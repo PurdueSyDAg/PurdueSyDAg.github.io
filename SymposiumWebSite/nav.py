@@ -16,10 +16,10 @@ def header_content(device: str) -> rx.Component:
     return (
         rx.hstack(
             header_icons_item("Home", "home", "home"),
+            header_icons_item("About", "info", "about"),
             header_icons_item("Register", "send", "register"),
             header_icons_item("Speakers", "speech", "speakers"),
             header_icons_item("Schedule", "calendar-check-2", "schedule"),
-            header_icons_item("FAQ", "circle-help", "faq"),
             header_icons_item("Contact", "mail", "contact"),
             rx.color_mode.button(),
             spacing="6",
@@ -30,10 +30,11 @@ def header_content(device: str) -> rx.Component:
                 rx.menu.trigger(rx.icon("menu", size=30)),
                 rx.menu.content(
                     header_icons_item("Home", "home", "home"),
+                    header_icons_item("About", "info", "about"),
                     header_icons_item("Register", "send", "register"),
                     header_icons_item("Speakers", "speech", "speakers"),
-                    header_icons_item("Schedule", "calendar-check-2", "schedule"),
-                    header_icons_item("FAQ", "circle-help", "faq"),
+                    header_icons_item(
+                        "Schedule", "calendar-check-2", "schedule"),
                     header_icons_item("Contact", "mail", "contact"),
                 ),
                 justify="end",
