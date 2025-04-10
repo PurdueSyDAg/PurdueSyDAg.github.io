@@ -24,4 +24,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . ./
 
 RUN reflex export --frontend-only
-CMD ["reflex", "run", "--env", "prod", "--host", "0.0.0.0", "--port", "8080"]
+CMD ["reflex", "run", "--env", "prod", "--backend-only", "--loglevel", "debug" ] 
