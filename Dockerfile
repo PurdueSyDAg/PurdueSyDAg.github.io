@@ -1,13 +1,21 @@
-FROM python:3.12
-
-
-ENV REDIS_URL=redis://redis PYTHONUNBUFFERED=1
-
+# Use an official Python 3.11 runtime as a parent image
+FROM python:3.12-slim
+ 
 WORKDIR /app
-COPY . .
 
-RUN pip install -r requirements.txt
+# Install virtualenv
+RUN python -m venv /env
 
+# Activate the virtual environment
+ENV VIRTUAL_ENV=/env
+ENV PATH="/env/bin:$PATH"
 
-ENTRYPOINT ["reflex", "run", "--env", "prod", "--backend-only", "--loglevel", "debug" ]
+# Copy the application's requirements.txt and run pip to install all dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
+# Copy the application source code
+COPY . ./
+
+RUN reflex init
+CMD ["reflex", "run", "--env", "prod", "--host", "0.0.0.0", "--port", "8080"]
