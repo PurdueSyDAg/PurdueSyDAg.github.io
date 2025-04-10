@@ -8,6 +8,8 @@ WORKDIR /app
 # Often you’ll need 'build-essential', 'gcc', or 'libc-dev' for certain pip installs.
 RUN apt-get update && apt-get install -y \
     build-essential \
+    unzip \
+    curl \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy requirements and install
