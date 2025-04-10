@@ -24,5 +24,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . ./
 
 # RUN reflex export --frontend-only
-RUN reflex init --no-install
+RUN reflex init
 CMD ["reflex", "run", "--env", "prod", "--frontend-only", "--loglevel", "debug" ] 
