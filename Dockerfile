@@ -23,5 +23,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the application source code
 COPY . ./
 
-RUN reflex export --frontend-only
-CMD ["reflex", "run", "--env", "prod", "--backend-only", "--loglevel", "debug" ] 
+# RUN reflex export --frontend-only
+CMD ["reflex", "run", "--env", "prod", "--frontend-only", "--loglevel", "debug" ] 
