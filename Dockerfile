@@ -1,22 +1,13 @@
-# Use an official Python 3.11 runtime as a parent image
-FROM python:3.12-slim
+FROM python:3.12
 
-# Set the working directory
+
+ENV REDIS_URL=redis://redis PYTHONUNBUFFERED=1
+
 WORKDIR /app
+COPY . .
 
-# Install virtualenv
-RUN python -m venv /env
+RUN pip install -r requirements.txt
 
-# Activate the virtual environment
-ENV VIRTUAL_ENV=/env
-ENV PATH="/env/bin:$PATH"
 
-# Copy the application's requirements.txt and run pip to install all dependencies
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Copy the application source code
-COPY . ./
-
-# Run the compiled app
 ENTRYPOINT ["reflex", "run", "--env", "prod", "--backend-only", "--loglevel", "debug" ]
+
