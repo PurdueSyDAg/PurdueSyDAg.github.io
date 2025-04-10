@@ -18,12 +18,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the application source code
 COPY . ./
 
-# Build the Reflex app
-RUN reflex init
-RUN reflex export --frontend-only
-
-# Expose the port the app runs on
-EXPOSE 8080
-
 # Run the compiled app
-CMD ["reflex", "run", "--env", "prod", "--backend-only", "--host", "0.0.0.0", "--port", "8080"]
+ENTRYPOINT ["reflex", "run", "--env", "prod", "--backend-only", "--loglevel", "debug" ]
