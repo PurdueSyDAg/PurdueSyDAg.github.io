@@ -66,6 +66,71 @@ def index() -> rx.Component:
         spacing="0",
     )
 
+# PEDRO - uncomment/comment these as you want to play with the styles.
+# -Dr. Worm
 
-app = rx.App()
+# Option 1
+primary_color = "#2c3e50" # Navy/slate
+secondary_color = "#ff4f00" # weird gold/tangerine ish
+accent_color = "#ddb945" # 
+
+
+# Option 2
+# primary_color = "#423629"
+# secondary_color = "#7a9e1e"
+# accent_color = "#ddb945"
+
+# Option 3
+#primary_color = "#756d54"
+#secondary_color = "#3b9c9c"
+#accent_color = "#ddb945"
+
+
+background_color = "#ffffff"
+text_color = "#000000"
+
+
+# reflex is stupid in that it doesn't allow you to just simply theme using their in-built functionality unless
+# you only want to use pre-set colors
+# so you are also welcome to play with theeeeseee
+# - Dr. Worm
+style = {
+    "::selection": {
+        "background_color": accent_color,
+    },
+    ".text-primary": {
+        "color": primary_color,
+    },
+    ".nav-bar": {
+        "background_color": primary_color
+    },
+    ".hero": {
+        "background_color": background_color,
+        "text_color": accent_color,
+    },
+    "#special-input": {
+        "width": "20vw",
+    },
+    ".header_opt_text": {
+        "color": background_color,
+    },
+    rx.button: {
+        "background_color": accent_color,
+        "color": text_color,
+    },
+    rx.text: {
+        "color": text_color,
+    },
+    rx.heading: {
+        "color": secondary_color,
+    },
+    rx.icon: {
+        "color": accent_color,
+        "stroke": accent_color,
+    }
+}
+
+
+
+app = rx.App(style = style)
 app.add_page(index)

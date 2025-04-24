@@ -5,7 +5,7 @@ def header_icons_item(text: str, icon: str, section_id: str) -> rx.Component:
     return rx.link(
         rx.hstack(
             rx.icon(icon),
-            rx.text(text, size="4", weight="medium"),
+            rx.text(text, size="4", weight="medium", class_name = "header_opt_text"),
         ),
         href=f"#{section_id}" if section_id else "/",  # Empty returns to top
         smooth=True,  # Enable smooth scrolling if your version supports it
@@ -21,7 +21,6 @@ def header_content(device: str) -> rx.Component:
             header_icons_item("Speakers", "speech", "speakers"),
             header_icons_item("Schedule", "calendar-check-2", "schedule"),
             header_icons_item("Contact", "mail", "contact"),
-            rx.color_mode.button(),
             spacing="6",
         )
         if device == "desktop"
@@ -39,7 +38,6 @@ def header_content(device: str) -> rx.Component:
                 ),
                 justify="end",
             ),
-            rx.color_mode.button(),
         )
     )
 
@@ -81,7 +79,7 @@ def header() -> rx.Component:
                 align_items="center",
             ),
         ),
-        bg=rx.color("accent", 3),
+        class_name = 'nav-bar',
         padding="1em",
         width="100%",
     )
@@ -103,7 +101,6 @@ def footer() -> rx.Component:
         ),
         width="100%",
         bg="rgba(0,0,0,0.1)",
-        _dark={"bg": "rgba(255,255,255,0.1)"},
         padding="2em",
         display="flex",
         justify_content="center",

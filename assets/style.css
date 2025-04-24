@@ -1,0 +1,14 @@
+:root {
+    --primary: #ff4f00;
+    --secondary: #508aab;
+    --accent: #ddb945;
+    --background: #ffffff;
+    --text: #000000;
+  }
+  
+  .text-primary {
+    color: var(--primary);
+  }
+  .bg-primary {
+    background-color: var(--primary);
+  }
