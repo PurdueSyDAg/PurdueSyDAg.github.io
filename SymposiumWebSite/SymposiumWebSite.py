@@ -75,15 +75,15 @@ def index() -> rx.Component:
 
 
 # Option 1
-# primary_color = "#2c3e50"  # Navy/slate
-# secondary_color = "#ff4f00"  # weird gold/tangerine ish
-# accent_color = "#ddb945"
+primary_color = "#2c3e50"  # Navy/slate
+secondary_color = "#ff4f00"  # weird gold/tangerine ish
+accent_color = "#ddb945"
 
 
 # Option 2
-primary_color = "#423629"
-secondary_color = "#7a9e1e"
-accent_color = "#ddb945"
+# primary_color = "#423629"
+# secondary_color = "#7a9e1e"
+# accent_color = "#ddb945"
 
 # Option 3
 # primary_color = "#756d54"
