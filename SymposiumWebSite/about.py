@@ -4,16 +4,18 @@ import reflex as rx
 def about_section() -> rx.Component:
     return rx.box(
         rx.vstack(
-            rx.heading("About", size="6", mb="4"),
+            rx.heading("About", size="9", mb="4"),
             rx.text(
                 "Join us for the first annual IDAAS symposium, where we bring together researchers, industry leaders, and innovators to explore the intersection of digital technology and agricultural systems.",
                 max_width="800px",
                 text_align="center",
+                size="5",
             ),
             rx.text(
                 "Our goal is to showcase practical applications that are making a real-world impact on sustainable agriculture.",
                 max_width="800px",
                 text_align="center",
+                size="5",
                 mb="8",
             ),
             # Vision Section
