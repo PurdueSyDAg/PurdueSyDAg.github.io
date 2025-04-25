@@ -48,12 +48,11 @@ def header() -> rx.Component:
             rx.hstack(
                 rx.hstack(
                     rx.image(
-                        src="/logo.jpg",
-                        width="2.25em",
+                        src="/purdue.webp",
+                        width="5.25em",
                         height="auto",
-                        border_radius="25%",
                     ),
-                    rx.heading(headingStr, size="7", weight="bold"),
+                    rx.text(headingStr, size="8", weight="bold", color="white"),
                     align_items="center",
                 ),
                 header_content("desktop"),
@@ -65,12 +64,11 @@ def header() -> rx.Component:
             rx.hstack(
                 rx.hstack(
                     rx.image(
-                        src="/logo.jpg",
-                        width="2em",
+                        src="/purdue.webp",
+                        width="5.25em",
                         height="auto",
-                        border_radius="25%",
                     ),
-                    rx.heading(headingStr, size="6", weight="bold"),
+                    rx.text(headingStr, size="6", weight="bold", color="white"),
                     align_items="center",
                 ),
                 header_content("mobile"),
