@@ -5,7 +5,7 @@ def header_icons_item(text: str, icon: str, section_id: str) -> rx.Component:
     return rx.link(
         rx.hstack(
             rx.icon(icon),
-            rx.text(text, size="4", weight="medium", class_name = "header_opt_text"),
+            rx.text(text, size="4", weight="medium", class_name="header_opt_text"),
         ),
         href=f"#{section_id}" if section_id else "/",  # Empty returns to top
         smooth=True,  # Enable smooth scrolling if your version supports it
@@ -32,8 +32,7 @@ def header_content(device: str) -> rx.Component:
                     header_icons_item("About", "info", "about"),
                     header_icons_item("Register", "send", "register"),
                     header_icons_item("Speakers", "speech", "speakers"),
-                    header_icons_item(
-                        "Schedule", "calendar-check-2", "schedule"),
+                    header_icons_item("Schedule", "calendar-check-2", "schedule"),
                     header_icons_item("Contact", "mail", "contact"),
                 ),
                 justify="end",
@@ -43,7 +42,7 @@ def header_content(device: str) -> rx.Component:
 
 
 def header() -> rx.Component:
-    headingStr: str = "IDAAS"
+    headingStr: str = "SyDAG"
     return rx.box(
         rx.desktop_only(
             rx.hstack(
@@ -79,7 +78,7 @@ def header() -> rx.Component:
                 align_items="center",
             ),
         ),
-        class_name = 'nav-bar',
+        class_name="nav-bar",
         padding="1em",
         width="100%",
     )

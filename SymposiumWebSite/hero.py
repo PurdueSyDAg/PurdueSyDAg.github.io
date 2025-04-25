@@ -5,12 +5,12 @@ def hero_section() -> rx.Component:
     return rx.box(
         rx.vstack(
             rx.heading(
-                "Institute of Digital and Advanced Agricultural systems (IDAAS) 1st Annual Symposium:",
+                "1st Annual Symposium of Digital Agriculture (SyDAG)",
                 size="7",
                 text_align="center",
             ),
             rx.text(
-                "From Innovation to Real World Impact",
+                "From Innovation to Impact",
                 size="8",
                 text_align="center",
             ),
@@ -27,7 +27,6 @@ def hero_section() -> rx.Component:
         ),
         id="home",
         width="100%",
-        class_name = 'hero',
-        _dark={"bg": "rgba(255,255,255,0.05)"},
+        class_name="hero",
         padding_y="2em",
     )

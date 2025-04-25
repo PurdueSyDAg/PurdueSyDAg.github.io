@@ -66,13 +66,15 @@ def index() -> rx.Component:
         spacing="0",
     )
 
+
 # PEDRO - uncomment/comment these as you want to play with the styles.
 # -Dr. Worm
 
+
 # Option 1
-primary_color = "#2c3e50" # Navy/slate
-secondary_color = "#ff4f00" # weird gold/tangerine ish
-accent_color = "#ddb945" # 
+primary_color = "#2c3e50"  # Navy/slate
+secondary_color = "#ff4f00"  # weird gold/tangerine ish
+accent_color = "#ddb945"
 
 
 # Option 2
@@ -81,9 +83,9 @@ accent_color = "#ddb945" #
 # accent_color = "#ddb945"
 
 # Option 3
-#primary_color = "#756d54"
-#secondary_color = "#3b9c9c"
-#accent_color = "#ddb945"
+# primary_color = "#756d54"
+# secondary_color = "#3b9c9c"
+# accent_color = "#ddb945"
 
 
 background_color = "#ffffff"
@@ -94,43 +96,50 @@ text_color = "#000000"
 # you only want to use pre-set colors
 # so you are also welcome to play with theeeeseee
 # - Dr. Worm
+style_sheets = [
+    "https://fonts.googleapis.com/css2?family=Roboto&display=swap",
+    "https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap",
+    "https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap",
+    "https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap",
+]
 style = {
-    "::selection": {
-        "background_color": accent_color,
-    },
-    ".text-primary": {
-        "color": primary_color,
-    },
-    ".nav-bar": {
-        "background_color": primary_color
-    },
-    ".hero": {
-        "background_color": background_color,
-        "text_color": accent_color,
-    },
-    "#special-input": {
-        "width": "20vw",
-    },
-    ".header_opt_text": {
-        "color": background_color,
-    },
-    rx.button: {
-        "background_color": accent_color,
-        "color": text_color,
-    },
-    rx.text: {
-        "color": text_color,
-    },
-    rx.heading: {
-        "color": secondary_color,
-    },
-    rx.icon: {
-        "color": accent_color,
-        "stroke": accent_color,
-    }
+    # "font_family": {"Roboto"},
+    "font_family": {"Roboto Mono"},
+    # "font_family": {"Ubuntu"},
+    # "font_family": {"Merriweather"},
+    # "::selection": {
+    #     "background_color": accent_color,
+    # },
+    # ".text-primary": {
+    #     "color": primary_color,
+    # },
+    # ".nav-bar": {"background_color": primary_color},
+    # ".hero": {
+    #     "background_color": background_color,
+    #     "text_color": accent_color,
+    # },
+    # "#special-input": {
+    #     "width": "20vw",
+    # },
+    # ".header_opt_text": {
+    #     "color": background_color,
+    # },
+    # rx.button: {
+    #     "background_color": accent_color,
+    #     "color": text_color,
+    # }, rx.text: {
+    #     "color": text_color,
+    # },
+    # rx.heading: {
+    #     "color": secondary_color,
+    # },
+    # rx.icon: {
+    #     "color": accent_color,
+    #     "stroke": accent_color,
+    # },
 }
 
 
-
-app = rx.App(style = style)
+# app = rx.App(style=style)
+app = rx.App(style=style, stylesheets=style_sheets)
 app.add_page(index)
