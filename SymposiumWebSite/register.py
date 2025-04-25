@@ -33,7 +33,5 @@ def register_section() -> rx.Component:
         ),
         id="register",
         width="100%",
-        bg="rgba(0,0,0,0.05)",
-        _dark={"bg": "rgba(255,255,255,0.05)"},
         scroll_margin_top="5em",
     )

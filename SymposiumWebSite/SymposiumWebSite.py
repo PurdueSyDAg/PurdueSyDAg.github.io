@@ -29,14 +29,15 @@ def apply_motion(content: rx.Component) -> rx.Component:
 
 
 def index() -> rx.Component:
-    section_components = [
-        hero_section,
-        about_section,
-        register_section,
-        speakers_section,
-        schedule_section,
-        contact_section,
+    section_data = [
+        (hero_section, "#f5f5f5"),  # light gray
+        (about_section, "#ffffff"),  # white
+        (register_section, "#f5f5f5"),
+        (speakers_section, "#ffffff"),
+        (schedule_section, "#f5f5f5"),
+        (contact_section, "#ffffff"),  # light gray
     ]
+
     motion_sections = [
         apply_motion(
             rx.box(
@@ -44,9 +45,10 @@ def index() -> rx.Component:
                 overflow_x="hidden",
                 width="100%",
                 padding_x="2em",
+                background=bg_color,
             )
         )
-        for section_func in section_components
+        for section_func, bg_color in section_data
     ]
 
     return rx.box(
@@ -62,6 +64,7 @@ def index() -> rx.Component:
         # Unpack all the motion sections
         *motion_sections,
         footer(),
+        background=background_color,
         width="100%",
         spacing="0",
     )
@@ -72,15 +75,15 @@ def index() -> rx.Component:
 
 
 # Option 1
-primary_color = "#2c3e50"  # Navy/slate
-secondary_color = "#ff4f00"  # weird gold/tangerine ish
-accent_color = "#ddb945"
+# primary_color = "#2c3e50"  # Navy/slate
+# secondary_color = "#ff4f00"  # weird gold/tangerine ish
+# accent_color = "#ddb945"
 
 
 # Option 2
-# primary_color = "#423629"
-# secondary_color = "#7a9e1e"
-# accent_color = "#ddb945"
+primary_color = "#423629"
+secondary_color = "#7a9e1e"
+accent_color = "#ddb945"
 
 # Option 3
 # primary_color = "#756d54"
@@ -107,39 +110,38 @@ style = {
     "font_family": {"Roboto Mono"},
     # "font_family": {"Ubuntu"},
     # "font_family": {"Merriweather"},
-    # "::selection": {
-    #     "background_color": accent_color,
-    # },
-    # ".text-primary": {
-    #     "color": primary_color,
-    # },
-    # ".nav-bar": {"background_color": primary_color},
-    # ".hero": {
-    #     "background_color": background_color,
-    #     "text_color": accent_color,
-    # },
-    # "#special-input": {
-    #     "width": "20vw",
-    # },
-    # ".header_opt_text": {
-    #     "color": background_color,
-    # },
-    # rx.button: {
-    #     "background_color": accent_color,
-    #     "color": text_color,
-    # }, rx.text: {
-    #     "color": text_color,
-    # },
-    # rx.heading: {
-    #     "color": secondary_color,
-    # },
-    # rx.icon: {
-    #     "color": accent_color,
-    #     "stroke": accent_color,
-    # },
+    "::selection": {
+        "background_color": accent_color,
+    },
+    ".text-primary": {
+        "color": primary_color,
+    },
+    ".nav-bar": {"background_color": primary_color},
+    ".hero": {
+        "text_color": accent_color,
+    },
+    "#special-input": {
+        "width": "20vw",
+    },
+    ".header_opt_text": {
+        "color": background_color,
+    },
+    rx.button: {
+        "background_color": accent_color,
+        "color": text_color,
+    },
+    rx.text: {
+        "color": text_color,
+    },
+    rx.heading: {
+        "color": secondary_color,
+    },
+    rx.icon: {
+        "color": accent_color,
+        "stroke": accent_color,
+    },
 }
 
 
-# app = rx.App(style=style)
 app = rx.App(style=style, stylesheets=style_sheets)
 app.add_page(index)

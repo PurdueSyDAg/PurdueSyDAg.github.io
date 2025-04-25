@@ -36,7 +36,5 @@ def speakers_section() -> rx.Component:
         ),
         id="speakers",
         width="100%",
-        bg="rgba(0,0,0,0.05)",
-        _dark={"bg": "rgba(255,255,255,0.05)"},
         scroll_margin_top="5em",
     )

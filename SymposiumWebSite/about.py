@@ -83,7 +83,8 @@ def about_section() -> rx.Component:
         id="about",
         width="100%",
         justify="center",
-        display="flex", justity_content="center",
+        display="flex",
+        justity_content="center",
         align_items="center",
         scroll_margin_top="5em",
     )
