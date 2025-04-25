@@ -76,7 +76,7 @@ def about_section() -> rx.Component:
             min_height="80vh",
             padding_y="2em",
             spacing="8",
-            width="50%",
+            width="80%",
             margin_x="auto",
             display="flex",
         ),
