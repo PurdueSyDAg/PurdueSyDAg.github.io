@@ -90,9 +90,22 @@ accent_color = "#ddb945"
 # secondary_color = "#3b9c9c"
 # accent_color = "#ddb945"
 
+# Option 4 "Satellite 1"
+primary_color = '#1E3A5F'
+secondary_color = '#C56A33'
+accent_color = '#ddb945'
+text_color = '#2D1F15'
+background_color = '#F9F9F9'
 
-background_color = "#ffffff"
-text_color = "#000000"
+# Option 5 "Satellite 2"
+primary_color = '#3A281C'
+secondary_color = '#C56A33'
+accent_color = '#ddb945'
+text_color = '#1E3A5F'
+background_color = '#F9F9F9'
+
+#background_color = "#ffffff"
+#text_color = "#000000"
 
 
 # reflex is stupid in that it doesn't allow you to just simply theme using their in-built functionality unless
