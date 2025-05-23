@@ -117,41 +117,70 @@ style_sheets = [
     "https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap",
     "https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap",
     "https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap",
+    "https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap",
+    "https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap",
 ]
 style = {
-    # "font_family": {"Roboto"},
-    "font_family": {"Roboto Mono"},
-    # "font_family": {"Ubuntu"},
-    # "font_family": {"Merriweather"},
+    "font_family": {"Lora"},
     "::selection": {
         "background_color": accent_color,
     },
     ".text-primary": {
         "color": primary_color,
+        "font_weight": "regular",
     },
     ".nav-bar": {"background_color": primary_color},
     ".hero": {
         "text_color": accent_color,
+        "font_style": "italic",
     },
     "#special-input": {
         "width": "20vw",
     },
     ".header_opt_text": {
         "color": background_color,
+        "font_weight": "400",
+        "font_family": "Geist",
     },
     rx.button: {
         "background_color": accent_color,
         "color": text_color,
+        "font_weight": "bold",
     },
     rx.text: {
         "color": text_color,
+        "font_family": "Lora",
     },
     rx.heading: {
         "color": secondary_color,
+        "font_family": "Geist",
+        "font_weight": "700",
     },
     rx.icon: {
         "color": accent_color,
         "stroke": accent_color,
+    },
+    "h1": {
+        "font_family": "Geist",
+        "font_weight": "900",
+    },
+    "h2": {
+        "font_family": "Geist",
+        "font_weight": "700",
+    },
+    "h3": {
+        "font_family": "Geist",
+        "font_weight": "600",
+    },
+    "p.emphasis": {
+        "font_style": "italic",
+        "font_weight": "500",
+    },
+    "strong": {
+        "font_weight": "700",
+    },
+    "em": {
+        "font_style": "italic",
     },
 }
 

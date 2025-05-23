@@ -42,7 +42,7 @@ def header_content(device: str) -> rx.Component:
 
 
 def header() -> rx.Component:
-    headingStr: str = "SyDAG"
+    headingStr: str = "SyDAg"
     return rx.box(
         rx.desktop_only(
             rx.hstack(
@@ -52,7 +52,7 @@ def header() -> rx.Component:
                         width="5.25em",
                         height="auto",
                     ),
-                    rx.text(headingStr, size="8", weight="bold", color="white"),
+                    rx.text(headingStr, size="8", weight="regular", color="white"),
                     align_items="center",
                 ),
                 header_content("desktop"),
