@@ -29,8 +29,16 @@ def apply_motion(content: rx.Component) -> rx.Component:
 
 
 def index() -> rx.Component:
-    section_data = [
-        (hero_section, "#f5f5f5"),  # light gray
+    # Handle hero section separately (no padding, no motion wrapper)
+    hero_section_component = rx.box(
+        hero_section(),
+        overflow_x="hidden",
+        width="100%",
+        background="#f5f5f5",
+    )
+    
+    # Handle other sections with padding and motion
+    other_sections_data = [
         (about_section, "#ffffff"),  # white
         (register_section, "#f5f5f5"),
         (speakers_section, "#ffffff"),
@@ -48,7 +56,7 @@ def index() -> rx.Component:
                 background=bg_color,
             )
         )
-        for section_func, bg_color in section_data
+        for section_func, bg_color in other_sections_data
     ]
 
     return rx.box(
@@ -61,7 +69,9 @@ def index() -> rx.Component:
             z_index="1000",
             width="100%",
         ),
-        # Unpack all the motion sections
+        # Hero section without padding constraints
+        hero_section_component,
+        # Other sections with motion and padding
         *motion_sections,
         footer(),
         background=background_color,
