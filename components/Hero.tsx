@@ -141,15 +141,6 @@ export function Hero() {
                                     Digital Agriculture
                                 </motion.span>
                             </motion.h1>
-
-                            <motion.p
-                                className="text-xl sm:text-2xl lg:text-3xl text-white/90 font-light italic tracking-wide"
-                                initial={{ opacity: 0, scale: 0.8, filter: "blur(15px)" }}
-                                animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
-                                transition={{ duration: 0.6, delay: 0.9, ease: "easeOut" }}
-                            >
-                                (SyDAg)
-                            </motion.p>
                         </div>
 
                         {/* Subtitle */}

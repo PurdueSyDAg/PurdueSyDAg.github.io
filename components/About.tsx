@@ -57,7 +57,7 @@ export function About() {
                             viewport={{ once: true }}
                             className="text-xl text-[#1E3A5F] leading-relaxed"
                         >
-                            Join us for the first annual IDAAS symposium, where we bring together researchers,
+                            Join us for the first annual Symposium on Digital Agriculture (SyDAg), where we bring together researchers,
                             industry leaders, and innovators to explore the intersection of digital technology and
                             agricultural systems.
                         </motion.p>
