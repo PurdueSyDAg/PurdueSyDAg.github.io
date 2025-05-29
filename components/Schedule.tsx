@@ -8,7 +8,7 @@ export function Schedule() {
     return (
         <section
             id="schedule"
-            className="min-h-screen bg-gradient-to-br from-[#f5f1e8] to-[#e8dcc6] px-4 sm:px-6 lg:px-8 py-16"
+            className="min-h-screen bg-gradient-to-br from-[#f5f1e8] to-[#e8dcc6] px-4 sm:px-6 lg:px-8 py-20"
         >
             <div className="max-w-7xl mx-auto">
                 <motion.div

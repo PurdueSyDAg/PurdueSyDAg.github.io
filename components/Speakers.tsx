@@ -7,7 +7,7 @@ export function Speakers() {
     return (
         <section
             id="speakers"
-            className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#1F1510] via-[#2A1B12] to-[#0F0B08] px-4 sm:px-6 lg:px-8 py-16"
+            className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#1F1510] via-[#2A1B12] to-[#0F0B08] px-4 sm:px-6 lg:px-8 py-20"
         >
             <div className="max-w-6xl mx-auto">
                 <motion.div
