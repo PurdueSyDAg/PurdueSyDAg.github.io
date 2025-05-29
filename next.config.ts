@@ -6,9 +6,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true
   },
-  // Only apply basePath for GitHub Pages deployment (not local testing)
-  basePath: process.env.GITHUB_ACTIONS ? '/SymposiumWebSite' : '',
-  assetPrefix: process.env.GITHUB_ACTIONS ? '/SymposiumWebSite/' : '',
+  basePath: '',
+  assetPrefix: '',
 };
 
 export default nextConfig;
