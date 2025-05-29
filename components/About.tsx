@@ -4,6 +4,34 @@ import { motion } from 'framer-motion';
 import { Target, Lightbulb, Users } from 'lucide-react';
 
 export function About() {
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.1,
+                delayChildren: 0.2
+            }
+        }
+    };
+
+    const cardVariants = {
+        hidden: {
+            opacity: 0,
+            y: 30,
+            scale: 0.95
+        },
+        visible: {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            transition: {
+                duration: 0.5,
+                ease: "easeOut"
+            }
+        }
+    };
+
     return (
         <section
             id="about"
@@ -12,20 +40,20 @@ export function About() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <motion.div
-                    initial={{ opacity: 0, y: 30 }}
+                    initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
+                    viewport={{ once: true, margin: "-10%" }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-5xl sm:text-6xl font-black text-[#C56A33] mb-8">
+                    <h2 className="text-5xl sm:text-6xl font-black text-[#3A281C] mb-8">
                         About
                     </h2>
                     <div className="max-w-4xl mx-auto space-y-6">
                         <motion.p
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 15 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, delay: 0.2 }}
+                            transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
                             viewport={{ once: true }}
                             className="text-xl text-[#1E3A5F] leading-relaxed"
                         >
@@ -34,9 +62,9 @@ export function About() {
                             agricultural systems.
                         </motion.p>
                         <motion.p
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 15 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, delay: 0.4 }}
+                            transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
                             viewport={{ once: true }}
                             className="text-xl text-[#1E3A5F] leading-relaxed"
                         >
@@ -47,14 +75,18 @@ export function About() {
                 </motion.div>
 
                 {/* Three Column Layout */}
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+                <motion.div
+                    className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12"
+                    variants={containerVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-20%" }}
+                >
                     {/* Vision */}
                     <motion.div
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
-                        viewport={{ once: true }}
-                        className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-[#ddb945]"
+                        variants={cardVariants}
+                        whileHover={{ y: -4, scale: 1.02 }}
+                        className="bg-white rounded-2xl p-8 shadow-lg border-l-4 border-[#ddb945]"
                     >
                         <div className="flex items-center mb-6">
                             <div className="w-12 h-12 bg-gradient-to-r from-[#ddb945] to-[#f4e076] rounded-xl flex items-center justify-center mr-4">
@@ -71,11 +103,9 @@ export function About() {
 
                     {/* Mission */}
                     <motion.div
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.4 }}
-                        viewport={{ once: true }}
-                        className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-[#C56A33]"
+                        variants={cardVariants}
+                        whileHover={{ y: -4, scale: 1.02 }}
+                        className="bg-white rounded-2xl p-8 shadow-lg border-l-4 border-[#C56A33]"
                     >
                         <div className="flex items-center mb-6">
                             <div className="w-12 h-12 bg-gradient-to-r from-[#C56A33] to-[#e07a47] rounded-xl flex items-center justify-center mr-4">
@@ -92,11 +122,9 @@ export function About() {
 
                     {/* Target Audience */}
                     <motion.div
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.6 }}
-                        viewport={{ once: true }}
-                        className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-[#3A281C]"
+                        variants={cardVariants}
+                        whileHover={{ y: -4, scale: 1.02 }}
+                        className="bg-white rounded-2xl p-8 shadow-lg border-l-4 border-[#3A281C]"
                     >
                         <div className="flex items-center mb-6">
                             <div className="w-12 h-12 bg-gradient-to-r from-[#3A281C] to-[#4a3426] rounded-xl flex items-center justify-center mr-4">
@@ -112,17 +140,17 @@ export function About() {
                             opportunities at the intersection of technology and agriculture.
                         </p>
                     </motion.div>
-                </div>
+                </motion.div>
 
                 {/* Bottom Decorative Element */}
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.8, delay: 0.8 }}
+                    initial={{ opacity: 0, scaleX: 0 }}
+                    whileInView={{ opacity: 1, scaleX: 1 }}
+                    transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
                     viewport={{ once: true }}
                     className="mt-16 flex justify-center"
                 >
-                    <div className="w-24 h-1 bg-gradient-to-r from-[#ddb945] via-[#C56A33] to-[#3A281C] rounded-full"></div>
+                    <div className="w-24 h-1 bg-gradient-to-r from-[#ddb945] via-[#C56A33] to-[#3A281C] rounded-full origin-left"></div>
                 </motion.div>
             </div>
         </section>

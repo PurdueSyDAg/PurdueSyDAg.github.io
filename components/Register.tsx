@@ -69,7 +69,7 @@ export function Register() {
                                     onChange={handleInputChange}
                                     placeholder="Enter your full name"
                                     required
-                                    className="w-full px-4 py-3 border-2 border-[#C56A33]/20 rounded-xl focus:ring-2 focus:ring-[#ddb945] focus:border-[#ddb945] bg-white text-[#1E3A5F] placeholder-[#1E3A5F]/50 transition-all duration-200"
+                                    className="w-full px-4 py-3 border-2 border-[#C56A33]/20 rounded-xl focus:ring-2 focus:ring-[#ddb945] focus:border-[#ddb945] bg-white text-[#1E3A5F] placeholder-[#1E3A5F]/50"
                                 />
                             </div>
 
@@ -85,7 +85,7 @@ export function Register() {
                                     onChange={handleInputChange}
                                     placeholder="Enter your email address"
                                     required
-                                    className="w-full px-4 py-3 border-2 border-[#C56A33]/20 rounded-xl focus:ring-2 focus:ring-[#ddb945] focus:border-[#ddb945] bg-white text-[#1E3A5F] placeholder-[#1E3A5F]/50 transition-all duration-200"
+                                    className="w-full px-4 py-3 border-2 border-[#C56A33]/20 rounded-xl focus:ring-2 focus:ring-[#ddb945] focus:border-[#ddb945] bg-white text-[#1E3A5F] placeholder-[#1E3A5F]/50"
                                 />
                             </div>
 
@@ -101,7 +101,7 @@ export function Register() {
                                     onChange={handleInputChange}
                                     placeholder="Enter your institution or organization"
                                     required
-                                    className="w-full px-4 py-3 border-2 border-[#C56A33]/20 rounded-xl focus:ring-2 focus:ring-[#ddb945] focus:border-[#ddb945] bg-white text-[#1E3A5F] placeholder-[#1E3A5F]/50 transition-all duration-200"
+                                    className="w-full px-4 py-3 border-2 border-[#C56A33]/20 rounded-xl focus:ring-2 focus:ring-[#ddb945] focus:border-[#ddb945] bg-white text-[#1E3A5F] placeholder-[#1E3A5F]/50"
                                 />
                             </div>
 
@@ -115,7 +115,7 @@ export function Register() {
                                     value={formData.attendeeType}
                                     onChange={handleInputChange}
                                     required
-                                    className="w-full px-4 py-3 border-2 border-[#C56A33]/20 rounded-xl focus:ring-2 focus:ring-[#ddb945] focus:border-[#ddb945] bg-white text-[#1E3A5F] transition-all duration-200"
+                                    className="w-full px-4 py-3 border-2 border-[#C56A33]/20 rounded-xl focus:ring-2 focus:ring-[#ddb945] focus:border-[#ddb945] bg-white text-[#1E3A5F]"
                                 >
                                     <option value="">Select attendee type</option>
                                     <option value="Academic">Academic</option>
@@ -144,7 +144,7 @@ export function Register() {
                                 type="submit"
                                 whileHover={{ scale: 1.02, y: -2 }}
                                 whileTap={{ scale: 0.98 }}
-                                className="w-full bg-gradient-to-r from-[#C56A33] to-[#e07a47] hover:from-[#e07a47] hover:to-[#C56A33] text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#ddb945] focus:ring-offset-2"
+                                className="w-full bg-gradient-to-r from-[#C56A33] to-[#e07a47] hover:from-[#e07a47] hover:to-[#C56A33] text-white font-bold py-4 px-6 rounded-xl shadow-lg focus:outline-none focus:ring-2 focus:ring-[#ddb945] focus:ring-offset-2"
                             >
                                 Submit Registration
                             </motion.button>

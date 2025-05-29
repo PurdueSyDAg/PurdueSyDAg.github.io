@@ -20,10 +20,7 @@ export function Hero() {
     }, [images.length]);
 
     const handleRegisterClick = () => {
-        const element = document.querySelector('#register');
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-        }
+        window.open('https://www.purdue.edu/bicc/tools/qualtrics/index.php', '_blank');
     };
 
     const handleLearnMoreClick = () => {
@@ -56,7 +53,13 @@ export function Hero() {
     // Inject keyframes into the document
     if (typeof document !== 'undefined') {
         const styleSheet = document.styleSheets[0];
-        styleSheet.insertRule(bounceKeyframes, styleSheet.cssRules.length);
+        if (styleSheet) {
+            try {
+                styleSheet.insertRule(bounceKeyframes, styleSheet.cssRules.length);
+            } catch (e) {
+                // Ignore if rule already exists
+            }
+        }
     }
 
     return (
@@ -90,7 +93,7 @@ export function Hero() {
             </AnimatePresence>
 
             {/* Modern Gradient Overlay */}
-            <div className="absolute inset-0 z-20 bg-gradient-to-br from-[#3A281C]/90 via-[#C56A33]/80 to-[#ddb945]/85"></div>
+            <div className="absolute inset-0 z-20 bg-gradient-to-br from-[#1F1510]/95 via-[#2A1B12]/90 to-[#C56A33]/85"></div>
 
             {/* Content */}
             <div className="relative z-30 w-full max-w-6xl mx-auto text-center px-4 sm:px-6 lg:px-8 py-8">
@@ -98,42 +101,82 @@ export function Hero() {
                     {/* Main Content */}
                     <div className="flex-1 flex flex-col justify-center space-y-2 pt-0">
                         {/* Badge */}
-                        <div className="inline-block mx-auto">
-                            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-6 py-2">
-                                <p className="text-sm sm:text-base font-medium text-white uppercase tracking-widest">
+                        <motion.div
+                            className="inline-block mx-auto"
+                            initial={{ opacity: 0, scale: 0.8, filter: "blur(10px)" }}
+                            animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+                            transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+                        >
+                            <div className="inline-flex items-center space-x-2">
+                                <span className="w-12 h-[2px] bg-white/30"></span>
+                                <p className="text-sm sm:text-xl font-light text-white uppercase tracking-[0.2em]">
                                     First Annual
                                 </p>
+                                <span className="w-12 h-[2px] bg-white/30"></span>
                             </div>
-                        </div>
+                        </motion.div>
 
-                        {/* Main Title Group - Tighter spacing */}
+                        {/* Main Title Group */}
                         <div className="space-y-3">
-                            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-tight tracking-tight px-4">
-                                <span className="block mb-1">Symposium of</span>
-                                <span className="block bg-gradient-to-r from-[#ddb945] to-[#f4e076] bg-clip-text text-transparent">
+                            <motion.h1
+                                className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-tight tracking-tight px-4"
+                                initial={{ opacity: 0, scale: 0.9, filter: "blur(20px)", y: 30 }}
+                                animate={{ opacity: 1, scale: 1, filter: "blur(0px)", y: 0 }}
+                                transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+                            >
+                                <motion.span
+                                    className="block mb-1"
+                                    initial={{ opacity: 0, x: -50 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
+                                >
+                                    Symposium of
+                                </motion.span>
+                                <motion.span
+                                    className="block bg-gradient-to-r from-[#ddb945] to-[#f4e076] bg-clip-text text-transparent"
+                                    initial={{ opacity: 0, x: 50 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ duration: 0.6, delay: 0.7, ease: "easeOut" }}
+                                >
                                     Digital Agriculture
-                                </span>
-                            </h1>
-                            <p className="text-xl sm:text-2xl lg:text-3xl text-white/90 font-light italic tracking-wide">
+                                </motion.span>
+                            </motion.h1>
+
+                            <motion.p
+                                className="text-xl sm:text-2xl lg:text-3xl text-white/90 font-light italic tracking-wide"
+                                initial={{ opacity: 0, scale: 0.8, filter: "blur(15px)" }}
+                                animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+                                transition={{ duration: 0.6, delay: 0.9, ease: "easeOut" }}
+                            >
                                 (SyDAg)
-                            </p>
+                            </motion.p>
                         </div>
 
-                        {/* Subtitle - Closer to title */}
-                        <div className="mt-2">
+                        {/* Subtitle */}
+                        <motion.div
+                            className="mt-2"
+                            initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
+                            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                            transition={{ duration: 0.6, delay: 1.1, ease: "easeOut" }}
+                        >
                             <p className="text-lg sm:text-xl lg:text-2xl text-white/95 font-light tracking-wide">
                                 From Innovation to Impact
                             </p>
-                        </div>
+                        </motion.div>
 
-                        {/* Buttons - More space above */}
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
+                        {/* Buttons */}
+                        <motion.div
+                            className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8"
+                            initial={{ opacity: 0, y: 30, scale: 0.9 }}
+                            animate={{ opacity: 1, y: 0, scale: 1 }}
+                            transition={{ duration: 0.7, delay: 1.3, ease: "easeOut" }}
+                        >
                             <motion.button
                                 onClick={handleRegisterClick}
                                 variants={buttonAnimation}
                                 whileHover="hover"
                                 whileTap="tap"
-                                className="group relative px-8 py-4 text-lg font-bold text-[#3A281C] bg-gradient-to-r from-[#ddb945] to-[#f4e076] rounded-2xl shadow-2xl overflow-hidden transition-all duration-300"
+                                className="group relative px-8 py-4 text-lg font-bold text-[#1F1510] bg-gradient-to-r from-[#ddb945] to-[#f4e076] rounded-2xl shadow-2xl overflow-hidden"
                             >
                                 <div className="absolute inset-0 bg-gradient-to-r from-[#f4e076] to-[#ddb945] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                 <span className="relative z-10">Register Now</span>
@@ -144,14 +187,19 @@ export function Hero() {
                                 variants={buttonAnimation}
                                 whileHover="hover"
                                 whileTap="tap"
-                                className="px-8 py-4 text-lg font-semibold text-white bg-white/10 border-2 border-white/30 rounded-2xl backdrop-blur-md hover:bg-white/20 hover:border-white/50 transition-all duration-300"
+                                className="px-8 py-4 text-lg font-semibold text-white bg-white/10 border-2 border-white/30 rounded-2xl backdrop-blur-md hover:bg-white/20 hover:border-white/50"
                             >
                                 Learn More
                             </motion.button>
-                        </div>
+                        </motion.div>
 
-                        {/* Image indicators - Closer to content */}
-                        <div className="flex justify-center space-x-2 mt-6">
+                        {/* Image indicators */}
+                        <motion.div
+                            className="flex justify-center space-x-2 mt-6"
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.5, delay: 1.6, ease: "easeOut" }}
+                        >
                             {images.map((_, index) => (
                                 <div
                                     key={index}
@@ -161,11 +209,16 @@ export function Hero() {
                                         }`}
                                 />
                             ))}
-                        </div>
+                        </motion.div>
                     </div>
 
-                    {/* Scroll Indicator - Refined animation and positioning */}
-                    <div className="pb-6">
+                    {/* Scroll Indicator */}
+                    <motion.div
+                        className="pb-6"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 1.8, ease: "easeOut" }}
+                    >
                         <div className="flex flex-col items-center space-y-1">
                             <p className="text-md text-white/70 font-light uppercase tracking-wider">
                                 Scroll to explore
@@ -176,7 +229,7 @@ export function Hero() {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>

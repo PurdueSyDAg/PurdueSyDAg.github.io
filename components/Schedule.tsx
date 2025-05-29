@@ -1,43 +1,16 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Clock } from 'lucide-react';
-
-const scheduleItems = [
-    {
-        time: '09:00 - 10:00',
-        title: 'Opening Remarks & Keynote',
-        description: 'Welcome address and opening keynote presentation',
-    },
-    {
-        time: '10:15 - 11:30',
-        title: 'Panel: Digital Transformation in Agriculture',
-        description: 'Expert panel discussion on digital innovation in farming',
-    },
-    {
-        time: '12:00 - 13:30',
-        title: 'Lunch & Networking',
-        description: 'Networking lunch with fellow attendees and speakers',
-    },
-    {
-        time: '13:45 - 15:00',
-        title: 'Workshop: Real-world Applications',
-        description: 'Hands-on workshop showcasing practical digital agriculture solutions',
-    },
-    {
-        time: '15:30 - 16:30',
-        title: 'Closing Discussion & Future Directions',
-        description: 'Wrap-up discussion and outlook on the future of digital agriculture',
-    },
-];
+import { Clock, MapPin, Calendar } from 'lucide-react';
+import scheduleData from '@/data/schedule.json';
 
 export function Schedule() {
     return (
         <section
             id="schedule"
-            className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-800 px-4 sm:px-6 lg:px-8 py-16"
+            className="min-h-screen bg-gradient-to-br from-[#f5f1e8] to-[#e8dcc6] px-4 sm:px-6 lg:px-8 py-16"
         >
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-7xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -45,68 +18,145 @@ export function Schedule() {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                        Schedule
+                    <h2 className="text-5xl sm:text-6xl font-black text-[#1F1510] mb-4">
+                        Event Schedule
                     </h2>
-                    <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                        A full day of insights, networking, and practical workshops
+                    <p className="text-lg text-[#1F1510]/70 max-w-2xl mx-auto">
+                        Three days of innovation, collaboration, and insights in digital agriculture
                     </p>
                 </motion.div>
 
-                <div className="relative">
-                    {/* Timeline line */}
-                    <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-blue-200 dark:bg-blue-800"></div>
+                {/* Hackathon Weekend */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    viewport={{ once: true }}
+                    className="mb-16"
+                >
+                    <h3 className="text-2xl sm:text-3xl font-bold text-[#C56A33] mb-8 text-center">
+                        {scheduleData.hackathon.title}
+                    </h3>
 
-                    <div className="space-y-8">
-                        {scheduleItems.map((item, index) => (
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        {scheduleData.hackathon.days.map((day, dayIndex) => (
                             <motion.div
-                                key={index}
-                                initial={{ opacity: 0, x: -30 }}
+                                key={dayIndex}
+                                initial={{ opacity: 0, x: dayIndex === 0 ? -30 : 30 }}
                                 whileInView={{ opacity: 1, x: 0 }}
-                                transition={{ duration: 0.8, delay: index * 0.1 }}
+                                transition={{ duration: 0.8, delay: dayIndex * 0.2 }}
                                 viewport={{ once: true }}
-                                className="relative"
+                                whileHover={{ scale: 1.02, y: -4 }}
+                                className="border-2 border-[#C56A33]/30 rounded-lg p-6 backdrop-blur-sm shadow-lg"
                             >
-                                {/* Timeline dot */}
-                                <div className="absolute left-6 w-4 h-4 bg-blue-600 dark:bg-blue-400 rounded-full border-4 border-white dark:border-gray-800"></div>
-
-                                {/* Content */}
-                                <div className="ml-20 bg-white dark:bg-gray-700 rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-                                    <div className="flex items-center mb-3">
-                                        <Clock className="w-5 h-5 text-blue-600 dark:text-blue-400 mr-2" />
-                                        <span className="text-blue-600 dark:text-blue-400 font-semibold text-lg">
-                                            {item.time}
-                                        </span>
+                                <div className="mb-6">
+                                    <div className="flex items-center mb-2">
+                                        <Calendar className="w-5 h-5 text-[#C56A33] mr-2" />
+                                        <h4 className="text-xl font-semibold text-[#1F1510]">{day.date}</h4>
                                     </div>
+                                    <div className="flex items-center text-[#1F1510]/70">
+                                        <MapPin className="w-4 h-4 mr-2" />
+                                        <span className="text-sm">{day.location}</span>
+                                    </div>
+                                </div>
 
-                                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                                        {item.title}
-                                    </h3>
-
-                                    <p className="text-gray-600 dark:text-gray-300">
-                                        {item.description}
-                                    </p>
+                                <div className="space-y-4">
+                                    {day.sessions.map((session, sessionIndex) => (
+                                        <motion.div
+                                            key={sessionIndex}
+                                            initial={{ opacity: 0, y: 20 }}
+                                            whileInView={{ opacity: 1, y: 0 }}
+                                            transition={{ duration: 0.6, delay: sessionIndex * 0.1 }}
+                                            viewport={{ once: true }}
+                                            className="border-l-4 border-[#C56A33]/40 pl-4 py-2 bg-[#1F1510]/5 rounded-r-md"
+                                        >
+                                            <div className="flex items-center mb-1">
+                                                <Clock className="w-4 h-4 text-[#C56A33] mr-2" />
+                                                <span className="text-[#C56A33] font-medium text-sm">
+                                                    {session.time}
+                                                </span>
+                                            </div>
+                                            <h5 className="font-medium text-[#1F1510]">{session.title}</h5>
+                                        </motion.div>
+                                    ))}
                                 </div>
                             </motion.div>
                         ))}
                     </div>
-                </div>
+                </motion.div>
 
+                {/* Symposium */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.6 }}
+                    transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
-                    className="text-center mt-12"
                 >
-                    <div className="bg-blue-100 dark:bg-blue-900 rounded-lg p-6">
-                        <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-2">
-                            📅 Event Date
-                        </h3>
-                        <p className="text-blue-800 dark:text-blue-200">
-                            Date and venue details to be announced soon
-                        </p>
-                    </div>
+                    <h3 className="text-2xl sm:text-3xl font-bold text-[#C56A33] mb-8 text-center">
+                        {scheduleData.symposium.title}
+                    </h3>
+
+                    {scheduleData.symposium.days.map((day, dayIndex) => (
+                        <motion.div
+                            key={dayIndex}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: dayIndex * 0.2 }}
+                            viewport={{ once: true }}
+                            whileHover={{ scale: 1.01, y: -4 }}
+                            className="border-2 border-[#C56A33]/30 rounded-lg p-6 backdrop-blur-sm shadow-lg"
+                        >
+                            <div className="mb-6">
+                                <div className="flex items-center mb-2">
+                                    <Calendar className="w-5 h-5 text-[#C56A33] mr-2" />
+                                    <h4 className="text-xl font-semibold text-[#1F1510]">{day.date}</h4>
+                                </div>
+                                <div className="flex items-center text-[#1F1510]/70">
+                                    <MapPin className="w-4 h-4 mr-2" />
+                                    <span className="text-sm">{day.location}</span>
+                                </div>
+                            </div>
+
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                                {day.sessions.map((session, sessionIndex) => (
+                                    <div key={sessionIndex} className="space-y-4">
+                                        <h5 className="text-lg font-semibold text-[#C56A33] border-b-2 border-[#C56A33]/30 pb-2 bg-[#C56A33]/10 px-3 py-2 rounded-t-md">
+                                            {session.sessionTitle}
+                                        </h5>
+
+                                        {session.items.map((item, itemIndex) => (
+                                            <motion.div
+                                                key={itemIndex}
+                                                initial={{ opacity: 0, y: 20 }}
+                                                whileInView={{ opacity: 1, y: 0 }}
+                                                transition={{ duration: 0.6, delay: itemIndex * 0.1 }}
+                                                viewport={{ once: true }}
+                                                className={`${item.isSubItem
+                                                    ? 'ml-6 border-l-2 border-[#ddb945]/50 pl-4 bg-[#ddb945]/10'
+                                                    : 'border-l-4 border-[#C56A33]/40 pl-4 bg-[#1F1510]/5'
+                                                    } py-2 rounded-r-md`}
+                                            >
+                                                <div className="flex items-center mb-1">
+                                                    <Clock className="w-4 h-4 text-[#C56A33] mr-2" />
+                                                    <span className="text-[#C56A33] font-medium text-sm">
+                                                        {item.time}
+                                                    </span>
+                                                </div>
+                                                <h6 className={`font-medium text-[#1F1510] ${item.isGroup ? 'text-lg' : ''}`}>
+                                                    {item.title}
+                                                </h6>
+                                                {item.description && (
+                                                    <p className="text-[#1F1510]/70 text-sm mt-1">
+                                                        {item.description}
+                                                    </p>
+                                                )}
+                                            </motion.div>
+                                        ))}
+                                    </div>
+                                ))}
+                            </div>
+                        </motion.div>
+                    ))}
                 </motion.div>
             </div>
         </section>

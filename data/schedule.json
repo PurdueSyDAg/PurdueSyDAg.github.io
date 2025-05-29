@@ -1,0 +1,147 @@
+{
+    "hackathon": {
+        "title": "Hackathon Weekend",
+        "days": [
+            {
+                "date": "Saturday, October 18th",
+                "location": "Purdue, ABE building [to confirm location]",
+                "sessions": [
+                    {
+                        "time": "08:00 am - 09:00 am",
+                        "title": "Check in & Breakfast"
+                    },
+                    {
+                        "time": "09:00 am - 09:30 am",
+                        "title": "Opening"
+                    },
+                    {
+                        "time": "09:30 am - 11:30 am",
+                        "title": "Ideas Pitching & Team Formation"
+                    },
+                    {
+                        "time": "11:30 am - 01:00 pm",
+                        "title": "Lunch"
+                    },
+                    {
+                        "time": "01:00 pm - 06:00 pm",
+                        "title": "Working Session"
+                    }
+                ]
+            },
+            {
+                "date": "Sunday, October 19th",
+                "location": "Purdue, ABE building [to confirm location]",
+                "sessions": [
+                    {
+                        "time": "08:00 am - 09:00 am",
+                        "title": "Check in & Breakfast"
+                    },
+                    {
+                        "time": "08:00 am - 12:00 pm",
+                        "title": "Working Session"
+                    },
+                    {
+                        "time": "12:00 pm - 01:00 pm",
+                        "title": "Lunch"
+                    },
+                    {
+                        "time": "01:00 pm - 04:00 pm",
+                        "title": "Working Session"
+                    },
+                    {
+                        "time": "04:00 pm - 05:30 pm",
+                        "title": "Presentation"
+                    }
+                ]
+            }
+        ]
+    },
+    "symposium": {
+        "title": "Symposium",
+        "days": [
+            {
+                "date": "Monday, October 20th",
+                "location": "Purdue, COREC facilities",
+                "sessions": [
+                    {
+                        "sessionTitle": "Morning Session",
+                        "items": [
+                            {
+                                "time": "08:00 am - 09:00 am",
+                                "title": "Check in & Breakfast"
+                            },
+                            {
+                                "time": "09:00 am - 09:30 am",
+                                "title": "Kickoff-Opening"
+                            },
+                            {
+                                "time": "09:30 am - 10:30 am",
+                                "title": "Panel Discussion Session 1",
+                                "description": "The Future of Digital Ag: Where Are We Headed?"
+                            },
+                            {
+                                "time": "10:30 am - 11:00 am",
+                                "title": "Break and poster session"
+                            },
+                            {
+                                "time": "11:00 am - 11:45 am",
+                                "title": "Keynote",
+                                "description": "30-35 mins talk; 10 min questions"
+                            },
+                            {
+                                "time": "11:45 am - 01:00 pm",
+                                "title": "Lunch"
+                            }
+                        ]
+                    },
+                    {
+                        "sessionTitle": "Afternoon Session",
+                        "items": [
+                            {
+                                "time": "01:00 pm - 02:30 pm",
+                                "title": "Turning Agricultural Challenges into Scalable Digital Solutions",
+                                "isGroup": true
+                            },
+                            {
+                                "time": "01:00 pm",
+                                "title": "Talk 1",
+                                "description": "Real-World Challenges: Lessons from the Field",
+                                "isSubItem": true
+                            },
+                            {
+                                "time": "01:30 pm",
+                                "title": "Talk 2",
+                                "description": "Innovations at the Frontier: New Discoveries Shaping the Future of Ag Tech",
+                                "isSubItem": true
+                            },
+                            {
+                                "time": "02:00 pm",
+                                "title": "Talk 3",
+                                "description": "From Research to Reality: Transforming Innovation into Scalable Solutions",
+                                "isSubItem": true
+                            },
+                            {
+                                "time": "02:30 pm - 03:15 pm",
+                                "title": "Break and poster session"
+                            },
+                            {
+                                "time": "03:15 pm - 04:00 pm",
+                                "title": "Panel Discussion Session 2",
+                                "description": "How Do We Close the Gap Between Innovation and Adoption?"
+                            },
+                            {
+                                "time": "04:00 pm - 04:30 pm",
+                                "title": "Awards ceremony",
+                                "description": "Hackathon + poster session"
+                            },
+                            {
+                                "time": "04:30 pm - 06:00 pm",
+                                "title": "Networking & Job Expo"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
