@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* Font families for Tailwind CSS v4 */
+  --font-family-heading: 'Geist', system-ui, sans-serif;
+  --font-family-body: 'Lora', serif;
+  --font-family-mono: 'Geist Mono', monospace;
+
+  /* Color scheme from Python app */
+  --color-primary: #2c3e50;
+  --color-secondary: #ff4f00;
+  --color-accent: #ddb945;
+  --color-text: #2D1F15;
+  --color-app-background: #F9F9F9;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-family-body);
+  /* Default to Lora for body text */
+}
+
+/* Typography hierarchy matching the Python app */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-heading);
+  /* Geist for headings */
+}
+
+p,
+div,
+a,
+button,
+input,
+textarea,
+select {
+  font-family: var(--font-family-body);
+  /* Lora for body text */
+}
+
+/* Utility classes */
+.font-heading {
+  font-family: var(--font-family-heading);
+}
+
+.font-body {
+  font-family: var(--font-family-body);
+}
+
+.font-mono {
+  font-family: var(--font-family-mono);
+}
