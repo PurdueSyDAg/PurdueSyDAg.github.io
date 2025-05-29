@@ -56,7 +56,7 @@ export function Hero() {
         if (styleSheet) {
             try {
                 styleSheet.insertRule(bounceKeyframes, styleSheet.cssRules.length);
-            } catch (e) {
+            } catch {
                 // Ignore if rule already exists
             }
         }

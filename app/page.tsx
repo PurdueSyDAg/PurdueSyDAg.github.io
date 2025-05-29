@@ -2,7 +2,6 @@
 
 import { Header } from '@/components/Header';
 import { Hero } from '@/components/Hero';
-import { Register } from '@/components/Register';
 import { About } from '@/components/About';
 import { Speakers } from '@/components/Speakers';
 import { Schedule } from '@/components/Schedule';
