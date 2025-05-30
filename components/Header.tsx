@@ -87,7 +87,7 @@ export function Header() {
                             </h1>
                             <div className="hidden sm:block w-px h-6 bg-[#C56A33]/30"></div>
                             <span className="hidden sm:block text-sm text-white/70 font-light">
-                                A Student Led Symposium
+                                A Purdue University Student Led Symposium
                             </span>
                         </div>
                     </div>
