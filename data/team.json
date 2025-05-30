@@ -1,106 +1,122 @@
 [
-    {
-        "id": 1,
-        "name": "Ana Morales",
-        "position": "PhD",
-        "role": "Session Team",
-        "pfp_file_name": "Ana Morales AGRY.jpg",
-        "linkedin": "https://linkedin.com/in/ana-morales"
-    },
-    {
-        "id": 2,
-        "name": "Ankita Raturi",
-        "position": "PhD. Purdue University Professor",
-        "role": "Advising Faculty",
-        "pfp_file_name": "Ankita_Raturi_1440x960.jpg",
-        "linkedin": "https://linkedin.com/in/ankita-raturi"
-    },
-    {
-        "id": 3,
-        "name": "Autumn Denny",
-        "position": "MSc Student",
-        "role": "Marketing Team",
-        "pfp_file_name": "Autumn Denny ABE.png",
-        "linkedin": "https://linkedin.com/in/autumn-denny"
-    },
-    {
-        "id": 4,
-        "name": "Emmanuel Cooper",
-        "position": "?",
-        "role": "Logistics & Operations Team",
-        "pfp_file_name": "Emmanuel_Cooper-BPP.jpg",
-        "linkedin": "https://linkedin.com/in/emmanuel-cooper"
-    },
-    {
-        "id": 5,
-        "name": "Gustavo Santiago",
-        "position": "PhD Student",
-        "role": "Hackathon Team",
-        "pfp_file_name": "Gustavo N Santiago AGRON.jpg",
-        "linkedin": "https://linkedin.com/in/gustavo-santiago"
-    },
-    {
-        "id": 6,
-        "name": "Ignacio Ciampitti",
-        "position": "PhD. Purdue University Professor",
-        "role": "Advising Faculty",
-        "pfp_file_name": "ignacio-ciampitti3.jpg",
-        "linkedin": "https://linkedin.com/in/ignacio-ciampitti"
-    },
-    {
-        "id": 7,
-        "name": "Jeanine Arana",
-        "position": "?",
-        "role": "Logistics & Operations, Finance Team",
-        "pfp_file_name": "Jeanine Arana HLA.JPG",
-        "linkedin": "https://linkedin.com/in/jeanine-arana"
-    },
-    {
-        "id": 8,
-        "name": "Leslie Aviles",
-        "position": "?",
-        "role": "Session Team",
-        "pfp_file_name": "Leslie Aviles ENTM.jpeg",
-        "linkedin": "https://linkedin.com/in/leslie-aviles"
-    },
-    {
-        "id": 9,
-        "name": "Megan Low",
-        "position": "?",
-        "role": "Logistics & Operations Team",
-        "pfp_file_name": "Megan Low ABE.jpg",
-        "linkedin": "https://linkedin.com/in/megan-low"
-    },
-    {
-        "id": 10,
-        "name": "Mariela",
-        "position": "?",
-        "role": "Finance Team",
-        "pfp_file_name": "",
-        "linkedin": ""
-    },
-    {
-        "id": 11,
-        "name": "Pedro Cisdeli",
-        "position": "MSc. Student",
-        "role": "Marketing Team",
-        "pfp_file_name": "Pedro_Cisdeli_AGRON.jpg",
-        "linkedin": "https://linkedin.com/in/pedro-cisdeli"
-    },
-    {
-        "id": 12,
-        "name": "Thirawat Bureetes",
-        "position": "PhD ?",
-        "role": "Team Leader",
-        "pfp_file_name": "Thirawat Bureetes ABE.jpg",
-        "linkedin": "https://linkedin.com/in/thirawat-bureetes"
-    },
-    {
-        "id": 13,
-        "name": "Wily Sic",
-        "position": "?",
-        "role": "Logistics & Operations Team",
-        "pfp_file_name": "Wily_Sic_BTNY.jpg",
-        "linkedin": "https://linkedin.com/in/wily-sic"
-    }
+  {
+    "id": 1,
+    "name": "Ana Morales",
+    "position": "Ph.D.",
+    "role": "Session Team",
+    "pfp_file_name": "Ana Morales AGRY.jpg",
+    "linkedin": "https://www.linkedin.com/in/ana-morales-ona-324005a2/"
+  },
+  {
+    "id": 2,
+    "name": "Ankita Raturi",
+    "position": "Ph.D. - Purdue University Professor",
+    "role": "Advising Faculty",
+    "pfp_file_name": "Ankita_Raturi_1440x960.jpg",
+    "linkedin": "https://www.linkedin.com/in/sudokita/"
+  },
+  {
+    "id": 3,
+    "name": "Autumn Denny",
+    "position": "M.Eng. Student",
+    "role": "Marketing Team",
+    "pfp_file_name": "Autumn Denny ABE.png",
+    "linkedin": "https://www.linkedin.com/in/spiritual-machine/"
+  },
+  {
+    "id": 4,
+    "name": "Emmanuel Cooper",
+    "position": "Ph.D. Student",
+    "role": "Logistics & Operations Team",
+    "pfp_file_name": "Emmanuel_Cooper-BPP.jpg",
+    "linkedin": "https://www.linkedin.com/in/emmanuel-g-cooper-18a29789/"
+  },
+  {
+    "id": 5,
+    "name": "Gustavo Santiago",
+    "position": "Ph.D. Student",
+    "role": "Hackathon Team",
+    "pfp_file_name": "Gustavo N Santiago AGRON.jpg",
+    "linkedin": "https://www.linkedin.com/in/gustavo-nocera-santiago-00796616a/"
+  },
+  {
+    "id": 6,
+    "name": "Ignacio Ciampitti",
+    "position": "Ph.D. - Purdue University Professor",
+    "role": "Advising Faculty",
+    "pfp_file_name": "ignacio-ciampitti3.jpg",
+    "linkedin": "https://www.linkedin.com/in/ignaciociampitti/"
+  },
+  {
+    "id": 7,
+    "name": "Jeanine Arana",
+    "position": "Ph.D. Candidate",
+    "role": "Finance and Logistics & Operations Team",
+    "pfp_file_name": "Jeanine Arana HLA.JPG",
+    "linkedin": "https://www.linkedin.com/in/jeaninearana/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+  },
+  {
+    "id": 8,
+    "name": "Leonardo Bosche",
+    "position": "Ph.D. Student",
+    "role": "Logistics & Operations and Hackathon Team",
+    "pfp_file_name": "leonardo_bosche.jpg",
+    "linkedin": "https://www.linkedin.com/in/leonardo-bosche/"
+  },
+  {
+    "id": 9,
+    "name": "Leslie Aviles",
+    "position": "Ph.D. Candidate",
+    "role": "Finance and Session Team",
+    "pfp_file_name": "Leslie Aviles ENTM.jpeg",
+    "linkedin": "https://www.linkedin.com/in/leslieavi/"
+  },
+  {
+    "id": 10,
+    "name": "Natalia Volpato",
+    "position": "Ph.D. Student",
+    "role": "Marketing Team",
+    "pfp_file_name": "natalia_volpato.jpg",
+    "linkedin": "https://www.linkedin.com/in/natalia-volpato-3824a6150/"
+  },
+  {
+    "id": 11,
+    "name": "Megan Low",
+    "position": "Ph.D. Candidate",
+    "role": "Logistics & Operations Team",
+    "pfp_file_name": "Megan Low ABE.jpg",
+    "linkedin": "https://www.linkedin.com/in/megan-low-a45967138/"
+  },
+  {
+    "id": 12,
+    "name": "Mariela Fernandez",
+    "position": "Ph.D.",
+    "role": "Finance Team",
+    "pfp_file_name": "",
+    "linkedin": "https://www.linkedin.com/in/marielafernandez-campos/"
+  },
+  {
+    "id": 13,
+    "name": "Pedro Cisdeli",
+    "position": "M.Sc. Student",
+    "role": "Marketing Team",
+    "pfp_file_name": "Pedro_Cisdeli_AGRON.jpg",
+    "linkedin": "https://linkedin.com/in/pedro-cisdeli"
+  },
+  {
+    "id": 14,
+    "name": "Thirawat Bureetes",
+    "position": "Ph.D. Student",
+    "role": "Chair and Session Team",
+    "pfp_file_name": "Thirawat Bureetes ABE.jpg",
+    "linkedin": "https://www.linkedin.com/in/thirawat-bureetes-8a787176/"
+  },
+  {
+    "id": 15,
+    "name": "Wily Sic",
+    "position": "Ph.D. Student",
+    "role": "Logistics & Operations and Session Team",
+    "pfp_file_name": "Wily_Sic_BTNY.jpg",
+    "linkedin": "https://www.linkedin.com/in/wily-r-sic-hernandez/"
+  }
 ]
