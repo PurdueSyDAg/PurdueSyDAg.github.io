@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import speakersData from "@/data/speakers.json";
+// import speakersData from "@/data/speakers.json"; // TODO: Uncomment when speakers are ready
 
 export function Speakers() {
   return (
@@ -21,7 +21,7 @@ export function Speakers() {
             Speakers
           </h2>
           <p className="font-body text-lg text-white/80 max-w-2xl mx-auto">
-            We're assembling an incredible lineup of distinguished speakers who are leading the way in digital agriculture innovation
+            We&apos;re assembling an incredible lineup of distinguished speakers who are leading the way in digital agriculture innovation
           </p>
         </motion.div>
 
@@ -53,7 +53,7 @@ export function Speakers() {
             </h3>
             
             <p className="font-body text-white/80 mb-6 leading-relaxed">
-              We're excited to announce our speaker lineup soon. Stay tuned for updates on the incredible experts who will be joining us!
+              We&apos;re excited to announce our speaker lineup soon. Stay tuned for updates on the incredible experts who will be joining us!
             </p>
             
             <div className="inline-flex items-center px-4 py-2 bg-[#ddb945]/20 border border-[#ddb945]/30 text-[#ddb945] rounded-full text-sm font-medium">

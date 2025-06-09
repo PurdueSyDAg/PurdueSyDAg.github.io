@@ -218,7 +218,7 @@ export function Sponsors() {
                     viewport={{ once: true }}
                     className="lg:hidden grid gap-6 mb-16"
                 >
-                    {tiers.map((tier, tierIndex) => (
+                    {tiers.map((tier, _tierIndex) => (
                         <motion.div
                             key={tier.name}
                             variants={cardVariants}
