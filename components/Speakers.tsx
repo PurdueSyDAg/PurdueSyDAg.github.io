@@ -21,11 +21,50 @@ export function Speakers() {
             Speakers
           </h2>
           <p className="font-body text-lg text-white/80 max-w-2xl mx-auto">
-            Meet our distinguished speakers who are leading the way in digital
-            agriculture innovation
+            We're assembling an incredible lineup of distinguished speakers who are leading the way in digital agriculture innovation
           </p>
         </motion.div>
 
+        {/* Coming Soon Card */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="flex justify-center"
+        >
+          <motion.div
+            whileHover={{ y: -8, scale: 1.02 }}
+            className="bg-[#C56A33]/10 backdrop-blur-sm border border-[#C56A33]/20 rounded-2xl shadow-lg p-12 max-w-md text-center"
+          >
+            <motion.div
+              initial={{ scale: 0.8 }}
+              whileInView={{ scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="mb-6"
+            >
+              <div className="w-20 h-20 bg-gradient-to-r from-[#ddb945] to-[#f4e076] rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-3xl">🎤</span>
+              </div>
+            </motion.div>
+            
+            <h3 className="font-heading text-2xl font-bold text-white mb-4">
+              Coming Soon
+            </h3>
+            
+            <p className="font-body text-white/80 mb-6 leading-relaxed">
+              We're excited to announce our speaker lineup soon. Stay tuned for updates on the incredible experts who will be joining us!
+            </p>
+            
+            <div className="inline-flex items-center px-4 py-2 bg-[#ddb945]/20 border border-[#ddb945]/30 text-[#ddb945] rounded-full text-sm font-medium">
+              📅 Announcements coming soon
+            </div>
+          </motion.div>
+        </motion.div>
+
+        {/* 
+        TODO: Uncomment this section when speakers are ready to be displayed
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {speakersData.map((speaker, index) => (
             <motion.div
@@ -77,6 +116,7 @@ export function Speakers() {
             🎤 Stay tuned for updates
           </div>
         </motion.div>
+        */}
       </div>
     </section>
   );
