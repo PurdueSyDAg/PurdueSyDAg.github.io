@@ -6,6 +6,7 @@ import { About } from '@/components/About';
 import { Speakers } from '@/components/Speakers';
 import { Schedule } from '@/components/Schedule';
 import { Team } from '@/components/Team';
+import { Sponsors } from '@/components/Sponsors';
 import { Footer } from '@/components/Footer';
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
         <Speakers />
         <Schedule />
         <Team />
+        <Sponsors />
       </main>
       <Footer />
     </div>

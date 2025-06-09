@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Menu, X, Home, Send, Speech, CalendarCheck2, Users, Info } from 'lucide-react';
+import { Menu, X, Home, Send, Speech, CalendarCheck2, Users, Info, Handshake } from 'lucide-react';
 
 const navigationItems = [
     { name: 'Home', icon: Home, href: '#home' },
@@ -9,6 +9,7 @@ const navigationItems = [
     { name: 'Speakers', icon: Speech, href: '#speakers' },
     { name: 'Schedule', icon: CalendarCheck2, href: '#schedule' },
     { name: 'Team', icon: Users, href: '#team' },
+    { name: 'Sponsors', icon: Handshake, href: '#sponsors' },
 ];
 
 export function Header() {
