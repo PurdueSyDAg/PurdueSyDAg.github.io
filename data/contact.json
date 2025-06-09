@@ -1,20 +1,12 @@
 [
     {
-        "label": "Email",
-        "value": "symposium@sydag.org",
-        "href": "mailto:symposium@sydag.org",
-        "icon": "Mail"
-    },
-    {
-        "label": "Phone",
-        "value": "+1 (555) 123-4567",
-        "href": "tel:+15551234567",
-        "icon": "Phone"
-    },
-    {
         "label": "LinkedIn",
-        "value": "https://www.linkedin.com/",
-        "href": "#",
-        "icon": "Mail"
+        "href": "https://www.linkedin.com/company/sydag/",
+        "icon": "Linkedin"
+    },
+    {
+        "label": "Instagram", 
+        "href": "https://www.instagram.com/purduesydag/?igsh=NGh0NDA5OGVtenhs",
+        "icon": "Instagram"
     }
 ]

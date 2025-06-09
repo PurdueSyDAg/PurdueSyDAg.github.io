@@ -1,6 +1,6 @@
 'use client';
 
-import { Facebook, Twitter, Linkedin } from 'lucide-react';
+import { Instagram, Linkedin } from 'lucide-react';
 
 export function Footer() {
     const currentYear = new Date().getFullYear();
@@ -22,9 +22,16 @@ export function Footer() {
 
                     {/* Digital Ag. Club Column */}
                     <div className="text-center md:text-left">
-                        <h3 className="text-lg font-bold text-[#ddb945] mb-3">
-                            Digital Ag. Club (DAC)
-                        </h3>
+                        <a
+                            href="https://digitalagclub.org/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block"
+                        >
+                            <h3 className="text-lg font-bold text-[#f4e076] hover:text-[#ddb945] transition-colors duration-200 mb-3 underline decoration-2 underline-offset-2">
+                                Digital Ag. Club (DAC)
+                            </h3>
+                        </a>
                         <p className="text-white/70 text-sm">
                             Fostering innovation and collaboration in digital agricultural technologies
                         </p>
@@ -32,9 +39,16 @@ export function Footer() {
 
                     {/* IDAAS Column */}
                     <div className="text-center md:text-left">
-                        <h3 className="text-lg font-bold text-[#ddb945] mb-3">
-                            IDAAS
-                        </h3>
+                        <a
+                            href="https://ag.purdue.edu/idaas/index.html"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block"
+                        >
+                            <h3 className="text-lg font-bold text-[#f4e076] hover:text-[#ddb945] transition-colors duration-200 mb-3 underline decoration-2 underline-offset-2">
+                                IDAAS
+                            </h3>
+                        </a>
                         <p className="text-white/70 text-sm">
                             Institute of Digital and Advanced Agricultural Systems
                         </p>
@@ -54,25 +68,22 @@ export function Footer() {
 
                     <div className="flex items-center space-x-6">
                         <a
-                            href="#"
-                            className="text-white/60 hover:text-[#ddb945] transition-colors duration-200"
-                            aria-label="Twitter"
-                        >
-                            <Twitter className="w-5 h-5" />
-                        </a>
-                        <a
-                            href="#"
+                            href="https://www.linkedin.com/company/sydag/"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="text-white/60 hover:text-[#ddb945] transition-colors duration-200"
                             aria-label="LinkedIn"
                         >
                             <Linkedin className="w-5 h-5" />
                         </a>
                         <a
-                            href="#"
+                            href="https://www.instagram.com/purduesydag/?igsh=NGh0NDA5OGVtenhs"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="text-white/60 hover:text-[#ddb945] transition-colors duration-200"
-                            aria-label="Facebook"
+                            aria-label="Instagram"
                         >
-                            <Facebook className="w-5 h-5" />
+                            <Instagram className="w-5 h-5" />
                         </a>
                     </div>
                 </div>
