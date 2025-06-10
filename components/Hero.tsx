@@ -211,6 +211,29 @@ export function Hero() {
                 />
               ))}
             </motion.div>
+
+            {/* Partner Logos */}
+            <motion.div
+              className="flex justify-center items-center space-x-8 sm:space-x-12 mt-8 mb-4"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.7, ease: "easeOut" }}
+            >
+              <div className="flex items-center justify-center">
+                <img
+                  src="/coa.png"
+                  alt="COA Logo"
+                  className="h-12 sm:h-16 w-auto opacity-90 hover:opacity-100 transition-opacity duration-300"
+                />
+              </div>
+              <div className="flex items-center justify-center">
+                <img
+                  src="/IDAAS_Logo.png"
+                  alt="IDAAS Logo"
+                  className="h-12 sm:h-16 w-auto opacity-90 hover:opacity-100 transition-opacity duration-300"
+                />
+              </div>
+            </motion.div>
           </div>
 
           {/* Scroll Indicator */}
