@@ -22,7 +22,7 @@ const iconMap = {
 
 export function Team() {
     // Separate faculty from students
-    const students = teamData.filter(member => member.role !== 'Advising Faculty');
+    const students = teamData.filter(member => member.role !== 'Advising Faculty' && member.role !== 'Advising Staff');
     const faculty = teamData.filter(member => member.role === 'Advising Faculty' || member.role === 'Advising Staff');
 
     return (
@@ -132,7 +132,7 @@ export function Team() {
                     </div>
 
                     {/* Faculty and Staff Members */}
-                    <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
                         {faculty.map((member, index) => (
                             <motion.div
                                 key={member.id}
@@ -143,7 +143,7 @@ export function Team() {
                                 whileHover={{ y: -8, scale: 1.02 }}
                                 className="bg-white rounded-2xl shadow-lg overflow-hidden border-2 border-[#ddb945]/30"
                             >
-                                <div className="relative w-full h-80 bg-gradient-to-br from-[#ddb945]/30 to-[#C56A33]/20">
+                                <div className="relative w-full h-56 bg-gradient-to-br from-[#ddb945]/30 to-[#C56A33]/20">
                                     <img
                                         src={`/team/${member.pfp_file_name}`}
                                         alt={member.name}
@@ -154,11 +154,11 @@ export function Team() {
                                         }}
                                     />
                                 </div>
-                                <div className="p-8">
+                                <div className="p-6">
                                     <div className="text-center">
-                                        <h3 className="text-xl font-bold text-[#1F1510] mb-2">{member.name}</h3>
-                                        <p className="text-[#ddb945] font-semibold mb-3">{member.position}</p>
-                                        <p className="text-[#C56A33] font-medium mb-4">{member.role}</p>
+                                        <h3 className="text-lg font-bold text-[#1F1510] mb-2">{member.name}</h3>
+                                        <p className="text-[#ddb945] font-semibold mb-2">{member.position}</p>
+                                        <p className="text-[#C56A33] font-medium mb-3">{member.role}</p>
                                         {member.linkedin && (
                                             <motion.a
                                                 href={member.linkedin}
