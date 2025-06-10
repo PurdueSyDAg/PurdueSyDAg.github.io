@@ -108,12 +108,12 @@ export function Hero() {
               animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
               transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
             >
-              <p className="text-md sm:text-2xl font-light text-white uppercase tracking-[0.2em]">
+              <p className="text-lg sm:text-2xl font-light text-white uppercase tracking-[0.2em]">
                 2025 
               </p>
               <div className="inline-flex items-center space-x-2">
                 <span className="w-12 h-[2px] bg-white/30"></span>
-                <p className="text-sm sm:text-xl font-light text-white uppercase tracking-[0.2em]">
+                <p className="text-lg sm:text-xl font-light text-white uppercase tracking-[0.2em]">
                   First Annual
                 </p>
                 <span className="w-12 h-[2px] bg-white/30"></span>
@@ -210,6 +210,48 @@ export function Hero() {
                   }`}
                 />
               ))}
+            </motion.div>
+
+            {/* Partnership Text - Typography Focus */}
+            <motion.div
+              className="mt-4 mb-2"
+              initial={{ opacity: 0, y: 20, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.8, delay: 1.7, ease: "easeOut" }}
+            >
+              <div className="flex flex-col items-center space-y-2">
+                <motion.p
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 1.8, ease: "easeOut" }}
+                  className="text-sm text-[#ddb945] font-bold uppercase tracking-[0.3em]"
+                >
+                  Presented by
+                </motion.p>
+                
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 1.9, ease: "easeOut" }}
+                  className="text-center space-y-2"
+                >
+                  <p className="text-lg sm:text-xl text-white font-semibold tracking-wide drop-shadow-lg">
+                    Purdue University College of Agriculture
+                  </p>
+                  
+                  <div className="flex items-center justify-center space-x-3">
+                    <div className="w-6 h-[2px] bg-gradient-to-r from-transparent via-[#ddb945] to-transparent"></div>
+                    <p className="text-sm text-[#ddb945] font-semibold uppercase tracking-[0.25em]">
+                      In Partnership with
+                    </p>
+                    <div className="w-6 h-[2px] bg-gradient-to-r from-transparent via-[#ddb945] to-transparent"></div>
+                  </div>
+                  
+                  <p className="text-lg sm:text-xl text-white font-semibold tracking-wide drop-shadow-lg">
+                    Institute for Digital and Advanced Agricultural Systems (IDAAS)
+                  </p>
+                </motion.div>
+              </div>
             </motion.div>
           </div>
 
