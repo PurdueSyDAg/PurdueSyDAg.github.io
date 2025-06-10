@@ -122,7 +122,7 @@ export function Header() {
                   <button
                     key={item.name}
                     onClick={() => handleNavClick(item.href)}
-                    className={`group flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-200 hover:scale-105 nav-font-geist ${
+                    className={`group flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-200 hover:scale-105 nav-font-geist cursor-pointer ${
                       isActive
                         ? "text-[#ddb945] font-bold"
                         : "text-white/80 hover:text-white hover:font-semibold"
@@ -144,7 +144,7 @@ export function Header() {
             {/* Register Button */}
             <button
               onClick={handleRegisterClick}
-              className="hidden md:flex items-center space-x-1 px-4 py-1 bg-gradient-to-r from-[#ddb945] to-[#f4e076] text-[#1F1510] font-bold rounded-lg hover:scale-105 transition-all duration-200 shadow-lg"
+              className="hidden md:flex items-center space-x-1 px-4 py-1 bg-gradient-to-r from-[#ddb945] to-[#f4e076] text-[#1F1510] font-bold rounded-lg hover:scale-105 transition-all duration-200 shadow-lg cursor-pointer"
             >
               <Send className="w-4 h-4" />
               <span className="font-heading">Register</span>
@@ -154,7 +154,7 @@ export function Header() {
             <div className="md:hidden">
               <button
                 onClick={toggleMobileMenu}
-                className="p-2 rounded-lg text-white/80 hover:text-white transition-colors duration-200"
+                className="p-2 rounded-lg text-white/80 hover:text-white transition-colors duration-200 cursor-pointer"
                 aria-label="Toggle menu"
               >
                 {isMobileMenuOpen ? (
@@ -176,7 +176,7 @@ export function Header() {
                   <button
                     key={item.name}
                     onClick={() => handleNavClick(item.href)}
-                    className="flex items-center space-x-3 px-3 py-3 rounded-lg transition-all duration-200 text-white/80 font-heading"
+                    className="flex items-center space-x-3 px-3 py-3 rounded-lg transition-all duration-200 text-white/80 font-heading cursor-pointer"
                   >
                     <item.icon className="w-5 h-5" />
                     <span className="font-heading">{item.name}</span>
@@ -187,7 +187,7 @@ export function Header() {
               {/* Mobile Register Button */}
               <button
                 onClick={handleRegisterClick}
-                className="flex items-center space-x-3 px-3 py-3 mt-2 bg-gradient-to-r from-[#ddb945] to-[#f4e076] text-[#1F1510] font-bold rounded-lg transition-all duration-200"
+                className="flex items-center space-x-3 px-3 py-3 mt-2 bg-gradient-to-r from-[#ddb945] to-[#f4e076] text-[#1F1510] font-bold rounded-lg transition-all duration-200 cursor-pointer"
               >
                 <Send className="w-5 h-5" />
                 <span className="font-heading">Register</span>
