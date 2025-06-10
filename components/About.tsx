@@ -90,9 +90,9 @@ export function About() {
                     >
                         <div className="flex items-center mb-6">
                             <div className="w-12 h-12 bg-gradient-to-r from-[#ddb945] to-[#f4e076] rounded-xl flex items-center justify-center mr-4">
-                                <Lightbulb className="w-6 h-6 text-[#3A281C]" />
+                                <Lightbulb className="w-6 h-6 text-white" />
                             </div>
-                            <h3 className="text-2xl font-bold text-[#C56A33]">Vision</h3>
+                            <h3 className="text-2xl font-bold text-black">Vision</h3>
                         </div>
                         <p className="text-[#1E3A5F] leading-relaxed">
                             Build a future where digital agriculture is impactful, intuitive, and accessible,
@@ -111,7 +111,7 @@ export function About() {
                             <div className="w-12 h-12 bg-gradient-to-r from-[#C56A33] to-[#e07a47] rounded-xl flex items-center justify-center mr-4">
                                 <Target className="w-6 h-6 text-white" />
                             </div>
-                            <h3 className="text-2xl font-bold text-[#C56A33]">Mission</h3>
+                            <h3 className="text-2xl font-bold text-black">Mission</h3>
                         </div>
                         <p className="text-[#1E3A5F] leading-relaxed">
                             Create a hands-on, student-led symposium that makes digital agriculture approachable and easy
@@ -128,9 +128,9 @@ export function About() {
                     >
                         <div className="flex items-center mb-6">
                             <div className="w-12 h-12 bg-gradient-to-r from-[#3A281C] to-[#4a3426] rounded-xl flex items-center justify-center mr-4">
-                                <Users className="w-6 h-6 text-[#ddb945]" />
+                                <Users className="w-6 h-6 text-white" />
                             </div>
-                            <h3 className="text-2xl font-bold text-[#C56A33]">Target Audience</h3>
+                            <h3 className="text-2xl font-bold text-black">Target Audience</h3>
                         </div>
                         <p className="text-[#1E3A5F] leading-relaxed">
                             Our target audience includes students, researchers, educators, and industry professionals in
