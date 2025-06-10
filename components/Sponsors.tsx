@@ -275,6 +275,31 @@ export function Sponsors() {
                     </div>
                 </motion.div>
 
+                {/* Become a Sponsor CTA */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+                    viewport={{ once: true }}
+                    className="text-center mt-16"
+                >
+                    <h3 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+                        Ready to Sponsor?
+                    </h3>
+                    <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
+                        Join us in shaping the future of digital agriculture and connect with the next generation of innovators.
+                    </p>
+                    <motion.button
+                        onClick={() => window.open('https://purdue.ca1.qualtrics.com/jfe/form/SV_b7QHgJq74jjAPau?Q_CHL=qr', '_blank')}
+                        whileHover={{ y: -4, scale: 1.05 }}
+                        whileTap={{ scale: 0.98 }}
+                        className="group relative px-8 py-4 text-xl font-bold text-[#1F1510] bg-gradient-to-r from-[#ddb945] to-[#f4e076] rounded-2xl shadow-2xl overflow-hidden cursor-pointer"
+                    >
+                        <div className="absolute inset-0 bg-gradient-to-r from-[#f4e076] to-[#ddb945] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <span className="relative z-10">Become a Sponsor</span>
+                    </motion.button>
+                </motion.div>
+
                 {/* Bottom Decorative Element */}
                 <motion.div
                     initial={{ opacity: 0, scaleX: 0 }}
