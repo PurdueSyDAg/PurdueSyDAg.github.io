@@ -81,14 +81,6 @@
   },
   {
     "id": 11,
-    "name": "Megan Low",
-    "position": "Ph.D. Candidate",
-    "role": "Logistics & Operations Team",
-    "pfp_file_name": "Megan Low ABE.jpg",
-    "linkedin": "https://www.linkedin.com/in/megan-low-a45967138/"
-  },
-  {
-    "id": 12,
     "name": "Mariela Fernandez",
     "position": "Ph.D.",
     "role": "Finance Team",
@@ -96,7 +88,23 @@
     "linkedin": "https://www.linkedin.com/in/marielafernandez-campos/"
   },
   {
+    "id": 12,
+    "name": "Megan Low",
+    "position": "Ph.D. Candidate",
+    "role": "Logistics & Operations Team",
+    "pfp_file_name": "Megan Low ABE.jpg",
+    "linkedin": "https://www.linkedin.com/in/megan-low-a45967138/"
+  },
+  {
     "id": 13,
+    "name": "Melinda Smith",
+    "position": "Project Manager",
+    "role": "Advising Staff",
+    "pfp_file_name": "melinda_smith.jpg",
+    "linkedin": "https://www.linkedin.com/in/melinda-smith-1a6aa512b/"
+  },
+  {
+    "id": 14,
     "name": "Pedro Cisdeli",
     "position": "M.Sc. Student",
     "role": "Marketing Team",
@@ -104,7 +112,7 @@
     "linkedin": "https://linkedin.com/in/pedro-cisdeli"
   },
   {
-    "id": 14,
+    "id": 15,
     "name": "Thirawat Bureetes",
     "position": "Ph.D. Student",
     "role": "Chair and Session Team",
@@ -112,7 +120,7 @@
     "linkedin": "https://www.linkedin.com/in/thirawat-bureetes-8a787176/"
   },
   {
-    "id": 15,
+    "id": 16,
     "name": "Wily Sic",
     "position": "Ph.D. Student",
     "role": "Logistics & Operations and Session Team",

@@ -23,7 +23,7 @@ const iconMap = {
 export function Team() {
     // Separate faculty from students
     const students = teamData.filter(member => member.role !== 'Advising Faculty');
-    const faculty = teamData.filter(member => member.role === 'Advising Faculty');
+    const faculty = teamData.filter(member => member.role === 'Advising Faculty' || member.role === 'Advising Staff');
 
     return (
         <section
@@ -126,12 +126,12 @@ export function Team() {
                     <div className="flex items-center justify-center mb-12">
                         <div className="flex-1 h-px bg-gradient-to-r from-transparent via-[#C56A33]/30 to-transparent"></div>
                         <div className="px-6">
-                            <h3 className="text-2xl font-bold text-[#3A281C]">Faculty Advisors</h3>
+                            <h3 className="text-2xl font-bold text-[#3A281C]">Faculty and Staff Advisors</h3>
                         </div>
                         <div className="flex-1 h-px bg-gradient-to-r from-transparent via-[#C56A33]/30 to-transparent"></div>
                     </div>
 
-                    {/* Faculty Members */}
+                    {/* Faculty and Staff Members */}
                     <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                         {faculty.map((member, index) => (
                             <motion.div
