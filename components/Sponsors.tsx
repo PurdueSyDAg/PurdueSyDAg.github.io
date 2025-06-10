@@ -133,7 +133,7 @@ export function Sponsors() {
                     className="text-center mb-12"
                 >
                     <h3 className="text-xl sm:text-3xl font-black text-white mb-4">
-                        Industry Sponsorship Tiers
+                        Sponsorship Tiers
                     </h3>
                 </motion.div>
 
