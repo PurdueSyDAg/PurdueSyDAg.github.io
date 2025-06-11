@@ -38,7 +38,7 @@ export function Header() {
 
   const handleRegisterClick = () => {
     window.open(
-      "https://www.purdue.edu/bicc/tools/qualtrics/index.php",
+      "https://purdue.ca1.qualtrics.com/jfe/form/SV_9yuv1mTcomqpWey",
       "_blank",
     );
   };
