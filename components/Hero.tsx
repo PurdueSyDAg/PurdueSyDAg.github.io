@@ -18,7 +18,7 @@ export function Hero() {
 
   const handleRegisterClick = () => {
     window.open(
-      "https://www.purdue.edu/bicc/tools/qualtrics/index.php",
+      "https://purdue.ca1.qualtrics.com/jfe/form/SV_9yuv1mTcomqpWey",
       "_blank",
     );
   };
@@ -109,7 +109,7 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
             >
               <p className="text-md sm:text-2xl font-light text-white uppercase tracking-[0.2em]">
-                2025 
+                2025
               </p>
               <div className="inline-flex items-center space-x-2">
                 <span className="w-12 h-[2px] bg-white/30"></span>
