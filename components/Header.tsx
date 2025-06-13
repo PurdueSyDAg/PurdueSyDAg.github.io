@@ -93,7 +93,7 @@ export function Header() {
           {/* Logo and Title */}
           <div className="flex items-center space-x-2">
             <img
-              src="/temp_logo.png"
+              src="/logo.png"
               alt="SyDAg Logo"
               className="h-10 w-auto object-contain opacity-90"
               onError={(e) => {
