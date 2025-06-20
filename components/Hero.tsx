@@ -119,7 +119,7 @@ export function Hero() {
         </h3>
         
         <div className="grid grid-cols-4 gap-1 sm:gap-2">
-          {timeBlocks.map((block, index) => (
+          {timeBlocks.map((block, _index) => (
             <div key={block.label} className="flex flex-col items-center">
                              <div className="bg-gradient-to-br from-[#ddb945] to-[#f4e076] text-[#1F1510] w-7 h-7 sm:w-9 sm:h-9 rounded flex items-center justify-center shadow-md">
                  <span className="text-xs sm:text-sm font-black">
