@@ -9,8 +9,7 @@ export function Hero() {
   const images = ["/Arana-Weed-Science-Researcher.jpg", "/Arana-Garlic.jpg"];
 
   // Countdown Timer State
-  // const targetDate = new Date('2025-10-18T08:00:00').getTime();
-  const targetDate = new Date('2025-06-20T15:57:00').getTime();
+  const targetDate = new Date('2025-10-18T08:00:00').getTime();
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -182,17 +181,17 @@ export function Hero() {
           <div className="flex-1 flex flex-col justify-center space-y-1 pt-0">
             {/* Badge */}
             <motion.div
-              className="inline-block mx-auto"
+              className="inline-block mx-auto pt-10 sm:pt-0"
               initial={{ opacity: 0, scale: 0.8, filter: "blur(10px)" }}
               animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
               transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
             >
-              <p className="text-md sm:text-2xl font-light text-white uppercase tracking-[0.2em]">
+              <p className="text-lg sm:text-2xl font-light text-white uppercase tracking-[0.2em]">
                 2025
               </p>
               <div className="inline-flex items-center space-x-2">
                 <span className="w-12 h-[2px] bg-white/30"></span>
-                <p className="text-sm sm:text-xl font-light text-white uppercase tracking-[0.2em]">
+                <p className="text-base sm:text-xl font-light text-white uppercase tracking-[0.2em]">
                   First Annual
                 </p>
                 <span className="w-12 h-[2px] bg-white/30"></span>
@@ -202,7 +201,7 @@ export function Hero() {
             {/* Main Title Group */}
             <div className="space-y-1">
               <motion.h1
-                className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-white leading-tight tracking-tight px-4"
+                className="text-4xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-white leading-tight tracking-tight px-4"
                 initial={{
                   opacity: 0,
                   scale: 0.9,
@@ -238,7 +237,7 @@ export function Hero() {
               animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               transition={{ duration: 0.6, delay: 1.1, ease: "easeOut" }}
             >
-              <p className="text-xl sm:text-2xl lg:text-3xl text-white/95 font-light italic tracking-wide">
+              <p className="text-2xl sm:text-2xl lg:text-3xl text-white/95 font-light italic tracking-wide">
                 From Innovation to Impact
               </p>
             </motion.div>
