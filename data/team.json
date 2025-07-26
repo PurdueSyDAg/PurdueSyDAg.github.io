@@ -33,6 +33,14 @@
   },
   {
     "id": 5,
+    "name": "Erick Oliva",
+    "position": "MSc. Student",
+    "role": "Logistics & Operations Team",
+    "pfp_file_name": "none",
+    "linkedin": "https://www.linkedin.com/in/erick-oliva-1009642aa/"
+  },
+  {
+    "id": 6,
     "name": "Gustavo Santiago",
     "position": "Ph.D. Student",
     "role": "Hackathon Team",
@@ -40,7 +48,7 @@
     "linkedin": "https://www.linkedin.com/in/gustavo-nocera-santiago-00796616a/"
   },
   {
-    "id": 6,
+    "id": 7,
     "name": "Ignacio Ciampitti",
     "position": "Ph.D. - Purdue University Professor",
     "role": "Advising Faculty",
@@ -48,7 +56,7 @@
     "linkedin": "https://www.linkedin.com/in/ignaciociampitti/"
   },
   {
-    "id": 7,
+    "id": 8,
     "name": "Jeanine Arana",
     "position": "Ph.D. Candidate",
     "role": "Finance and Logistics & Operations Team",
@@ -56,7 +64,7 @@
     "linkedin": "https://www.linkedin.com/in/jeaninearana/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
   },
   {
-    "id": 8,
+    "id": 9,
     "name": "Leonardo Bosche",
     "position": "Ph.D. Student",
     "role": "Logistics & Operations and Hackathon Team",
@@ -64,7 +72,7 @@
     "linkedin": "https://www.linkedin.com/in/leonardo-bosche/"
   },
   {
-    "id": 9,
+    "id": 10,
     "name": "Leslie Aviles",
     "position": "Ph.D. Candidate",
     "role": "Finance and Session Team",
@@ -72,7 +80,7 @@
     "linkedin": "https://www.linkedin.com/in/leslieavi/"
   },
   {
-    "id": 10,
+    "id": 11,
     "name": "Natalia Volpato",
     "position": "Ph.D. Student",
     "role": "Marketing Team",
@@ -80,7 +88,7 @@
     "linkedin": "https://www.linkedin.com/in/natalia-volpato-3824a6150/"
   },
   {
-    "id": 11,
+    "id": 12,
     "name": "Mariela Fernandez",
     "position": "Ph.D.",
     "role": "Finance Team",
@@ -88,7 +96,7 @@
     "linkedin": "https://www.linkedin.com/in/marielafernandez-campos/"
   },
   {
-    "id": 12,
+    "id": 13,
     "name": "Megan Low",
     "position": "Ph.D. Candidate",
     "role": "Logistics & Operations Team",
@@ -96,7 +104,7 @@
     "linkedin": "https://www.linkedin.com/in/megan-low-a45967138/"
   },
   {
-    "id": 13,
+    "id": 14,
     "name": "Melinda Smith",
     "position": "Project Manager",
     "role": "Advising Staff",
@@ -104,7 +112,7 @@
     "linkedin": "https://www.linkedin.com/in/melinda-smith-1a6aa512b/"
   },
   {
-    "id": 14,
+    "id": 15,
     "name": "Pedro Cisdeli",
     "position": "M.Sc. Student",
     "role": "Marketing Team",
@@ -112,7 +120,7 @@
     "linkedin": "https://linkedin.com/in/pedro-cisdeli"
   },
   {
-    "id": 15,
+    "id": 16,
     "name": "Thirawat Bureetes",
     "position": "Ph.D. Student",
     "role": "Chair and Session Team",
@@ -120,7 +128,7 @@
     "linkedin": "https://www.linkedin.com/in/thirawat-bureetes-8a787176/"
   },
   {
-    "id": 16,
+    "id": 17,
     "name": "Wily Sic",
     "position": "Ph.D. Student",
     "role": "Logistics & Operations and Session Team",
