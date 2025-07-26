@@ -87,25 +87,16 @@ export function Header() {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 w-full bg-gradient-to-r from-[#1F1510] via-[#2A1B12] to-[#1F1510] backdrop-blur-md border-b border-[#C56A33]/20 transition-all duration-300">
+    <header className="fixed top-0 left-0 right-0 z-50 w-full bg-gradient-to-r from-[#000000] via-[#1a1a1a] to-[#000000] backdrop-blur-md border-b border-[#9E6F3E]/20 transition-all duration-300">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo and Title */}
           <div className="flex items-center space-x-2">
-            <img
-              src="/logo.png"
-              alt="SyDAg Logo"
-              className="h-10 w-auto object-contain opacity-90"
-              onError={(e) => {
-                // Fallback if logo doesn't exist
-                e.currentTarget.style.display = "none";
-              }}
-            />
             <div className="flex items-center space-x-2">
-              <h1 className="font-heading text-xl font-bold bg-gradient-to-r from-[#ddb945] to-[#f4e076] bg-clip-text text-transparent">
+              <h1 className="font-heading text-xl font-bold bg-gradient-to-r from-[#CFB991] to-[#DDB945] bg-clip-text text-transparent">
                 SyDAg
               </h1>
-              <div className="hidden sm:block w-px h-6 bg-[#C56A33]/30"></div>
+              <div className="hidden sm:block w-px h-6 bg-[#9E6F3E]/30"></div>
               <span className="hidden sm:block text-sm text-white/70 font-light">
                 A Purdue Student Led Symposium
               </span>
@@ -122,18 +113,16 @@ export function Header() {
                   <button
                     key={item.name}
                     onClick={() => handleNavClick(item.href)}
-                    className={`group flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-200 hover:scale-105 nav-font-geist cursor-pointer ${
-                      isActive
-                        ? "text-[#ddb945] font-bold"
+                    className={`group flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-200 hover:scale-105 nav-font-geist cursor-pointer ${isActive
+                        ? "text-[#CFB991] font-bold"
                         : "text-white/80 hover:text-white hover:font-semibold"
-                    }`}
+                      }`}
                   >
                     <item.icon
-                      className={`w-4 h-4 transition-colors duration-200 ${
-                        isActive
-                          ? "text-[#ddb945]"
-                          : "group-hover:text-[#ddb945]"
-                      }`}
+                      className={`w-4 h-4 transition-colors duration-200 ${isActive
+                          ? "text-[#CFB991]"
+                          : "group-hover:text-[#CFB991]"
+                        }`}
                     />
                     <span className="font-heading">{item.name}</span>
                   </button>
@@ -144,7 +133,7 @@ export function Header() {
             {/* Register Button */}
             <button
               onClick={handleRegisterClick}
-              className="hidden md:flex items-center space-x-1 px-4 py-1 bg-gradient-to-r from-[#ddb945] to-[#f4e076] text-[#1F1510] font-bold rounded-lg hover:scale-105 transition-all duration-200 shadow-lg cursor-pointer"
+              className="hidden md:flex items-center space-x-1 px-4 py-1 bg-gradient-to-r from-[#CFB991] to-[#DDB945] text-[#000000] font-bold rounded-lg hover:scale-105 transition-all duration-200 shadow-lg cursor-pointer"
             >
               <Send className="w-4 h-4" />
               <span className="font-heading">Register</span>

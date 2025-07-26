@@ -16,12 +16,30 @@
   --font-family-body: 'Lora', serif;
   --font-family-mono: 'Geist Mono', monospace;
 
-  /* Color scheme from Python app */
-  --color-primary: #2c3e50;
-  --color-secondary: #ff4f00;
-  --color-accent: #ddb945;
-  --color-text: #2D1F15;
+  /* Purdue Brand Colors */
+  --color-primary: #000000;
+  /* Purdue Black */
+  --color-secondary: #9E6F3E;
+  /* Aged */
+  --color-accent: #CFB991;
+  /* Boilermaker Gold */
+  --color-text: #000000;
+  /* Purdue Black */
   --color-app-background: #F9F9F9;
+
+  /* Additional Purdue Brand Colors */
+  --color-gold-field: #DDB945;
+  /* Field */
+  --color-gold-rush: #DAAA00;
+  /* Rush */
+  --color-gold-dust: #EBD99F;
+  /* Dust */
+  --color-steel: #555960;
+  /* Steel */
+  --color-cool-gray: #6F727B;
+  /* Cool Gray */
+  --color-railway-gray: #9D9795;
+  /* Railway Gray */
 }
 
 @media (prefers-color-scheme: dark) {

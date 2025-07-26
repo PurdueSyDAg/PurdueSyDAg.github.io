@@ -30,7 +30,7 @@ export function Register() {
     return (
         <section
             id="register"
-            className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#3A281C]/5 to-[#C56A33]/5 px-4 sm:px-6 lg:px-8 py-20"
+            className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#555960]/5 to-[#CFB991]/5 px-4 sm:px-6 lg:px-8 py-20"
         >
             <div className="max-w-2xl mx-auto w-full">
                 <motion.div
@@ -40,13 +40,13 @@ export function Register() {
                     viewport={{ once: true }}
                     className="text-center mb-12"
                 >
-                    <h2 className="text-4xl sm:text-5xl font-black text-[#C56A33] mb-4">
+                    <h2 className="text-4xl sm:text-5xl font-black text-[#555960] mb-4">
                         Register
                     </h2>
                     <p className="text-lg text-[#1E3A5F]/80">
                         Complete the form below to register for the symposium
                     </p>
-                    <div className="w-16 h-1 bg-gradient-to-r from-[#ddb945] to-[#C56A33] rounded-full mx-auto mt-4"></div>
+                    <div className="w-16 h-1 bg-gradient-to-r from-[#CFB991] to-[#DDB945] rounded-full mx-auto mt-4"></div>
                 </motion.div>
 
                 <motion.div
@@ -55,10 +55,10 @@ export function Register() {
                     transition={{ duration: 0.8, delay: 0.2 }}
                     viewport={{ once: true }}
                 >
-                    <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-6 sm:p-8 border border-[#C56A33]/10">
+                    <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-6 sm:p-8 border border-[#555960]/10">
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div>
-                                <label htmlFor="fullName" className="block text-sm font-semibold text-[#1E3A5F] mb-2">
+                                <label htmlFor="fullName" className="block text-sm font-semibold text-[#000000] mb-2">
                                     Full Name
                                 </label>
                                 <input
@@ -74,7 +74,7 @@ export function Register() {
                             </div>
 
                             <div>
-                                <label htmlFor="email" className="block text-sm font-semibold text-[#1E3A5F] mb-2">
+                                <label htmlFor="email" className="block text-sm font-semibold text-[#000000] mb-2">
                                     Email
                                 </label>
                                 <input
@@ -90,7 +90,7 @@ export function Register() {
                             </div>
 
                             <div>
-                                <label htmlFor="institution" className="block text-sm font-semibold text-[#1E3A5F] mb-2">
+                                <label htmlFor="institution" className="block text-sm font-semibold text-[#000000] mb-2">
                                     Institution/Organization
                                 </label>
                                 <input
@@ -115,7 +115,7 @@ export function Register() {
                                     value={formData.attendeeType}
                                     onChange={handleInputChange}
                                     required
-                                    className="w-full px-4 py-3 border-2 border-[#C56A33]/20 rounded-xl focus:ring-2 focus:ring-[#ddb945] focus:border-[#ddb945] bg-white text-[#1E3A5F]"
+                                    className="w-full px-4 py-3 border-2 border-[#555960]/20 rounded-xl focus:ring-2 focus:ring-[#CFB991] focus:border-[#CFB991] bg-white text-[#000000]"
                                 >
                                     <option value="">Select attendee type</option>
                                     <option value="Academic">Academic</option>
@@ -133,7 +133,7 @@ export function Register() {
                                     name="inPerson"
                                     checked={formData.inPerson}
                                     onChange={handleInputChange}
-                                    className="w-5 h-5 text-[#ddb945] bg-white border-2 border-[#C56A33]/20 rounded focus:ring-[#ddb945] accent-[#ddb945]"
+                                    className="w-5 h-5 text-[#CFB991] bg-white border-2 border-[#555960]/20 rounded focus:ring-[#CFB991] accent-[#CFB991]"
                                 />
                                 <label htmlFor="inPerson" className="ml-3 text-sm font-medium text-[#1E3A5F]">
                                     I will attend in person
@@ -144,7 +144,7 @@ export function Register() {
                                 type="submit"
                                 whileHover={{ scale: 1.02, y: -2 }}
                                 whileTap={{ scale: 0.98 }}
-                                className="w-full bg-gradient-to-r from-[#C56A33] to-[#e07a47] hover:from-[#e07a47] hover:to-[#C56A33] text-white font-bold py-4 px-6 rounded-xl shadow-lg focus:outline-none focus:ring-2 focus:ring-[#ddb945] focus:ring-offset-2"
+                                className="w-full bg-gradient-to-r from-[#CFB991] to-[#DDB945] hover:from-[#DDB945] hover:to-[#CFB991] text-[#000000] font-bold py-4 px-6 rounded-xl shadow-lg focus:outline-none focus:ring-2 focus:ring-[#555960] focus:ring-offset-2"
                             >
                                 Submit Registration
                             </motion.button>

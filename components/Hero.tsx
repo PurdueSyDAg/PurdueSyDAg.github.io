@@ -98,7 +98,7 @@ export function Hero() {
   const CountdownTimer = () => {
     if (isExpired) {
       return (
-        <div className="flex flex-col items-center justify-center p-2 sm:p-3 bg-gradient-to-br from-[#ddb945] to-[#f4e076] text-[#1F1510] rounded-lg shadow-lg mx-auto max-w-sm">
+        <div className="flex flex-col items-center justify-center p-2 sm:p-3 bg-gradient-to-br from-[#CFB991] to-[#DDB945] text-[#000000] rounded-lg shadow-lg mx-auto max-w-sm">
           <h2 className="font-heading text-base font-bold mb-1">🎉 Event Started!</h2>
           <p className="font-heading text-sm font-semibold">Join us now!</p>
         </div>
@@ -113,26 +113,26 @@ export function Hero() {
     ];
 
     return (
-      <div className="flex flex-col items-center justify-center p-2 sm:p-3 bg-gradient-to-br from-[#1F1510]/60 to-[#2A1B12]/60 backdrop-blur-sm border border-[#ddb945]/20 rounded-lg shadow-lg mx-auto max-w-sm">
-        <h3 className="font-heading text-sm font-bold text-[#ddb945] mb-1 uppercase tracking-wider">
+      <div className="flex flex-col items-center justify-center p-2 sm:p-3 bg-gradient-to-br from-[#000000]/60 to-[#1a1a1a]/60 backdrop-blur-sm border border-[#CFB991]/20 rounded-lg shadow-lg mx-auto max-w-sm">
+        <h3 className="font-heading text-sm font-bold text-[#CFB991] mb-1 uppercase tracking-wider">
           Event Countdown
         </h3>
-        
+
         <div className="grid grid-cols-4 gap-1 sm:gap-2">
           {timeBlocks.map((block, _index) => (
             <div key={block.label} className="flex flex-col items-center">
-                             <div className="bg-gradient-to-br from-[#ddb945] to-[#f4e076] text-[#1F1510] w-7 h-7 sm:w-9 sm:h-9 rounded flex items-center justify-center shadow-md">
-                 <span className="text-xs sm:text-sm font-black">
-                   {block.value.toString().padStart(2, '0')}
-                 </span>
-               </div>
-               <span className="font-heading text-[9px] sm:text-[10px] text-white/70 font-medium mt-0.5 uppercase tracking-wide">
-                 {block.label}
-               </span>
+              <div className="bg-gradient-to-br from-[#CFB991] to-[#DDB945] text-[#000000] w-7 h-7 sm:w-9 sm:h-9 rounded flex items-center justify-center shadow-md">
+                <span className="text-xs sm:text-sm font-black">
+                  {block.value.toString().padStart(2, '0')}
+                </span>
+              </div>
+              <span className="font-heading text-[9px] sm:text-[10px] text-white/70 font-medium mt-0.5 uppercase tracking-wide">
+                {block.label}
+              </span>
             </div>
           ))}
         </div>
-        
+
         <p className="font-heading text-xs text-white/60 mt-2 text-center font-light">
           October 18, 2025 • 8:00 AM
         </p>
@@ -172,7 +172,7 @@ export function Hero() {
       </AnimatePresence>
 
       {/* Modern Gradient Overlay */}
-      <div className="absolute inset-0 z-20 bg-gradient-to-br from-[#1F1510]/95 via-[#2A1B12]/90 to-[#C56A33]/85"></div>
+      <div className="absolute inset-0 z-20 bg-gradient-to-br from-[#000000]/95 via-[#1a1a1a]/90 to-[#555960]/85"></div>
 
       {/* Content */}
       <div className="relative z-30 w-full max-w-6xl mx-auto text-center px-4 sm:px-6 lg:px-8 py-8">
@@ -220,7 +220,7 @@ export function Hero() {
                   Symposium of
                 </motion.span>
                 <motion.span
-                  className="block bg-gradient-to-r from-[#ddb945] to-[#f4e076] bg-clip-text text-transparent"
+                  className="block bg-gradient-to-r from-[#CFB991] to-[#DDB945] bg-clip-text text-transparent"
                   initial={{ opacity: 0, x: 50 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.7, ease: "easeOut" }}
@@ -254,9 +254,9 @@ export function Hero() {
                 variants={buttonAnimation}
                 whileHover="hover"
                 whileTap="tap"
-                className="group relative px-8 py-4 text-lg font-bold text-[#1F1510] bg-gradient-to-r from-[#ddb945] to-[#f4e076] rounded-2xl shadow-2xl overflow-hidden"
+                className="group relative px-8 py-4 text-lg font-bold text-[#000000] bg-gradient-to-r from-[#CFB991] to-[#DDB945] rounded-2xl shadow-2xl overflow-hidden"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-[#f4e076] to-[#ddb945] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#DDB945] to-[#CFB991] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <span className="relative z-10">Register Now</span>
               </motion.button>
 
@@ -281,11 +281,10 @@ export function Hero() {
               {images.map((_, index) => (
                 <div
                   key={index}
-                  className={`w-2 h-2 rounded-full transition-all duration-500 ${
-                    index === currentImageIndex
-                      ? "bg-[#ddb945] w-8"
-                      : "bg-white/40"
-                  }`}
+                  className={`w-2 h-2 rounded-full transition-all duration-500 ${index === currentImageIndex
+                    ? "bg-[#ddb945] w-8"
+                    : "bg-white/40"
+                    }`}
                 />
               ))}
             </motion.div>

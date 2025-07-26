@@ -45,8 +45,8 @@ export function Sponsors() {
     const tiers: Tier[] = [
         {
             name: 'Steward',
-            color: 'from-[#ddb945] to-[#f4e076]',
-            borderColor: 'border-[#ddb945]',
+            color: 'from-[#CFB991] to-[#DDB945]',
+            borderColor: 'border-[#CFB991]',
             benefits: {
                 'Networking Session Access': true,
                 'Social Media Promotion': true,
@@ -57,9 +57,9 @@ export function Sponsors() {
             }
         },
         {
-            name: 'Cultivator', 
-            color: 'from-[#C56A33] to-[#e07a47]',
-            borderColor: 'border-[#C56A33]',
+            name: 'Cultivator',
+            color: 'from-[#555960] to-[#6F727B]',
+            borderColor: 'border-[#555960]',
             benefits: {
                 'Networking Session Access': true,
                 'Social Media Promotion': true,
@@ -71,8 +71,8 @@ export function Sponsors() {
         },
         {
             name: 'Pollinator',
-            color: 'from-[#3A281C] to-[#4a3426]',
-            borderColor: 'border-[#3A281C]',
+            color: 'from-[#555960] to-[#6F727B]',
+            borderColor: 'border-[#555960]',
             benefits: {
                 'Networking Session Access': true,
                 'Social Media Promotion': true,
@@ -86,7 +86,7 @@ export function Sponsors() {
 
     const benefits: BenefitKey[] = [
         'Networking Session Access',
-        'Social Media Promotion', 
+        'Social Media Promotion',
         'Website + Booklet Listing',
         'Premier Recognition',
         'Premium Exhibit/Table Space',
@@ -96,7 +96,7 @@ export function Sponsors() {
     return (
         <section
             id="sponsors"
-            className="min-h-screen bg-gradient-to-br from-[#1F1510] via-[#2A1B12] to-[#0F0B08] py-20"
+            className="min-h-screen bg-white py-20"
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
@@ -107,7 +107,7 @@ export function Sponsors() {
                     viewport={{ once: true, margin: "-10%" }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-5xl sm:text-6xl font-black text-white mb-8">
+                    <h2 className="text-5xl sm:text-6xl font-black text-[#000000] mb-8">
                         Sponsors
                     </h2>
                     <div className="max-w-4xl mx-auto space-y-6">
@@ -116,9 +116,9 @@ export function Sponsors() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
                             viewport={{ once: true }}
-                            className="text-xl text-white/80 leading-relaxed"
+                            className="text-xl text-[#000000]/80 leading-relaxed"
                         >
-                            Join us as a sponsor and help shape the future of digital agriculture while connecting with 
+                            Join us as a sponsor and help shape the future of digital agriculture while connecting with
                             students, researchers, and industry leaders.
                         </motion.p>
                     </div>
@@ -132,7 +132,7 @@ export function Sponsors() {
                     viewport={{ once: true }}
                     className="text-center mb-12"
                 >
-                    <h3 className="text-xl sm:text-3xl font-black text-white mb-4">
+                    <h3 className="text-xl sm:text-3xl font-black text-[#555960] mb-4">
                         Sponsorship Tiers
                     </h3>
                 </motion.div>
@@ -169,7 +169,7 @@ export function Sponsors() {
                     >
                         <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200">
                             {/* Table Header */}
-                            <div className="grid grid-cols-4 bg-gradient-to-r from-[#3A281C] to-[#4a3426]">
+                            <div className="grid grid-cols-4 bg-gradient-to-r from-[#555960] to-[#6F727B]">
                                 <div className="p-4 lg:p-5">
                                     <h4 className="text-lg lg:text-xl font-bold text-white">Benefit</h4>
                                 </div>
@@ -177,7 +177,7 @@ export function Sponsors() {
                                     <div key={tier.name} className="p-4 lg:p-5 text-center">
                                         <h4 className="text-sm lg:text-base font-bold text-white mb-1">{tier.name}</h4>
                                         {tier.name === 'Steward' && (
-                                            <span className="text-[#ddb945] text-sm">⭐</span>
+                                            <span className="text-[#CFB991] text-sm">⭐</span>
                                         )}
                                     </div>
                                 ))}
@@ -188,9 +188,8 @@ export function Sponsors() {
                                 <motion.div
                                     key={benefit}
                                     variants={cardVariants}
-                                    className={`grid grid-cols-4 border-b border-gray-100 ${
-                                        index % 2 === 0 ? 'bg-gray-50' : 'bg-white'
-                                    }`}
+                                    className={`grid grid-cols-4 border-b border-gray-100 ${index % 2 === 0 ? 'bg-gray-50' : 'bg-white'
+                                        }`}
                                 >
                                     <div className="p-4 lg:p-5">
                                         <span className="text-sm lg:text-base font-medium text-[#1E3A5F]">{benefit}</span>
@@ -232,13 +231,13 @@ export function Sponsors() {
                                     </span>
                                 </div>
                                 <div>
-                                    <h3 className="text-2xl font-bold text-[#C56A33]">{tier.name}</h3>
+                                    <h3 className="text-2xl font-bold text-[#555960]">{tier.name}</h3>
                                     {tier.name === 'Steward' && (
-                                        <span className="text-[#ddb945] text-sm">⭐</span>
+                                        <span className="text-[#DAAA00] text-sm">⭐</span>
                                     )}
                                 </div>
                             </div>
-                            
+
                             <div className="space-y-3">
                                 {benefits.map((benefit) => (
                                     <div key={benefit} className="flex items-center justify-between">
@@ -265,12 +264,12 @@ export function Sponsors() {
                     viewport={{ once: true }}
                     className="text-center"
                 >
-                    <h3 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+                    <h3 className="text-3xl sm:text-4xl font-bold text-[#555960] mb-6">
                         Additional Sponsorship Opportunities
                     </h3>
-                    <div className="bg-[#C56A33]/10 backdrop-blur-sm border border-[#C56A33]/20 rounded-2xl p-8 shadow-lg max-w-4xl mx-auto">
-                        <p className="text-xl text-white/80 leading-relaxed">
-                            <span className="font-bold text-[#ddb945]">Hackathon</span>, <span className="font-bold text-[#ddb945]">Travel awards</span>, <span className="font-bold text-[#ddb945]">Poster Competition Awards</span>, and <span className="font-bold text-[#ddb945]">Coffee Breaks</span>
+                    <div className="bg-[#F9F9F9] border border-[#555960]/20 rounded-2xl p-8 shadow-lg max-w-4xl mx-auto">
+                        <p className="text-xl text-[#000000]/80 leading-relaxed">
+                            <span className="font-bold text-[#DAAA00]">Hackathon</span>, <span className="font-bold text-[#DAAA00]">Travel awards</span>, <span className="font-bold text-[#DAAA00]">Poster Competition Awards</span>, and <span className="font-bold text-[#DAAA00]">Coffee Breaks</span>
                         </p>
                     </div>
                 </motion.div>
@@ -283,19 +282,19 @@ export function Sponsors() {
                     viewport={{ once: true }}
                     className="text-center mt-16"
                 >
-                    <h3 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+                    <h3 className="text-3xl sm:text-4xl font-bold text-[#555960] mb-6">
                         Ready to Sponsor?
                     </h3>
-                    <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
+                    <p className="text-lg text-[#000000]/80 mb-8 max-w-2xl mx-auto">
                         Join us in shaping the future of digital agriculture and connect with the next generation of innovators.
                     </p>
                     <motion.button
                         onClick={() => window.open('https://purdue.ca1.qualtrics.com/jfe/form/SV_b7QHgJq74jjAPau?Q_CHL=qr', '_blank')}
                         whileHover={{ y: -4, scale: 1.05 }}
                         whileTap={{ scale: 0.98 }}
-                        className="group relative px-8 py-4 text-xl font-bold text-[#1F1510] bg-gradient-to-r from-[#ddb945] to-[#f4e076] rounded-2xl shadow-2xl overflow-hidden cursor-pointer"
+                        className="group relative px-8 py-4 text-xl font-bold text-[#000000] bg-gradient-to-r from-[#CFB991] to-[#DDB945] rounded-2xl shadow-2xl overflow-hidden cursor-pointer"
                     >
-                        <div className="absolute inset-0 bg-gradient-to-r from-[#f4e076] to-[#ddb945] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div className="absolute inset-0 bg-gradient-to-r from-[#DDB945] to-[#CFB991] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         <span className="relative z-10">Become a Sponsor</span>
                     </motion.button>
                 </motion.div>
@@ -308,7 +307,7 @@ export function Sponsors() {
                     viewport={{ once: true }}
                     className="mt-16 flex justify-center"
                 >
-                    <div className="w-24 h-1 bg-gradient-to-r from-[#ddb945] via-[#C56A33] to-[#3A281C] rounded-full origin-left"></div>
+                    <div className="w-24 h-1 bg-gradient-to-r from-[#CFB991] via-[#DDB945] to-[#555960] rounded-full origin-left"></div>
                 </motion.div>
             </div>
         </section>

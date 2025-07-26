@@ -46,7 +46,7 @@ export function About() {
                     viewport={{ once: true, margin: "-10%" }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-5xl sm:text-6xl font-black text-[#3A281C] mb-8">
+                    <h2 className="text-5xl sm:text-6xl font-black text-[#000000] mb-8">
                         About
                     </h2>
                     <div className="max-w-4xl mx-auto space-y-6">
@@ -86,10 +86,10 @@ export function About() {
                     <motion.div
                         variants={cardVariants}
                         whileHover={{ y: -4, scale: 1.02 }}
-                        className="bg-white rounded-2xl p-8 shadow-lg border-l-4 border-[#ddb945]"
+                        className="bg-white rounded-2xl p-8 shadow-lg border-l-4 border-[#CFB991]"
                     >
                         <div className="flex items-center mb-6">
-                            <div className="w-12 h-12 bg-gradient-to-r from-[#ddb945] to-[#f4e076] rounded-xl flex items-center justify-center mr-4">
+                            <div className="w-12 h-12 bg-gradient-to-r from-[#CFB991] to-[#DDB945] rounded-xl flex items-center justify-center mr-4">
                                 <Lightbulb className="w-6 h-6 text-white" />
                             </div>
                             <h3 className="text-2xl font-bold text-black">Vision</h3>
@@ -105,10 +105,10 @@ export function About() {
                     <motion.div
                         variants={cardVariants}
                         whileHover={{ y: -4, scale: 1.02 }}
-                        className="bg-white rounded-2xl p-8 shadow-lg border-l-4 border-[#C56A33]"
+                        className="bg-white rounded-2xl p-8 shadow-lg border-l-4 border-[#DDB945]"
                     >
                         <div className="flex items-center mb-6">
-                            <div className="w-12 h-12 bg-gradient-to-r from-[#C56A33] to-[#e07a47] rounded-xl flex items-center justify-center mr-4">
+                            <div className="w-12 h-12 bg-gradient-to-r from-[#DDB945] to-[#DAAA00] rounded-xl flex items-center justify-center mr-4">
                                 <Target className="w-6 h-6 text-white" />
                             </div>
                             <h3 className="text-2xl font-bold text-black">Mission</h3>
@@ -124,10 +124,10 @@ export function About() {
                     <motion.div
                         variants={cardVariants}
                         whileHover={{ y: -4, scale: 1.02 }}
-                        className="bg-white rounded-2xl p-8 shadow-lg border-l-4 border-[#3A281C]"
+                        className="bg-white rounded-2xl p-8 shadow-lg border-l-4 border-[#555960]"
                     >
                         <div className="flex items-center mb-6">
-                            <div className="w-12 h-12 bg-gradient-to-r from-[#3A281C] to-[#4a3426] rounded-xl flex items-center justify-center mr-4">
+                            <div className="w-12 h-12 bg-gradient-to-r from-[#555960] to-[#6F727B] rounded-xl flex items-center justify-center mr-4">
                                 <Users className="w-6 h-6 text-white" />
                             </div>
                             <h3 className="text-2xl font-bold text-black">Target Audience</h3>
@@ -150,7 +150,7 @@ export function About() {
                     viewport={{ once: true }}
                     className="mt-16 flex justify-center"
                 >
-                    <div className="w-24 h-1 bg-gradient-to-r from-[#ddb945] via-[#C56A33] to-[#3A281C] rounded-full origin-left"></div>
+                    <div className="w-24 h-1 bg-gradient-to-r from-[#CFB991] via-[#DDB945] to-[#555960] rounded-full origin-left"></div>
                 </motion.div>
             </div>
         </section>

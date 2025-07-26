@@ -8,7 +8,7 @@ export function Schedule() {
     return (
         <section
             id="schedule"
-            className="min-h-screen bg-gradient-to-br from-[#f5f1e8] to-[#e8dcc6] px-4 sm:px-6 lg:px-8 py-20"
+            className="min-h-screen bg-white px-4 sm:px-6 lg:px-8 py-20"
         >
             <div className="max-w-7xl mx-auto">
                 <motion.div
@@ -18,10 +18,10 @@ export function Schedule() {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-5xl sm:text-6xl font-black text-[#1F1510] mb-4">
+                    <h2 className="text-5xl sm:text-6xl font-black text-[#000000] mb-4">
                         Event Schedule
                     </h2>
-                    <p className="text-lg text-[#1F1510]/70 max-w-2xl mx-auto">
+                    <p className="text-lg text-[#000000]/70 max-w-2xl mx-auto">
                         Three days of innovation, collaboration, and insights in digital agriculture
                     </p>
                 </motion.div>
@@ -34,7 +34,7 @@ export function Schedule() {
                     viewport={{ once: true }}
                     className="mb-16"
                 >
-                    <h3 className="text-2xl sm:text-3xl font-bold text-[#C56A33] mb-8 text-center">
+                    <h3 className="text-2xl sm:text-3xl font-bold text-[#555960] mb-8 text-center">
                         {scheduleData.hackathon.title}
                     </h3>
 
@@ -47,14 +47,14 @@ export function Schedule() {
                                 transition={{ duration: 0.8, delay: dayIndex * 0.2 }}
                                 viewport={{ once: true }}
                                 whileHover={{ scale: 1.02, y: -4 }}
-                                className="border-2 border-[#C56A33]/30 rounded-lg p-6 backdrop-blur-sm shadow-lg"
+                                className="border-2 border-[#555960]/20 rounded-lg p-6 bg-[#F9F9F9] shadow-lg"
                             >
                                 <div className="mb-6">
                                     <div className="flex items-center mb-2">
-                                        <Calendar className="w-5 h-5 text-[#C56A33] mr-2" />
-                                        <h4 className="text-xl font-semibold text-[#1F1510]">{day.date}</h4>
+                                        <Calendar className="w-5 h-5 text-[#555960] mr-2" />
+                                        <h4 className="text-xl font-semibold text-[#000000]">{day.date}</h4>
                                     </div>
-                                    <div className="flex items-center text-[#1F1510]/70">
+                                    <div className="flex items-center text-[#000000]/70">
                                         <MapPin className="w-4 h-4 mr-2" />
                                         <span className="text-sm">{day.location}</span>
                                     </div>
@@ -68,15 +68,15 @@ export function Schedule() {
                                             whileInView={{ opacity: 1, y: 0 }}
                                             transition={{ duration: 0.6, delay: sessionIndex * 0.1 }}
                                             viewport={{ once: true }}
-                                            className="border-l-4 border-[#C56A33]/40 pl-4 py-2 bg-[#1F1510]/5 rounded-r-md"
+                                            className="border-l-4 border-[#555960]/60 pl-4 py-2 bg-white rounded-r-md shadow-sm"
                                         >
                                             <div className="flex items-center mb-1">
-                                                <Clock className="w-4 h-4 text-[#C56A33] mr-2" />
-                                                <span className="text-[#C56A33] font-medium text-sm">
+                                                <Clock className="w-4 h-4 text-[#555960] mr-2" />
+                                                <span className="text-[#555960] font-medium text-sm">
                                                     {session.time}
                                                 </span>
                                             </div>
-                                            <h5 className="font-medium text-[#1F1510]">{session.title}</h5>
+                                            <h5 className="font-medium text-[#000000]">{session.title}</h5>
                                         </motion.div>
                                     ))}
                                 </div>
@@ -92,7 +92,7 @@ export function Schedule() {
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
                 >
-                    <h3 className="text-2xl sm:text-3xl font-bold text-[#C56A33] mb-8 text-center">
+                    <h3 className="text-2xl sm:text-3xl font-bold text-[#555960] mb-8 text-center">
                         {scheduleData.symposium.title}
                     </h3>
 
@@ -104,14 +104,14 @@ export function Schedule() {
                             transition={{ duration: 0.8, delay: dayIndex * 0.2 }}
                             viewport={{ once: true }}
                             whileHover={{ scale: 1.01, y: -4 }}
-                            className="border-2 border-[#C56A33]/30 rounded-lg p-6 backdrop-blur-sm shadow-lg"
+                            className="border-2 border-[#555960]/20 rounded-lg p-6 bg-[#F9F9F9] shadow-lg"
                         >
                             <div className="mb-6">
                                 <div className="flex items-center mb-2">
-                                    <Calendar className="w-5 h-5 text-[#C56A33] mr-2" />
-                                    <h4 className="text-xl font-semibold text-[#1F1510]">{day.date}</h4>
+                                    <Calendar className="w-5 h-5 text-[#555960] mr-2" />
+                                    <h4 className="text-xl font-semibold text-[#000000]">{day.date}</h4>
                                 </div>
-                                <div className="flex items-center text-[#1F1510]/70">
+                                <div className="flex items-center text-[#000000]/70">
                                     <MapPin className="w-4 h-4 mr-2" />
                                     <span className="text-sm">{day.location}</span>
                                 </div>
@@ -120,7 +120,7 @@ export function Schedule() {
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                                 {day.sessions.map((session, sessionIndex) => (
                                     <div key={sessionIndex} className="space-y-4">
-                                        <h5 className="text-lg font-semibold text-[#C56A33] border-b-2 border-[#C56A33]/30 pb-2 bg-[#C56A33]/10 px-3 py-2 rounded-t-md">
+                                        <h5 className="text-lg font-semibold text-[#555960] border-b-2 border-[#555960]/30 pb-2 bg-[#555960]/5 px-3 py-2 rounded-t-md">
                                             {session.sessionTitle}
                                         </h5>
 
@@ -132,21 +132,21 @@ export function Schedule() {
                                                 transition={{ duration: 0.6, delay: itemIndex * 0.1 }}
                                                 viewport={{ once: true }}
                                                 className={`${item.isSubItem
-                                                    ? 'ml-6 border-l-2 border-[#ddb945]/50 pl-4 bg-[#ddb945]/10'
-                                                    : 'border-l-4 border-[#C56A33]/40 pl-4 bg-[#1F1510]/5'
+                                                    ? 'ml-6 border-l-2 border-[#CFB991]/60 pl-4 bg-white shadow-sm'
+                                                    : 'border-l-4 border-[#555960]/60 pl-4 bg-white shadow-sm'
                                                     } py-2 rounded-r-md`}
                                             >
                                                 <div className="flex items-center mb-1">
-                                                    <Clock className="w-4 h-4 text-[#C56A33] mr-2" />
-                                                    <span className="text-[#C56A33] font-medium text-sm">
+                                                    <Clock className="w-4 h-4 text-[#555960] mr-2" />
+                                                    <span className="text-[#555960] font-medium text-sm">
                                                         {item.time}
                                                     </span>
                                                 </div>
-                                                <h6 className={`font-medium text-[#1F1510] ${item.isGroup ? 'text-lg' : ''}`}>
+                                                <h6 className={`font-medium text-[#000000] ${item.isGroup ? 'text-lg' : ''}`}>
                                                     {item.title}
                                                 </h6>
                                                 {item.description && (
-                                                    <p className="text-[#1F1510]/70 text-sm mt-1">
+                                                    <p className="text-[#000000]/70 text-sm mt-1">
                                                         {item.description}
                                                     </p>
                                                 )}

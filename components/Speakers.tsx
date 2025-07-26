@@ -7,7 +7,7 @@ export function Speakers() {
   return (
     <section
       id="speakers"
-      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#1F1510] via-[#2A1B12] to-[#0F0B08] px-4 sm:px-6 lg:px-8 py-20"
+      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#000000] via-[#1a1a1a] to-[#0a0a0a] px-4 sm:px-6 lg:px-8 py-20"
     >
       <div className="max-w-6xl mx-auto">
         <motion.div
@@ -35,7 +35,7 @@ export function Speakers() {
         >
           <motion.div
             whileHover={{ y: -8, scale: 1.02 }}
-            className="bg-[#C56A33]/10 backdrop-blur-sm border border-[#C56A33]/20 rounded-2xl shadow-lg p-12 max-w-md text-center"
+            className="bg-[#555960]/10 backdrop-blur-sm border border-[#6F727B]/20 rounded-2xl shadow-lg p-12 max-w-md text-center"
           >
             <motion.div
               initial={{ scale: 0.8 }}
@@ -43,20 +43,20 @@ export function Speakers() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="mb-6"
             >
-              <div className="w-20 h-20 bg-gradient-to-r from-[#ddb945] to-[#f4e076] rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-20 h-20 bg-gradient-to-r from-[#CFB991] to-[#DDB945] rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-3xl">🎤</span>
               </div>
             </motion.div>
-            
+
             <h3 className="font-heading text-2xl font-bold text-white mb-4">
               Coming Soon
             </h3>
-            
+
             <p className="font-body text-white/80 mb-6 leading-relaxed">
               We&apos;re excited to announce our speaker lineup soon. Stay tuned for updates on the incredible experts who will be joining us!
             </p>
-            
-            <div className="inline-flex items-center px-4 py-2 bg-[#ddb945]/20 border border-[#ddb945]/30 text-[#ddb945] rounded-full text-sm font-medium">
+
+            <div className="inline-flex items-center px-4 py-2 bg-[#6F727B]/20 border border-[#9D9795]/30 text-[#9D9795] rounded-full text-sm font-medium">
               📅 Announcements coming soon
             </div>
           </motion.div>
@@ -74,7 +74,7 @@ export function Speakers() {
               transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}
               whileHover={{ y: -8, scale: 1.02 }}
-              className="bg-[#C56A33]/10 backdrop-blur-sm border border-[#C56A33]/20 rounded-lg shadow-lg overflow-hidden"
+              className="bg-[#9E6F3E]/10 backdrop-blur-sm border border-[#9E6F3E]/20 rounded-lg shadow-lg overflow-hidden"
             >
               <div className="aspect-square overflow-hidden">
                 <motion.img
@@ -93,7 +93,7 @@ export function Speakers() {
                 <h3 className="font-heading text-xl font-semibold text-white mb-2">
                   {speaker.name}
                 </h3>
-                <p className="font-body text-[#ddb945] font-medium mb-3">
+                <p className="font-body text-[#CFB991] font-medium mb-3">
                   {speaker.title}
                 </p>
                 <p className="font-body text-white/70 text-sm">{speaker.bio}</p>
@@ -112,7 +112,7 @@ export function Speakers() {
           <p className="font-body text-white/70 mb-6">
             More speakers to be announced soon!
           </p>
-          <div className="inline-flex items-center px-4 py-2 bg-[#ddb945]/20 border border-[#ddb945]/30 text-[#ddb945] rounded-full text-sm font-medium">
+          <div className="inline-flex items-center px-4 py-2 bg-[#6F727B]/20 border border-[#9D9795]/30 text-[#9D9795] rounded-full text-sm font-medium">
             🎤 Stay tuned for updates
           </div>
         </motion.div>
