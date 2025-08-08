@@ -1,6 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
   Menu,
   X,
@@ -11,24 +13,34 @@ import {
   Users,
   Info,
   Handshake,
+  Trophy,
 } from "lucide-react";
 
-const navigationItems = [
-  { name: "Home", icon: Home, href: "#home" },
-  { name: "About", icon: Info, href: "#about" },
-  { name: "Speakers", icon: Speech, href: "#speakers" },
-  { name: "Schedule", icon: CalendarCheck2, href: "#schedule" },
-  { name: "Team", icon: Users, href: "#team" },
-  { name: "Sponsors", icon: Handshake, href: "#sponsors" },
+type NavItem = {
+  name: string;
+  icon: React.ComponentType<{ className?: string }>;
+  href: string;
+  type: "anchor" | "route";
+};
+
+const navigationItems: NavItem[] = [
+  { name: "Home", icon: Home, href: "#home", type: "anchor" },
+  { name: "About", icon: Info, href: "#about", type: "anchor" },
+  { name: "Speakers", icon: Speech, href: "#speakers", type: "anchor" },
+  { name: "Schedule", icon: CalendarCheck2, href: "#schedule", type: "anchor" },
+  { name: "Team", icon: Users, href: "#team", type: "anchor" },
+  { name: "Sponsors", icon: Handshake, href: "#sponsors", type: "anchor" },
+  { name: "Hackathon", icon: Trophy, href: "/hackathon", type: "route" },
 ];
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const pathname = usePathname();
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
-  const handleNavClick = (href: string) => {
+  const handleAnchorClick = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -45,7 +57,11 @@ export function Header() {
 
   // Intersection Observer to track active section
   useEffect(() => {
+    // Only attach observer on homepage route
+    if (pathname && pathname !== "/") return;
+
     const sectionElements = navigationItems
+      .filter((item) => item.type === "anchor")
       .map((item) => ({
         id: item.href.substring(1),
         element: document.querySelector(item.href),
@@ -84,7 +100,7 @@ export function Header() {
     });
 
     return () => observer.disconnect();
-  }, []);
+  }, [pathname]);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 w-full bg-gradient-to-r from-[#000000] via-[#1a1a1a] to-[#000000] backdrop-blur-md border-b border-[#9E6F3E]/20 transition-all duration-300">
@@ -104,28 +120,61 @@ export function Header() {
           </div>
 
           {/* Center Navigation and Right Register Button */}
-          <div className="flex items-center space-x-6">
+          <div className="flex items-center space-x-4">
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-1">
               {navigationItems.map((item) => {
-                const isActive = activeSection === item.href.substring(1);
-                return (
-                  <button
-                    key={item.name}
-                    onClick={() => handleNavClick(item.href)}
-                    className={`group flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-200 hover:scale-105 nav-font-geist cursor-pointer ${isActive
-                        ? "text-[#CFB991] font-bold"
-                        : "text-white/80 hover:text-white hover:font-semibold"
-                      }`}
-                  >
+                const isAnchor = item.type === "anchor";
+                const isActive = isAnchor
+                  ? pathname === "/" && activeSection === item.href.substring(1)
+                  : pathname?.startsWith(item.href);
+                const innerContent = (
+                  <>
                     <item.icon
                       className={`w-4 h-4 transition-colors duration-200 ${isActive
                           ? "text-[#CFB991]"
-                          : "group-hover:text-[#CFB991]"
-                        }`}
+                          : "group-hover:text-[#CFB991]"}
+                      `}
                     />
-                    <span className="font-heading">{item.name}</span>
-                  </button>
+                    <span className="font-heading text-sm">{item.name}</span>
+                  </>
+                );
+
+                return isAnchor ? (
+                  pathname === "/" ? (
+                    <button
+                      key={item.name}
+                      onClick={() => handleAnchorClick(item.href)}
+                      className={`group flex items-center space-x-1 px-3 py-2 rounded-lg transition-all duration-200 hover:scale-105 nav-font-geist cursor-pointer ${
+                        isActive
+                          ? "text-[#CFB991] font-bold"
+                          : "text-white/80 hover:text-white hover:font-semibold"
+                      }`}
+                    >
+                      {innerContent}
+                    </button>
+                  ) : (
+                    <Link
+                      key={item.name}
+                      href={`/${item.href}`}
+                      className={`group flex items-center space-x-1 px-3 py-2 rounded-lg transition-all duration-200 hover:scale-105 nav-font-geist text-white/80 hover:text-white hover:font-semibold`}
+                    >
+                      {innerContent}
+                    </Link>
+                  )
+                ) : (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className={`group flex items-center space-x-1 px-3 py-2 rounded-lg transition-all duration-200 hover:scale-105 nav-font-geist ${
+                      isActive
+                        ? "text-[#CFB991] font-bold"
+                        : "text-white/80 hover:text-white hover:font-semibold"
+                    }`}
+                  >
+                    {innerContent}
+                  </Link>
                 );
               })}
             </nav>
@@ -161,15 +210,38 @@ export function Header() {
           <div className="md:hidden border-t border-[#C56A33]/20 py-4">
             <nav className="flex flex-col space-y-1">
               {navigationItems.map((item) => {
-                return (
-                  <button
+                const isAnchor = item.type === "anchor";
+                return isAnchor ? (
+                  pathname === "/" ? (
+                    <button
+                      key={item.name}
+                      onClick={() => handleAnchorClick(item.href)}
+                      className="flex items-center space-x-3 px-3 py-3 rounded-lg transition-all duration-200 text-white/80 font-heading cursor-pointer"
+                    >
+                      <item.icon className="w-5 h-5" />
+                      <span className="font-heading">{item.name}</span>
+                    </button>
+                  ) : (
+                    <Link
+                      key={item.name}
+                      href={`/${item.href}`}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="flex items-center space-x-3 px-3 py-3 rounded-lg transition-all duration-200 text-white/80 font-heading"
+                    >
+                      <item.icon className="w-5 h-5" />
+                      <span className="font-heading">{item.name}</span>
+                    </Link>
+                  )
+                ) : (
+                  <Link
                     key={item.name}
-                    onClick={() => handleNavClick(item.href)}
-                    className="flex items-center space-x-3 px-3 py-3 rounded-lg transition-all duration-200 text-white/80 font-heading cursor-pointer"
+                    href={item.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="flex items-center space-x-3 px-3 py-3 rounded-lg transition-all duration-200 text-white/80 font-heading"
                   >
                     <item.icon className="w-5 h-5" />
                     <span className="font-heading">{item.name}</span>
-                  </button>
+                  </Link>
                 );
               })}
 
