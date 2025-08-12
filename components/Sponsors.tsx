@@ -256,6 +256,28 @@ export function Sponsors() {
                     ))}
                 </motion.div>
 
+                {/* Current Sponsors */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
+                    viewport={{ once: true }}
+                    className="text-center mb-16"
+                >
+                    <div className="flex justify-center">
+                        <div className="relative max-w-4xl w-full">
+                            <Image
+                                src="/sponsors/current_sponsors.jpeg"
+                                alt="Thank You to Our Current Sponsors"
+                                width={800}
+                                height={600}
+                                className="w-full h-auto rounded-2xl shadow-lg"
+                                priority
+                            />
+                        </div>
+                    </div>
+                </motion.div>
+
                 {/* Additional Opportunities */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
