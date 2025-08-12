@@ -4,19 +4,19 @@
   "description": "Symposium on Digital Agriculture - From Innovation to Real World Impact",
   "icons": [
     {
-      "src": "/favicon-32x32.png",
+      "src": "/purdue.webp",
       "sizes": "32x32",
-      "type": "image/png"
+      "type": "image/webp"
     },
     {
-      "src": "/apple-touch-icon.png",
+      "src": "/purdue.webp",
       "sizes": "180x180",
-      "type": "image/png"
+      "type": "image/webp"
     },
     {
-      "src": "/logo.png",
+      "src": "/purdue.webp",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/webp"
     }
   ],
   "theme_color": "#ffffff",
