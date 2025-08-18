@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import { Calendar, MapPin, Clock, Gift, Trophy, Users, Code, Target, CheckCircle, ArrowRight, Zap, Award, User } from 'lucide-react';
+import { Calendar, MapPin, Clock, Gift, Trophy, Users, Code, Target, CheckCircle, Zap, Award, User } from 'lucide-react';
 import scheduleData from '@/data/schedule.json';
 
 export function Hackathon() {
