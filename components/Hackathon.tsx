@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import { Calendar, MapPin, Clock, Gift, Trophy, Users, Code, Target, CheckCircle, ArrowRight, Zap, Award } from 'lucide-react';
+import { Calendar, MapPin, Clock, Gift, Trophy, Users, Code, Target, CheckCircle, ArrowRight, Zap, Award, User } from 'lucide-react';
 import scheduleData from '@/data/schedule.json';
 
 export function Hackathon() {
@@ -63,11 +63,25 @@ export function Hackathon() {
               </div>
             </div>
 
-            <div className="inline-flex flex-col items-center gap-2 px-8 py-4 bg-black border-2 border-[#DDB945] text-[#DDB945] font-bold text-lg rounded-2xl opacity-75 cursor-not-allowed pointer-events-none">
-              <div className="flex items-center gap-2">
-                <ArrowRight className="w-5 h-5" />
-                Registration Coming Soon
-              </div>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a 
+                href="https://purdue.ca1.qualtrics.com/jfe/form/SV_8rhziKf1QXUjJnU"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#CFB991] to-[#DDB945] text-black font-bold text-lg rounded-2xl hover:shadow-lg hover:scale-105 transition-all duration-300"
+              >
+                <Users className="w-5 h-5" />
+                Register as Team
+              </a>
+              <a 
+                href="https://purdue.ca1.qualtrics.com/jfe/form/SV_54R3TbpGP7lBQMe"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-black border-2 border-[#DDB945] text-[#DDB945] font-bold text-lg rounded-2xl hover:bg-[#DDB945] hover:text-black hover:scale-105 transition-all duration-300"
+              >
+                <User className="w-5 h-5" />
+                Register Solo
+              </a>
             </div>
 
             {/* What is this? - Now part of hero */}
@@ -378,8 +392,25 @@ export function Hackathon() {
               Don&apos;t miss your chance to be part of this exciting hackathon. Registration closes October 4th!
             </p>
             
-            <div className="inline-flex flex-col items-center gap-2 px-12 py-6 bg-black border-2 border-[#DDB945] text-[#DDB945] font-bold text-xl rounded-2xl opacity-75 cursor-not-allowed pointer-events-none">
-              Registration Coming Soon
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+              <a 
+                href="https://purdue.ca1.qualtrics.com/jfe/form/SV_8rhziKf1QXUjJnU"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 px-12 py-6 bg-gradient-to-r from-[#CFB991] to-[#DDB945] text-black font-bold text-xl rounded-2xl hover:shadow-xl hover:scale-105 transition-all duration-300"
+              >
+                <Users className="w-6 h-6" />
+                Register as Team
+              </a>
+              <a 
+                href="https://purdue.ca1.qualtrics.com/jfe/form/SV_54R3TbpGP7lBQMe"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 px-12 py-6 bg-black border-2 border-[#DDB945] text-[#DDB945] font-bold text-xl rounded-2xl hover:bg-[#DDB945] hover:text-black hover:scale-105 transition-all duration-300"
+              >
+                <User className="w-6 h-6" />
+                Register Solo
+              </a>
             </div>
           </motion.div>
         </div>
