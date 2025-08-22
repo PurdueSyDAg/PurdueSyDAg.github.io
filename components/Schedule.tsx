@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Clock, MapPin, Calendar } from 'lucide-react';
+import { Clock, MapPin, Calendar, Users, User } from 'lucide-react';
 import scheduleData from '@/data/schedule.json';
 
 export function Schedule() {
@@ -149,6 +149,36 @@ export function Schedule() {
                                                     <p className="text-[#000000]/70 text-sm mt-1">
                                                         {item.description}
                                                     </p>
+                                                )}
+                                                {item.moderator && (
+                                                    <div className="mt-2 p-2 bg-[#555960]/5">
+                                                        <div className="flex items-center mb-1">
+                                                            <User className="w-3 h-3 text-[#555960] mr-1" />
+                                                            <span className="text-xs font-medium text-[#555960]">
+                                                                Moderator:
+                                                            </span>
+                                                        </div>
+                                                        <p className="text-sm text-[#000000] font-medium ml-4">
+                                                            {item.moderator.name}
+                                                        </p>
+                                                    </div>
+                                                )}
+                                                {item.panelists && item.panelists.length > 0 && (
+                                                    <div className="mt-2 p-2 bg-[#CFB991]/5">
+                                                        <div className="flex items-center mb-1">
+                                                            <Users className="w-3 h-3 text-[#555960] mr-1" />
+                                                            <span className="text-xs font-medium text-[#555960]">
+                                                                Panelists:
+                                                            </span>
+                                                        </div>
+                                                        <div className="ml-4 space-y-1">
+                                                            {item.panelists.map((panelist, pIndex) => (
+                                                                <p key={pIndex} className="text-sm text-[#000000] font-medium">
+                                                                    {panelist.name}
+                                                                </p>
+                                                            ))}
+                                                        </div>
+                                                    </div>
                                                 )}
                                             </motion.div>
                                         ))}

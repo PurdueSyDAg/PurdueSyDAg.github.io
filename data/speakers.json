@@ -1,1 +1,110 @@
-[]
+[
+  {
+    "id": "ankita-raturi",
+    "name": "Ankita Raturi",
+    "title": "Assistant Professor of Agricultural Informatics",
+    "organization": "Purdue University",
+
+    "image": "/team/Ankita_Raturi_1440x960.jpg",
+    "role": "moderator"
+  },
+  {
+    "id": "claudia-nari",
+    "name": "Claudia Nari",
+    "title": "Chief Product Officer",
+    "organization": "Inari",
+
+    "image": "https://ui-avatars.com/api/?name=Claudia+Nari&size=400&background=9E6F3E&color=fff",
+    "role": "panelist"
+  },
+  {
+    "id": "lukas-koch",
+    "name": "Lukas Koch",
+    "title": "Chief Executive Officer",
+    "organization": "Kelly Hills Unmanned Systems",
+
+    "image": "https://ui-avatars.com/api/?name=Lukas+Koch&size=400&background=9E6F3E&color=fff",
+    "role": "panelist"
+  },
+  {
+    "id": "josh-bailey",
+    "name": "Josh Bailey",
+    "title": "Farm Technology Manager",
+    "organization": "KC Bailey Orchards Inc",
+
+    "image": "https://ui-avatars.com/api/?name=Josh+Bailey&size=400&background=9E6F3E&color=fff",
+    "role": "panelist"
+  },
+  {
+    "id": "kaitlin-gold",
+    "name": "Kaitlin Gold",
+    "title": "Assistant Professor of Grape Pathology",
+    "organization": "Cornell University",
+
+    "image": "https://ui-avatars.com/api/?name=Kaitlin+Gold&size=400&background=9E6F3E&color=fff",
+    "role": "panelist"
+  },
+  {
+    "id": "elizabeth-hawkins",
+    "name": "Elizabeth Hawkins",
+    "title": "Associate Professor and Extension Field Specialist",
+    "organization": "The Ohio State University",
+
+    "image": "https://ui-avatars.com/api/?name=Elizabeth+Hawkins&size=400&background=9E6F3E&color=fff",
+    "role": "speaker"
+  },
+  {
+    "id": "kaiyu-guan",
+    "name": "Kaiyu Guan",
+    "title": "Levenick Endowed Professor in Agroecosystem Sensing and Modeling",
+    "organization": "University of Illinois Urbana-Champaign",
+
+    "image": "https://ui-avatars.com/api/?name=Kaiyu+Guan&size=400&background=9E6F3E&color=fff",
+    "role": "speaker"
+  },
+  {
+    "id": "maia-donahue",
+    "name": "Maia Donahue",
+    "title": "Digital Farming Platform Lead",
+    "organization": "Corteva Agriscience",
+
+    "image": "https://ui-avatars.com/api/?name=Maia+Donahue&size=400&background=9E6F3E&color=fff",
+    "role": "speaker"
+  },
+  {
+    "id": "bruce-erickson",
+    "name": "Bruce Erickson",
+    "title": "Clinical Professor of Digital Agriculture",
+    "organization": "Purdue University",
+
+    "image": "https://ui-avatars.com/api/?name=Bruce+Erickson&size=400&background=9E6F3E&color=fff",
+    "role": "moderator"
+  },
+  {
+    "id": "isabella-chism",
+    "name": "Isabella Chism",
+    "title": "Women's Leadership Committee Chair",
+    "organization": "American Farm Bureau",
+
+    "image": "https://ui-avatars.com/api/?name=Isabella+Chism&size=400&background=9E6F3E&color=fff",
+    "role": "panelist"
+  },
+  {
+    "id": "ezra-kies",
+    "name": "Ezra Kies",
+    "title": "Precision Technology Global Product Manager - Large Tractors",
+    "organization": "CNH",
+
+    "image": "https://ui-avatars.com/api/?name=Ezra+Kies&size=400&background=9E6F3E&color=fff",
+    "role": "panelist"
+  },
+  {
+    "id": "adam-shanks",
+    "name": "Adam Shanks",
+    "title": "Digital Agriculture and Natural Resources Lead",
+    "organization": "Purdue Extension",
+
+    "image": "https://ui-avatars.com/api/?name=Adam+Shanks&size=400&background=9E6F3E&color=fff",
+    "role": "panelist"
+  }
+]

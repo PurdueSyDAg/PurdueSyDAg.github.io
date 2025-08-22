@@ -4,7 +4,7 @@
         "days": [
             {
                 "date": "Saturday, October 18th",
-                "location": "Purdue, ABE building [to confirm location]",
+                "location": "225 S University St, West Lafayette, IN 47907, Room ABE1164",
                 "sessions": [
                     {
                         "time": "08:00 am - 09:00 am",
@@ -30,7 +30,7 @@
             },
             {
                 "date": "Sunday, October 19th",
-                "location": "Purdue, ABE building [to confirm location]",
+                "location": "225 S University St, West Lafayette, IN 47907, Room ABE1164",
                 "sessions": [
                     {
                         "time": "08:00 am - 09:00 am",
@@ -77,7 +77,29 @@
                             {
                                 "time": "09:30 am - 10:30 am",
                                 "title": "Panel Discussion Session 1",
-                                "description": "Innovation and Impact Today: The Foundations for Tomorrow"
+                                "description": "Innovation and Impact of Digital Ag Today: The Foundations for Tomorrow",
+                                "moderator": {
+                                    "name": "Ankita Raturi",
+                                    "id": "ankita-raturi"
+                                },
+                                "panelists": [
+                                    {
+                                        "name": "Claudia Nari",
+                                        "id": "claudia-nari"
+                                    },
+                                    {
+                                        "name": "Lukas Koch",
+                                        "id": "lukas-koch"
+                                    },
+                                    {
+                                        "name": "Josh Bailey",
+                                        "id": "josh-bailey"
+                                    },
+                                    {
+                                        "name": "Kaitlin Gold",
+                                        "id": "kaitlin-gold"
+                                    }
+                                ]
                             },
                             {
                                 "time": "10:30 am - 11:00 am",
@@ -104,21 +126,24 @@
                             },
                             {
                                 "time": "01:00 pm",
-                                "title": "Talk 1",
+                                "title": "Elizabeth Hawkins",
                                 "description": "Real-World Challenges: Lessons from the Field",
-                                "isSubItem": true
+                                "isSubItem": true,
+                                "speakerId": "elizabeth-hawkins"
                             },
                             {
                                 "time": "01:30 pm",
-                                "title": "Talk 2",
+                                "title": "Kaiyu Guan",
                                 "description": "Innovations at the Frontier: New Discoveries Shaping the Future of Ag Tech",
-                                "isSubItem": true
+                                "isSubItem": true,
+                                "speakerId": "kaiyu-guan"
                             },
                             {
                                 "time": "02:00 pm",
-                                "title": "Talk 3",
+                                "title": "Maia Donahue",
                                 "description": "From Research to Reality: Transforming Innovation into Scalable Solutions",
-                                "isSubItem": true
+                                "isSubItem": true,
+                                "speakerId": "maia-donahue"
                             },
                             {
                                 "time": "02:30 pm - 03:15 pm",
@@ -127,7 +152,25 @@
                             {
                                 "time": "03:15 pm - 04:00 pm",
                                 "title": "Panel Discussion Session 2",
-                                "description": "Closing the Gap Between Innovation & Adoption"
+                                "description": "Closing the Gap between Innovation & Adoption",
+                                "moderator": {
+                                    "name": "Bruce Erickson",
+                                    "id": "bruce-erickson"
+                                },
+                                "panelists": [
+                                    {
+                                        "name": "Isabella Chism",
+                                        "id": "isabella-chism"
+                                    },
+                                    {
+                                        "name": "Ezra Kies",
+                                        "id": "ezra-kies"
+                                    },
+                                    {
+                                        "name": "Adam Shanks",
+                                        "id": "adam-shanks"
+                                    }
+                                ]
                             },
                             {
                                 "time": "04:00 pm - 04:30 pm",

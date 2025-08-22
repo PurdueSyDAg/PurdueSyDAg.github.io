@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-// import speakersData from "@/data/speakers.json"; // TODO: Uncomment when speakers are ready
+import speakersData from "@/data/speakers.json";
 
 export function Speakers() {
   return (
@@ -25,48 +25,20 @@ export function Speakers() {
           </p>
         </motion.div>
 
-        {/* Coming Soon Card */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="flex justify-center"
-        >
-          <motion.div
-            whileHover={{ y: -8, scale: 1.02 }}
-            className="bg-[#555960]/10 backdrop-blur-sm border border-[#6F727B]/20 rounded-2xl shadow-lg p-12 max-w-md text-center"
-          >
-            <motion.div
-              initial={{ scale: 0.8 }}
-              whileInView={{ scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="mb-6"
-            >
-              <div className="w-20 h-20 bg-gradient-to-r from-[#CFB991] to-[#DDB945] rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">🎤</span>
-              </div>
-            </motion.div>
-
-            <h3 className="font-heading text-2xl font-bold text-white mb-4">
-              Coming Soon
-            </h3>
-
-            <p className="font-body text-white/80 mb-6 leading-relaxed">
-              We&apos;re excited to announce our speaker lineup soon. Stay tuned for updates on the incredible experts who will be joining us!
-            </p>
-
-            <div className="inline-flex items-center px-4 py-2 bg-[#6F727B]/20 border border-[#9D9795]/30 text-[#9D9795] rounded-full text-sm font-medium">
-              📅 Announcements coming soon
-            </div>
-          </motion.div>
-        </motion.div>
-
-        {/* 
-        TODO: Uncomment this section when speakers are ready to be displayed
-        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {speakersData.map((speaker, index) => (
+          {speakersData
+            .sort((a, b) => {
+              // Define role priority order
+              const roleOrder: { [key: string]: number } = { 'keynote speaker': 1, speaker: 2, panelist: 3, moderator: 4 };
+              
+              // First sort by role
+              const roleComparison = (roleOrder[a.role] || 999) - (roleOrder[b.role] || 999);
+              if (roleComparison !== 0) return roleComparison;
+              
+              // Then sort alphabetically by name
+              return a.name.localeCompare(b.name);
+            })
+            .map((speaker, index) => (
             <motion.div
               key={speaker.name}
               initial={{ opacity: 0, y: 30 }}
@@ -84,39 +56,31 @@ export function Speakers() {
                   whileHover={{ scale: 1.05 }}
                   onError={(e) => {
                     // Fallback to placeholder if image fails to load
-                    e.currentTarget.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(speaker.name)}&size=400&background=C56A33&color=fff`;
+                    e.currentTarget.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(speaker.name)}&size=400&background=9E6F3E&color=fff`;
                   }}
                 />
               </div>
 
               <div className="p-6">
-                <h3 className="font-heading text-xl font-semibold text-white mb-2">
-                  {speaker.name}
-                </h3>
-                <p className="font-body text-[#CFB991] font-medium mb-3">
+                <div className="flex items-center justify-between mb-2">
+                  <h3 className="font-heading text-xl font-semibold text-white">
+                    {speaker.name}
+                  </h3>
+                  <span className="px-2 py-1 bg-[#CFB991]/20 border border-[#CFB991]/40 text-[#CFB991] rounded-full text-xs font-medium capitalize">
+                    {speaker.role}
+                  </span>
+                </div>
+                <p className="font-body text-[#CFB991] font-medium mb-1">
                   {speaker.title}
                 </p>
-                <p className="font-body text-white/70 text-sm">{speaker.bio}</p>
+                <p className="font-body text-[#DDB945] font-medium mb-3 text-sm">
+                  {speaker.organization}
+                </p>
+
               </div>
             </motion.div>
           ))}
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mt-12"
-        >
-          <p className="font-body text-white/70 mb-6">
-            More speakers to be announced soon!
-          </p>
-          <div className="inline-flex items-center px-4 py-2 bg-[#6F727B]/20 border border-[#9D9795]/30 text-[#9D9795] rounded-full text-sm font-medium">
-            🎤 Stay tuned for updates
-          </div>
-        </motion.div>
-        */}
       </div>
     </section>
   );

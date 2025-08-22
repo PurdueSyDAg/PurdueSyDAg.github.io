@@ -59,7 +59,7 @@ export function Hackathon() {
               </div>
               <div className="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-3 rounded-xl">
                 <MapPin className="w-5 h-5 text-[#DDB945]" />
-                <span className="font-medium">Purdue University</span>
+                <span className="font-medium">225 S University St, West Lafayette, IN 47907, Room ABE1164</span>
               </div>
             </div>
 
