@@ -4,6 +4,34 @@ import { motion } from 'framer-motion';
 import { Clock, MapPin, Calendar, Users, User } from 'lucide-react';
 import scheduleData from '@/data/schedule.json';
 
+// Function to handle speaker name clicks
+const handleSpeakerClick = (speakerId: string) => {
+    // Prevent default button behavior
+    event?.preventDefault();
+    
+    // Find the specific speaker card directly
+    const speakerCard = document.querySelector(`[data-speaker-id="${speakerId}"]`);
+    if (speakerCard) {
+        // Scroll directly to the speaker card
+        speakerCard.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'center',
+            inline: 'nearest'
+        });
+        
+        // Highlight the speaker after scrolling with appropriate delay for mobile
+        const highlightDelay = /Mobi|Android/i.test(navigator.userAgent) ? 800 : 400;
+        
+        setTimeout(() => {
+            // Add temporary highlight effect
+            speakerCard.classList.add('speaker-highlight');
+            setTimeout(() => {
+                speakerCard.classList.remove('speaker-highlight');
+            }, 3000); // Remove highlight after 3 seconds
+        }, highlightDelay);
+    }
+};
+
 export function Schedule() {
     return (
         <section
@@ -46,7 +74,7 @@ export function Schedule() {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.8, delay: dayIndex * 0.2 }}
                                 viewport={{ once: true }}
-                                whileHover={{ scale: 1.02, y: -4 }}
+
                                 className="border-2 border-[#555960]/20 rounded-lg p-6 bg-[#F9F9F9] shadow-lg"
                             >
                                 <div className="mb-6">
@@ -103,7 +131,7 @@ export function Schedule() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: dayIndex * 0.2 }}
                             viewport={{ once: true }}
-                            whileHover={{ scale: 1.01, y: -4 }}
+
                             className="border-2 border-[#555960]/20 rounded-lg p-6 bg-[#F9F9F9] shadow-lg"
                         >
                             <div className="mb-6">
@@ -143,7 +171,16 @@ export function Schedule() {
                                                     </span>
                                                 </div>
                                                 <h6 className={`font-medium text-[#000000] ${item.isGroup ? 'text-lg' : ''}`}>
-                                                    {item.title}
+                                                    {item.speakerId ? (
+                                                        <button
+                                                            onClick={() => handleSpeakerClick(item.speakerId)}
+                                                            className="text-[#000000] hover:text-[#555960] active:text-[#555960] underline decoration-[#CFB991] decoration-2 underline-offset-2 cursor-pointer transition-colors duration-200 touch-manipulation"
+                                                        >
+                                                            {item.title}
+                                                        </button>
+                                                    ) : (
+                                                        item.title
+                                                    )}
                                                 </h6>
                                                 {item.description && (
                                                     <p className="text-[#000000]/70 text-sm mt-1">
@@ -158,9 +195,12 @@ export function Schedule() {
                                                                 Moderator:
                                                             </span>
                                                         </div>
-                                                        <p className="text-sm text-[#000000] font-medium ml-4">
+                                                        <button
+                                                            onClick={() => handleSpeakerClick(item.moderator.id)}
+                                                            className="text-sm text-[#000000] hover:text-[#555960] active:text-[#555960] font-medium ml-4 underline decoration-[#CFB991] decoration-2 underline-offset-2 cursor-pointer transition-colors duration-200 touch-manipulation"
+                                                        >
                                                             {item.moderator.name}
-                                                        </p>
+                                                        </button>
                                                     </div>
                                                 )}
                                                 {item.panelists && item.panelists.length > 0 && (
@@ -173,9 +213,13 @@ export function Schedule() {
                                                         </div>
                                                         <div className="ml-4 space-y-1">
                                                             {item.panelists.map((panelist, pIndex) => (
-                                                                <p key={pIndex} className="text-sm text-[#000000] font-medium">
+                                                                <button
+                                                                    key={pIndex}
+                                                                    onClick={() => handleSpeakerClick(panelist.id)}
+                                                                    className="text-sm text-[#000000] hover:text-[#555960] active:text-[#555960] font-medium underline decoration-[#CFB991] decoration-2 underline-offset-2 cursor-pointer transition-colors duration-200 block touch-manipulation"
+                                                                >
                                                                     {panelist.name}
-                                                                </p>
+                                                                </button>
                                                             ))}
                                                         </div>
                                                     </div>
