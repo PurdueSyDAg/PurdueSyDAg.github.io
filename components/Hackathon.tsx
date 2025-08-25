@@ -155,8 +155,8 @@ export function Hackathon() {
               { date: "Aug 18", event: "Registration Opens" },
               { date: "Oct 4", event: "Registration Closes" },
               { date: "Oct 18", event: "Hackathon Begins" },
-              { date: "Oct 19", event: "Judging Day" },
-              { date: "Oct 20", event: "Winners Announced" }
+              { date: "Oct 19", event: "Preselection Round" },
+              { date: "Oct 20", event: "Final Pitch & Awards" }
             ].map((milestone, index) => (
               <motion.div
                 key={index}
@@ -171,6 +171,24 @@ export function Hackathon() {
               </motion.div>
             ))}
           </div>
+
+          {/* Competition Flow */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-gradient-to-r from-[#CFB991]/10 to-[#DDB945]/10 border border-[#CFB991]/30 rounded-2xl p-6 mb-12"
+          >
+            <div className="text-center">
+              <h3 className="text-2xl font-bold text-[#CFB991] mb-4">Competition Flow</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Teams work throughout the weekend to develop innovative agricultural technology solutions. 
+                On <span className="text-[#CFB991] font-semibold">Sunday afternoon</span>, all teams present their solutions to judges in a <span className="text-[#CFB991] font-semibold">preselection round</span>. 
+                Selected teams then advance to <span className="text-[#CFB991] font-semibold">Monday's final pitch competition</span> at the symposium, 
+                where they compete for prizes and are ranked by expert judges.
+              </p>
+            </div>
+          </motion.div>
 
           {/* Weekend Details */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -189,12 +207,15 @@ export function Hackathon() {
                 </div>
                 
                 <div className="space-y-3">
-                  {day.sessions.map((session: { time: string; title: string }, sessionIndex: number) => (
+                  {day.sessions.map((session: { time: string; title: string; description?: string }, sessionIndex: number) => (
                     <div key={sessionIndex} className="flex items-start gap-3 p-3 bg-gray-800/50 rounded-lg">
                       <Clock className="w-4 h-4 text-[#CFB991] mt-1 flex-shrink-0" />
                       <div>
                         <div className="text-sm text-[#CFB991] font-medium">{session.time}</div>
-                        <div className="text-white">{session.title}</div>
+                        <div className="text-white font-medium">{session.title}</div>
+                        {session.description && (
+                          <div className="text-gray-300 text-sm mt-1">{session.description}</div>
+                        )}
                       </div>
                     </div>
                   ))}
@@ -232,9 +253,9 @@ export function Hackathon() {
             className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12"
           >
             {[
-              { place: "1st Place", amount: "$300", gradient: "from-yellow-400 to-yellow-600" },
-              { place: "2nd Place", amount: "$150", gradient: "from-gray-300 to-gray-500" },
-              { place: "3rd Place", amount: "$50", gradient: "from-orange-400 to-orange-600" }
+              { place: "1st Place", amount: "$1000", gradient: "from-yellow-400 to-yellow-600" },
+              { place: "2nd Place", amount: "$500", gradient: "from-gray-300 to-gray-500" },
+              { place: "3rd Place", amount: "$300", gradient: "from-orange-400 to-orange-600" }
             ].map((prize, index) => (
               <motion.div
                 key={index}
