@@ -184,7 +184,7 @@ export function Hackathon() {
               <p className="text-gray-300 leading-relaxed">
                 Teams work throughout the weekend to develop innovative agricultural technology solutions. 
                 On <span className="text-[#CFB991] font-semibold">Sunday afternoon</span>, all teams present their solutions to judges in a <span className="text-[#CFB991] font-semibold">preselection round</span>. 
-                Selected teams then advance to <span className="text-[#CFB991] font-semibold">Monday's final pitch competition</span> at the symposium, 
+                Selected teams then advance to <span className="text-[#CFB991] font-semibold">Monday&apos;s final pitch competition</span> at the symposium, 
                 where they compete for prizes and are ranked by expert judges.
               </p>
             </div>
