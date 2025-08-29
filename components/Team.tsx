@@ -56,13 +56,8 @@ export function Team() {
                     viewport={{ once: true }}
                 >
                     {students.map((member, index) => (
-                        <motion.div
+                        <div
                             key={member.id}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: index * 0.1 }}
-                            viewport={{ once: true }}
-                            whileHover={{ y: -8, scale: 1.02 }}
                             className="bg-white rounded-2xl shadow-lg overflow-hidden border border-[#555960]/20"
                         >
                             <div className="relative w-full h-64 bg-gradient-to-br from-[#CFB991]/20 to-[#555960]/20">
@@ -110,7 +105,7 @@ export function Team() {
                                     </div>
                                 </div>
                             </div>
-                        </motion.div>
+                        </div>
                     ))}
                 </motion.div>
 
@@ -134,13 +129,8 @@ export function Team() {
                     {/* Faculty and Staff Members */}
                     <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
                         {faculty.map((member, index) => (
-                            <motion.div
+                            <div
                                 key={member.id}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.6, delay: index * 0.2 }}
-                                viewport={{ once: true }}
-                                whileHover={{ y: -8, scale: 1.02 }}
                                 className="bg-white rounded-2xl shadow-lg overflow-hidden border-2 border-[#CFB991]/30"
                             >
                                 <div className="relative w-full h-56 bg-gradient-to-br from-[#CFB991]/30 to-[#DDB945]/20">
@@ -179,7 +169,7 @@ export function Team() {
                                         )}
                                     </div>
                                 </div>
-                            </motion.div>
+                            </div>
                         ))}
                     </div>
                 </motion.div>

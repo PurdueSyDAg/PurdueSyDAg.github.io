@@ -64,22 +64,16 @@ export function Speakers() {
               return a.name.localeCompare(b.name);
             })
             .map((speaker, index) => (
-            <motion.div
+            <div
               key={speaker.name}
               data-speaker-id={speaker.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              viewport={{ once: true }}
-
               className="bg-[#9E6F3E]/10 backdrop-blur-sm border border-[#9E6F3E]/20 rounded-lg shadow-lg overflow-hidden transition-all duration-300"
             >
               <div className="aspect-square overflow-hidden">
-                <motion.img
+                <img
                   src={speaker.image}
                   alt={speaker.name}
                   className="w-full h-full object-cover"
-
                   onError={(e) => {
                     // Fallback to placeholder if image fails to load
                     e.currentTarget.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(speaker.name)}&size=400&background=9E6F3E&color=fff`;
@@ -104,7 +98,7 @@ export function Speakers() {
                 </p>
 
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
