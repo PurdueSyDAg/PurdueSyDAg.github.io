@@ -9,7 +9,7 @@ export function Footer() {
         <footer className="bg-gradient-to-r from-[#000000] via-[#1a1a1a] to-[#000000] border-t border-[#555960]/20 py-12">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Main footer content */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
                     {/* SyDAg Column */}
                     <div className="text-center md:text-left">
                         <h3 className="text-lg font-bold text-[#CFB991] mb-3">
@@ -54,6 +54,26 @@ export function Footer() {
                         </p>
                         <p className="text-white/60 text-xs mt-2">
                             Advancing agriculture through digital innovation
+                        </p>
+                    </div>
+
+                    {/* RCAC Column */}
+                    <div className="text-center md:text-left">
+                        <a
+                            href="https://www.rcac.purdue.edu/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block"
+                        >
+                            <h3 className="text-lg font-bold text-[#DDB945] hover:text-[#CFB991] transition-colors duration-200 mb-3 underline decoration-2 underline-offset-2">
+                                RCAC
+                            </h3>
+                        </a>
+                        <p className="text-white/70 text-sm">
+                            Rosen Center for Advanced Computing
+                        </p>
+                        <p className="text-white/60 text-xs mt-2">
+                            Computational resources for researchers
                         </p>
                     </div>
                 </div>

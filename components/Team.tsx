@@ -55,7 +55,7 @@ export function Team() {
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
                 >
-                    {students.map((member, index) => (
+                    {students.map((member) => (
                         <div
                             key={member.id}
                             className="bg-white rounded-2xl shadow-lg overflow-hidden border border-[#555960]/20"
@@ -128,7 +128,7 @@ export function Team() {
 
                     {/* Faculty and Staff Members */}
                     <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-                        {faculty.map((member, index) => (
+                        {faculty.map((member) => (
                             <div
                                 key={member.id}
                                 className="bg-white rounded-2xl shadow-lg overflow-hidden border-2 border-[#CFB991]/30"

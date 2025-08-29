@@ -63,7 +63,7 @@ export function Speakers() {
               // Then sort alphabetically by name
               return a.name.localeCompare(b.name);
             })
-            .map((speaker, index) => (
+            .map((speaker) => (
             <div
               key={speaker.name}
               data-speaker-id={speaker.id}
