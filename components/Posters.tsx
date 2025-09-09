@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FileText, Upload, Video, Calendar, Award, ExternalLink } from 'lucide-react';
+import { FileText, Upload, Video, Calendar, Award, ExternalLink, Trophy } from 'lucide-react';
 
 export function Posters() {
     const containerVariants = {
@@ -18,12 +18,10 @@ export function Posters() {
     const cardVariants = {
         hidden: {
             opacity: 0,
-            y: 30,
             scale: 0.95
         },
         visible: {
             opacity: 1,
-            y: 0,
             scale: 1,
             transition: {
                 duration: 0.5,
@@ -47,8 +45,8 @@ export function Posters() {
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
                     className="text-center mb-16"
@@ -92,7 +90,6 @@ export function Posters() {
                     {/* In-Person Posters */}
                     <motion.div
                         variants={cardVariants}
-                        whileHover={{ y: -4, scale: 1.02 }}
                         className="bg-white rounded-2xl p-8 shadow-lg border-l-4 border-[#CFB991]"
                     >
                         <div className="flex items-center mb-6">
@@ -142,7 +139,6 @@ export function Posters() {
                     {/* Online Posters */}
                     <motion.div
                         variants={cardVariants}
-                        whileHover={{ y: -4, scale: 1.02 }}
                         className="bg-white rounded-2xl p-8 shadow-lg border-l-4 border-[#DDB945]"
                     >
                         <div className="flex items-center mb-6">
@@ -208,7 +204,6 @@ export function Posters() {
                     {/* Deadline */}
                     <motion.div
                         variants={cardVariants}
-                        whileHover={{ y: -4, scale: 1.02 }}
                         className="bg-white rounded-2xl p-8 shadow-lg border-l-4 border-[#555960]"
                     >
                         <div className="flex items-center mb-6">
@@ -226,7 +221,6 @@ export function Posters() {
                     {/* Competition */}
                     <motion.div
                         variants={cardVariants}
-                        whileHover={{ y: -4, scale: 1.02 }}
                         className="bg-white rounded-2xl p-8 shadow-lg border-l-4 border-[#DAAA00]"
                     >
                         <div className="flex items-center mb-6">
@@ -239,6 +233,86 @@ export function Posters() {
                             You may register and present more than one poster, but you can only 
                             <span className="font-bold text-[#DAAA00]"> participate in the poster competition with one</span>.
                         </p>
+                    </motion.div>
+                </motion.div>
+
+                {/* Poster Competition Prizes */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    viewport={{ once: true }}
+                    className="mb-16"
+                >
+                    <div className="text-center mb-12">
+                        <motion.h3
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6 }}
+                            viewport={{ once: true }}
+                            className="text-4xl font-black text-white mb-4 flex items-center justify-center gap-3"
+                        >
+                            <Trophy className="w-8 h-8 text-[#DDB945]" />
+                            Competition Prizes
+                        </motion.h3>
+                        <motion.p
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 0.1 }}
+                            viewport={{ once: true }}
+                            className="text-lg text-white/80 max-w-2xl mx-auto"
+                        >
+                            Compete for cash prizes with your innovative poster presentation
+                        </motion.p>
+                    </div>
+
+                    {/* Prize Cards */}
+                    <motion.div
+                        variants={containerVariants}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"
+                    >
+                        {[
+                            { place: "1st Place", amount: "$300", gradient: "from-yellow-400 to-yellow-600", rank: "🥇" },
+                            { place: "2nd Place", amount: "$150", gradient: "from-gray-300 to-gray-500", rank: "🥈" },
+                            { place: "3rd Place", amount: "$50", gradient: "from-orange-400 to-orange-600", rank: "🥉" }
+                        ].map((prize, index) => (
+                            <motion.div
+                                key={index}
+                                variants={cardVariants}
+                                className="relative bg-white p-8 rounded-2xl border-2 border-[#CFB991]/30 text-center group shadow-xl"
+                            >
+                                <div className="relative">
+                                    <div className={`w-16 h-16 bg-gradient-to-r ${prize.gradient} rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg`}>
+                                        <Trophy className="w-8 h-8 text-white" />
+                                    </div>
+                                    <div className="text-4xl mb-3">{prize.rank}</div>
+                                    <h3 className="text-2xl font-bold text-[#000000] mb-3">{prize.place}</h3>
+                                    <p className="text-4xl font-black text-[#DDB945]">{prize.amount}</p>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </motion.div>
+
+                    {/* Competition Info */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.4 }}
+                        viewport={{ once: true }}
+                        className="mt-8 bg-gradient-to-r from-[#CFB991]/20 via-[#DDB945]/15 to-[#DAAA00]/20 rounded-xl p-6 border border-[#CFB991]/30 max-w-3xl mx-auto"
+                    >
+                        <div className="text-center">
+                            <h4 className="text-xl font-bold text-white mb-3">Competition Details</h4>
+                            <p className="text-white/90 leading-relaxed">
+                                Posters will be judged on <span className="font-semibold text-[#DDB945]">innovation</span>, 
+                                <span className="font-semibold text-[#DDB945]"> impact</span>, and 
+                                <span className="font-semibold text-[#DDB945]"> presentation quality</span>. 
+                                Remember: you can present multiple posters but only compete with one!
+                            </p>
+                        </div>
                     </motion.div>
                 </motion.div>
 
@@ -360,11 +434,9 @@ export function Posters() {
                     </p>
                     <motion.button
                         onClick={handleSubmissionClick}
-                        whileHover={{ y: -4, scale: 1.05 }}
                         whileTap={{ scale: 0.98 }}
                         className="group relative px-8 py-4 text-xl font-bold text-[#000000] bg-gradient-to-r from-[#CFB991] to-[#DDB945] rounded-2xl shadow-2xl overflow-hidden cursor-pointer"
                     >
-                        <div className="absolute inset-0 bg-gradient-to-r from-[#DDB945] to-[#CFB991] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         <span className="relative z-10 flex items-center space-x-2">
                             <span>Submit to Purdue e-Pubs</span>
                             <ExternalLink className="w-5 h-5" />
