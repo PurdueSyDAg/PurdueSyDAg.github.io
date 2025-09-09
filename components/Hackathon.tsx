@@ -65,24 +65,14 @@ export function Hackathon() {
             </div>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a 
-                href="https://purdue.ca1.qualtrics.com/jfe/form/SV_8rhziKf1QXUjJnU"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#CFB991] to-[#DDB945] text-black font-bold text-lg rounded-2xl hover:shadow-lg hover:scale-105 transition-all duration-300"
-              >
+              <div className="inline-flex items-center gap-2 px-8 py-4 bg-gray-600 text-gray-300 font-bold text-lg rounded-2xl cursor-not-allowed opacity-75">
                 <Users className="w-5 h-5" />
-                Register as Team
-              </a>
-              <a 
-                href="https://purdue.ca1.qualtrics.com/jfe/form/SV_54R3TbpGP7lBQMe"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-black border-2 border-[#DDB945] text-[#DDB945] font-bold text-lg rounded-2xl hover:bg-[#DDB945] hover:text-black hover:scale-105 transition-all duration-300"
-              >
+                Registration Closed - Team Limit Reached
+              </div>
+              <div className="inline-flex items-center gap-2 px-8 py-4 bg-gray-800 border-2 border-gray-600 text-gray-400 font-bold text-lg rounded-2xl cursor-not-allowed opacity-75">
                 <User className="w-5 h-5" />
-                Register Solo
-              </a>
+                Registration Closed - Team Limit Reached
+              </div>
             </div>
 
             {/* What is this? - Now part of hero */}
@@ -564,24 +554,14 @@ export function Hackathon() {
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <a 
-                href="https://purdue.ca1.qualtrics.com/jfe/form/SV_8rhziKf1QXUjJnU"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-12 py-6 bg-gradient-to-r from-[#CFB991] to-[#DDB945] text-black font-bold text-xl rounded-2xl hover:shadow-xl hover:scale-105 transition-all duration-300"
-              >
+              <div className="inline-flex items-center gap-3 px-12 py-6 bg-gray-600 text-gray-300 font-bold text-xl rounded-2xl cursor-not-allowed opacity-75">
                 <Users className="w-6 h-6" />
-                Register as Team
-              </a>
-              <a 
-                href="https://purdue.ca1.qualtrics.com/jfe/form/SV_54R3TbpGP7lBQMe"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-12 py-6 bg-black border-2 border-[#DDB945] text-[#DDB945] font-bold text-xl rounded-2xl hover:bg-[#DDB945] hover:text-black hover:scale-105 transition-all duration-300"
-              >
+                Registration Closed - Team Limit Reached
+              </div>
+              <div className="inline-flex items-center gap-3 px-12 py-6 bg-gray-800 border-2 border-gray-600 text-gray-400 font-bold text-xl rounded-2xl cursor-not-allowed opacity-75">
                 <User className="w-6 h-6" />
-                Register Solo
-              </a>
+                Registration Closed - Team Limit Reached
+              </div>
             </div>
           </motion.div>
         </div>
