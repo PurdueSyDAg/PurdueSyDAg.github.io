@@ -314,6 +314,50 @@ export function Posters() {
                             </p>
                         </div>
                     </motion.div>
+
+                    {/* Awards and Recognition */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.5 }}
+                        viewport={{ once: true }}
+                        className="mt-8 bg-white rounded-xl p-6 border-2 border-[#CFB991]/30 max-w-4xl mx-auto"
+                    >
+                        <div className="text-center mb-6">
+                            <h4 className="text-2xl font-bold text-[#000000] mb-3 flex items-center justify-center gap-2">
+                                <Award className="w-6 h-6 text-[#DDB945]" />
+                                Awards & Recognition
+                            </h4>
+                        </div>
+                        
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            {/* In-Person Awards */}
+                            <div className="bg-gradient-to-br from-[#CFB991]/10 to-[#DDB945]/5 rounded-lg p-6 border border-[#CFB991]/20">
+                                <div className="flex items-center mb-4">
+                                    <div className="w-10 h-10 bg-gradient-to-r from-[#CFB991] to-[#DDB945] rounded-lg flex items-center justify-center mr-3">
+                                        <Trophy className="w-5 h-5 text-white" />
+                                    </div>
+                                    <h5 className="text-lg font-bold text-[#000000]">In-Person Presenters</h5>
+                                </div>
+                                <p className="text-[#1E3A5F] leading-relaxed">
+                                    <span className="font-bold text-[#DDB945]">Monetary awards</span> are available for the top in-person poster presentations in the competition.
+                                </p>
+                            </div>
+
+                            {/* Online Recognition */}
+                            <div className="bg-gradient-to-br from-[#DDB945]/10 to-[#DAAA00]/5 rounded-lg p-6 border border-[#DDB945]/20">
+                                <div className="flex items-center mb-4">
+                                    <div className="w-10 h-10 bg-gradient-to-r from-[#DDB945] to-[#DAAA00] rounded-lg flex items-center justify-center mr-3">
+                                        <FileText className="w-5 h-5 text-white" />
+                                    </div>
+                                    <h5 className="text-lg font-bold text-[#000000]">Online Presenters</h5>
+                                </div>
+                                <p className="text-[#1E3A5F] leading-relaxed">
+                                    All online presenters/poster submitters will receive a <span className="font-bold text-[#DDB945]">certificate of participation</span>.
+                                </p>
+                            </div>
+                        </div>
+                    </motion.div>
                 </motion.div>
 
                 {/* Requirements */}
