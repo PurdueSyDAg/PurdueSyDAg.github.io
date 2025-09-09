@@ -14,6 +14,7 @@ import {
   Info,
   Handshake,
   Trophy,
+  FileText,
 } from "lucide-react";
 
 type NavItem = {
@@ -26,6 +27,7 @@ type NavItem = {
 const navigationItems: NavItem[] = [
   { name: "Home", icon: Home, href: "#home", type: "anchor" },
   { name: "About", icon: Info, href: "#about", type: "anchor" },
+  { name: "Posters", icon: FileText, href: "#posters", type: "anchor" },
   { name: "Speakers", icon: Speech, href: "#speakers", type: "anchor" },
   { name: "Schedule", icon: CalendarCheck2, href: "#schedule", type: "anchor" },
   { name: "Team", icon: Users, href: "#team", type: "anchor" },
@@ -44,6 +46,8 @@ export function Header() {
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
+      // Set active section immediately when clicking
+      setActiveSection(href.substring(1));
     }
     setIsMobileMenuOpen(false);
   };
@@ -60,46 +64,97 @@ export function Header() {
     // Only attach observer on homepage route
     if (pathname && pathname !== "/") return;
 
-    const sectionElements = navigationItems
-      .filter((item) => item.type === "anchor")
-      .map((item) => ({
-        id: item.href.substring(1),
-        element: document.querySelector(item.href),
-      }))
-      .filter((item) => item.element);
+    // Small delay to ensure all sections are rendered
+    const timer = setTimeout(() => {
+      const sectionElements = navigationItems
+        .filter((item) => item.type === "anchor")
+        .map((item) => ({
+          id: item.href.substring(1),
+          element: document.querySelector(item.href),
+        }))
+        .filter((item) => item.element);
 
-    if (sectionElements.length === 0) return;
+      if (sectionElements.length === 0) return;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        // Find all intersecting entries
-        const intersectingEntries = entries.filter(
-          (entry) => entry.isIntersecting,
-        );
-
-        if (intersectingEntries.length > 0) {
-          // Sort by intersection ratio (most visible section first)
-          intersectingEntries.sort(
-            (a, b) => b.intersectionRatio - a.intersectionRatio,
+      const observer = new IntersectionObserver(
+        (entries) => {
+          // Find all intersecting entries
+          const intersectingEntries = entries.filter(
+            (entry) => entry.isIntersecting,
           );
 
-          // Get the ID of the most visible section
-          const mostVisibleSection = intersectingEntries[0].target.id;
-          setActiveSection(mostVisibleSection);
+          if (intersectingEntries.length > 0) {
+            // Sort by intersection ratio (most visible section first)
+            intersectingEntries.sort(
+              (a, b) => b.intersectionRatio - a.intersectionRatio,
+            );
+
+            // Get the ID of the most visible section
+            const mostVisibleSection = intersectingEntries[0].target.id;
+            setActiveSection(mostVisibleSection);
+          } else {
+            // Handle case when scrolling between sections
+            // Check scroll position to determine which section should be active
+            const scrollPosition = window.scrollY + window.innerHeight / 2;
+            
+            for (const { id, element } of sectionElements) {
+              if (element) {
+                const rect = element.getBoundingClientRect();
+                const elementTop = rect.top + window.scrollY;
+                const elementBottom = elementTop + rect.height;
+                
+                if (scrollPosition >= elementTop && scrollPosition <= elementBottom) {
+                  setActiveSection(id);
+                  break;
+                }
+              }
+            }
+          }
+        },
+        {
+          threshold: [0.1, 0.3, 0.5, 0.7], // Better thresholds for section detection
+          rootMargin: "-100px 0px -50% 0px", // Improved margins for better detection
+        },
+      );
+
+      // Observe all sections
+      sectionElements.forEach(({ element }) => {
+        if (element) observer.observe(element);
+      });
+
+      // Add scroll listener as backup
+      const handleScroll = () => {
+        const scrollPosition = window.scrollY + 150; // Account for header height
+        
+        for (const { id, element } of sectionElements) {
+          if (element) {
+            const rect = element.getBoundingClientRect();
+            const elementTop = rect.top + window.scrollY;
+            const elementBottom = elementTop + rect.height;
+            
+            if (scrollPosition >= elementTop && scrollPosition < elementBottom) {
+              setActiveSection(id);
+              break;
+            }
+          }
         }
-      },
-      {
-        threshold: [0.1, 0.25, 0.5, 0.75], // Multiple thresholds for better detection
-        rootMargin: "-80px 0px -30% 0px", // Adjusted for better section detection
-      },
-    );
+      };
 
-    // Observe all sections
-    sectionElements.forEach(({ element }) => {
-      if (element) observer.observe(element);
-    });
+      // Initial call to set correct active section
+      handleScroll();
 
-    return () => observer.disconnect();
+      window.addEventListener('scroll', handleScroll, { passive: true });
+
+      // Store observer and scroll listener for cleanup
+      return () => {
+        observer.disconnect();
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, 100);
+
+    return () => {
+      clearTimeout(timer);
+    };
   }, [pathname]);
 
   return (

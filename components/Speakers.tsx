@@ -32,7 +32,7 @@ export function Speakers() {
   return (
     <section
       id="speakers"
-      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#000000] via-[#1a1a1a] to-[#0a0a0a] px-4 sm:px-6 lg:px-8 py-20"
+      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#F9F9F9] to-white px-4 sm:px-6 lg:px-8 py-20"
     >
       <div className="max-w-6xl mx-auto">
         <motion.div
@@ -42,10 +42,10 @@ export function Speakers() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="font-heading text-5xl sm:text-6xl font-black text-white mb-4">
+          <h2 className="font-heading text-5xl sm:text-6xl font-black text-[#000000] mb-4">
             Speakers
           </h2>
-          <p className="font-body text-lg text-white/80 max-w-2xl mx-auto">
+          <p className="font-body text-lg text-[#1E3A5F] max-w-2xl mx-auto">
             We&apos;re assembling an incredible lineup of distinguished speakers who are leading the way in digital agriculture innovation
           </p>
         </motion.div>
@@ -67,7 +67,7 @@ export function Speakers() {
             <div
               key={speaker.name}
               data-speaker-id={speaker.id}
-              className="bg-[#9E6F3E]/10 backdrop-blur-sm border border-[#9E6F3E]/20 rounded-lg shadow-lg overflow-hidden transition-all duration-300"
+              className="bg-white backdrop-blur-sm border border-[#9E6F3E]/20 rounded-lg shadow-lg overflow-hidden transition-all duration-300"
             >
               <div className="aspect-square overflow-hidden">
                 <img
@@ -83,14 +83,14 @@ export function Speakers() {
 
               <div className="p-6">
                 <div className="flex items-center justify-between mb-2">
-                  <h3 className="font-heading text-xl font-bold text-white">
+                  <h3 className="font-heading text-xl font-bold text-[#000000]">
                     {speaker.name}
                   </h3>
                   <span className="px-2 py-1 bg-[#CFB991]/20 border border-[#CFB991]/40 text-[#CFB991] rounded-full text-xs font-medium capitalize">
                     {speaker.role}
                   </span>
                 </div>
-                <p className="font-body text-white/70 font-semibold mb-1">
+                <p className="font-body text-[#1E3A5F] font-semibold mb-1">
                   {speaker.title}
                 </p>
                 <p className="font-body text-[#DDB945] font-medium mb-3 text-sm">

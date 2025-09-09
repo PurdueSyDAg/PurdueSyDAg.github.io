@@ -3,6 +3,7 @@
 import { Header } from '@/components/Header';
 import { Hero } from '@/components/Hero';
 import { About } from '@/components/About';
+import { Posters } from '@/components/Posters';
 import { Speakers } from '@/components/Speakers';
 import { Schedule } from '@/components/Schedule';
 import { Team } from '@/components/Team';
@@ -16,6 +17,7 @@ export default function Home() {
       <main className="w-full">
         <Hero />
         <About />
+        <Posters />
         <Speakers />
         <Schedule />
         <Team />
