@@ -1,8 +1,9 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import { Calendar, MapPin, Clock, Gift, Trophy, Users, Code, Target, CheckCircle, Zap, Award, User } from 'lucide-react';
+import { Calendar, MapPin, Clock, Gift, Trophy, Users, Code, Target, CheckCircle, Zap, Award, User, Server, Cpu } from 'lucide-react';
 import scheduleData from '@/data/schedule.json';
+import judgesData from '@/data/hackathon.json';
 
 export function Hackathon() {
 
@@ -397,6 +398,155 @@ export function Hackathon() {
               <p className="text-sm text-gray-400 italic">*Don&apos;t forget to bring your own laptop!</p>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* RCAC Partnership */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black">
+        <div className="max-w-5xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl sm:text-5xl font-black text-white mb-6 flex items-center justify-center gap-3">
+              <Server className="w-8 h-8 text-[#DDB945]" />
+              Powered by RCAC & Anvil
+            </h2>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            viewport={{ once: true }}
+            className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm"
+          >
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+              {/* Main content */}
+              <div className="lg:col-span-2">
+                <p className="text-lg text-gray-300 leading-relaxed mb-6">
+                  The SyDAg Hackathon is supported by the{' '}
+                  <a 
+                    href="https://www.rcac.purdue.edu/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="font-semibold text-[#CFB991] hover:text-[#DDB945] transition-colors underline"
+                  >
+                    Rosen Center for Advanced Computing (RCAC)
+                  </a>{' '}
+                  at Purdue University, which offers state-of-the-art computational resources and expert services 
+                  to empower researchers. As a hub of innovation, RCAC drives performance enhancements and infrastructure 
+                  development to support data-intensive scientific discovery across disciplines.
+                </p>
+                
+                <p className="text-gray-300 leading-relaxed">
+                  The Anvil supercomputer, hosted by RCAC, represents Purdue&apos;s most powerful high-performance computing asset. 
+                  Funded by the NSF and part of the ACCESS program, Anvil provides robust compute capabilities to tens of 
+                  thousands of researchers nationwide, encouraging experiential learning and fostering future HPC professionals.
+                </p>
+              </div>
+
+              {/* Features highlight */}
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 bg-gradient-to-r from-[#CFB991] to-[#DDB945] rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Cpu className="w-5 h-5 text-black" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-white mb-1">5.3 Petaflops Performance</h4>
+                    <p className="text-gray-300 text-sm">1,000 Dell-AMD nodes with specialized large-memory and GPU partitions</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 bg-gradient-to-r from-[#DDB945] to-[#CFB991] rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Zap className="w-5 h-5 text-black" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-white mb-1">ACCESS Allocation System</h4>
+                    <p className="text-gray-300 text-sm">Credit-based access through NSF&apos;s nationwide HPC program</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 bg-gradient-to-r from-gray-600 to-[#555960] rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Users className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-white mb-1">AI & ML Ready</h4>
+                    <p className="text-gray-300 text-sm">NVIDIA A100 and H100 GPUs for machine learning workloads</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Judges Section */}
+      <section className="py-20 px-2 sm:px-4 lg:px-6 bg-gray-900">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl sm:text-5xl font-black text-white mb-6 flex items-center justify-center gap-3">
+              <Award className="w-8 h-8 text-[#DDB945]" />
+              Meet the Judges
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Expert judges who will evaluate your innovative solutions and award prizes
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {judgesData.map((judge, index) => (
+              <motion.div
+                key={judge.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.2 }}
+                viewport={{ once: true }}
+                className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200"
+              >
+                <div className="aspect-square overflow-hidden">
+                  <img
+                    src={judge.image}
+                    alt={judge.name}
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      // Fallback to placeholder if image fails to load
+                      e.currentTarget.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(judge.name)}&size=400&background=9E6F3E&color=fff`;
+                    }}
+                  />
+                </div>
+
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className="text-2xl font-bold text-black">
+                      {judge.name}
+                    </h3>
+                    <span className="px-3 py-1 bg-[#DDB945]/20 border border-[#DDB945]/40 text-[#DDB945] rounded-full text-sm font-medium capitalize">
+                      {judge.role}
+                    </span>
+                  </div>
+                  <p className="text-[#1E3A5F] font-semibold mb-2">
+                    {judge.title}
+                  </p>
+                  <p className="text-[#CFB991] font-medium mb-4 text-sm">
+                    {judge.organization}
+                  </p>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {judge.bio}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
