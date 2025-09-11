@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FileText, Upload, Video, Calendar, Award, ExternalLink, Trophy } from 'lucide-react';
+import { FileText, Upload, Video, Calendar, Award, ExternalLink, Trophy, Download } from 'lucide-react';
 
 export function Posters() {
     const containerVariants = {
@@ -35,6 +35,15 @@ export function Posters() {
             "https://docs.lib.purdue.edu/cgi/ir_submit.cgi?context=sydag",
             "_blank"
         );
+    };
+
+    const handleTemplateDownload = () => {
+        const link = document.createElement('a');
+        link.href = '/posters/SyDAg_2025_Header_Template.pptx';
+        link.download = 'SyDAg_2025_Header_Template.pptx';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
     };
 
     return (
@@ -396,9 +405,25 @@ export function Posters() {
                                     </div>
                                     <h4 className="text-lg font-bold text-[#000000]">Header Template</h4>
                                 </div>
-                                <p className="text-[#1E3A5F] leading-relaxed">
+                                <p className="text-[#1E3A5F] leading-relaxed mb-4">
                                     Include the provided header template in your poster design to maintain consistency across all submissions.
                                 </p>
+                                
+                                <motion.button
+                                    onClick={handleTemplateDownload}
+                                    whileHover={{ scale: 1.02 }}
+                                    whileTap={{ scale: 0.98 }}
+                                    className="w-full group relative px-4 py-3 text-sm font-bold text-white bg-gradient-to-r from-[#CFB991] to-[#DDB945] rounded-lg shadow-lg overflow-hidden cursor-pointer"
+                                >
+                                    <span className="relative z-10 flex items-center justify-center space-x-2">
+                                        <Download className="w-4 h-4" />
+                                        <span>Download Header Template</span>
+                                        <span className="text-xs font-normal opacity-90">(PPTX)</span>
+                                    </span>
+                                    
+                                    {/* Hover effect */}
+                                    <div className="absolute inset-0 bg-gradient-to-r from-[#DDB945] to-[#DAAA00] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                </motion.button>
                             </motion.div>
 
                             {/* Innovation Section */}
@@ -461,6 +486,7 @@ export function Posters() {
                         </motion.div>
                     </div>
                 </motion.div>
+
 
                 {/* Submit Button */}
                 <motion.div
