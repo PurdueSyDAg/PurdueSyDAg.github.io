@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import { Calendar, MapPin, Clock, Gift, Trophy, Users, Code, Target, CheckCircle, Zap, Award, User, Server, Cpu } from 'lucide-react';
+import { Calendar, MapPin, Clock, Gift, Trophy, Users, Code, Target, CheckCircle, Zap, Award, Server, Cpu } from 'lucide-react';
 import scheduleData from '@/data/schedule.json';
 import judgesData from '@/data/hackathon.json';
 
@@ -22,13 +22,16 @@ export function Hackathon() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen">
       {/* Hero Header */}
-      <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <section className="relative pt-8 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Background Elements */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black">
-          <div className="absolute top-20 left-20 w-96 h-96 bg-[#DDB945]/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-[#CFB991]/10 rounded-full blur-3xl" />
+        <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-50/50 to-white">
+          <div className="absolute inset-0 bg-gradient-to-tr from-[#CFB991]/5 via-white to-[#DDB945]/8"></div>
+          <div className="absolute top-20 left-20 w-96 h-96 bg-[#DDB945]/8 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-20 w-80 h-80 bg-[#CFB991]/6 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/3 right-1/3 w-72 h-72 bg-gradient-to-r from-[#CFB991]/3 to-[#DDB945]/4 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-1/4 left-1/3 w-64 h-64 bg-white/80 rounded-full blur-2xl shadow-lg"></div>
         </div>
 
         <div className="relative max-w-6xl mx-auto text-center">
@@ -37,40 +40,64 @@ export function Hackathon() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#CFB991]/20 to-[#DDB945]/20 border border-[#CFB991]/30 rounded-full px-4 py-2 mb-8">
+            {/* Sponsored by text */}
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+              className="mb-2"
+            >
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-medium text-gray-700">
+                Sponsored by
+              </h3>
+            </motion.div>
+
+            {/* Sponsor Logo */}
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+              className="mb-8"
+            >
+              <div className="inline-flex items-center justify-center">
+                <img 
+                  src="/bayer.png" 
+                  alt="Bayer" 
+                  className="h-16 sm:h-20 lg:h-24 w-auto object-contain"
+                />
+              </div>
+            </motion.div>
+
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#CFB991]/30 to-[#DDB945]/30 border border-[#CFB991]/50 rounded-full px-4 py-2 mb-6">
               <Trophy className="w-4 h-4 text-[#DDB945]" />
-              <span className="text-sm font-medium">48-Hour Innovation Challenge</span>
+              <span className="text-sm font-medium text-gray-800">48-Hour Innovation Challenge</span>
             </div>
             
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black mb-6">
-              <span className="block text-white">SyDAg</span>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-4">
+              <span className="block text-gray-900">SyDAg</span>
               <span className="block bg-gradient-to-r from-[#CFB991] to-[#DDB945] bg-clip-text text-transparent">
                 Hackathon
               </span>
             </h1>
 
-            <p className="text-xl sm:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
               Building the future of user-friendly digital agriculture
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-              <div className="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-3 rounded-xl">
+              <div className="flex items-center gap-2 bg-gray-800/10 border border-gray-300 px-4 py-3 rounded-xl">
                 <Calendar className="w-5 h-5 text-[#DDB945]" />
-                <span className="font-medium">October 18-19, 2025</span>
+                <span className="font-medium text-gray-800">October 18-19, 2025</span>
               </div>
-              <div className="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-3 rounded-xl">
+              <div className="flex items-center gap-2 bg-gray-800/10 border border-gray-300 px-4 py-3 rounded-xl">
                 <MapPin className="w-5 h-5 text-[#DDB945]" />
-                <span className="font-medium">225 S University St, West Lafayette, IN 47907, Room ABE1164</span>
+                <span className="font-medium text-gray-800">225 S University St, West Lafayette, IN 47907, Room ABE1164</span>
               </div>
             </div>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <div className="inline-flex items-center gap-2 px-8 py-4 bg-gray-600 text-gray-300 font-bold text-lg rounded-2xl cursor-not-allowed opacity-75">
+              <div className="inline-flex items-center gap-2 px-8 py-4 bg-gray-400 text-gray-700 font-bold text-lg rounded-2xl cursor-not-allowed opacity-75">
                 <Users className="w-5 h-5" />
-                Registration Closed - Team Limit Reached
-              </div>
-              <div className="inline-flex items-center gap-2 px-8 py-4 bg-gray-800 border-2 border-gray-600 text-gray-400 font-bold text-lg rounded-2xl cursor-not-allowed opacity-75">
-                <User className="w-5 h-5" />
                 Registration Closed - Team Limit Reached
               </div>
             </div>
@@ -83,8 +110,8 @@ export function Hackathon() {
               transition={{ duration: 0.8, delay: 1.5, ease: "easeOut" }}
             >
               <div className="text-center mb-12">
-                <h3 className="text-3xl font-bold mb-4">What is this Hackathon?</h3>
-                <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                <h3 className="text-3xl font-bold mb-4 text-gray-900">What is this Hackathon?</h3>
+                <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
                   A 48-hour innovation sprint where teams tackle real agricultural challenges. 
                   Choose from five case studies and build solutions that make digital agriculture 
                   more accessible and farmer-friendly.
@@ -92,29 +119,29 @@ export function Hackathon() {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-6 rounded-xl border border-gray-700/50 backdrop-blur-sm">
+                <div className="bg-gradient-to-br from-white/70 to-gray-50/70 p-6 rounded-xl border border-gray-300/50 backdrop-blur-sm shadow-lg">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 bg-gradient-to-r from-[#DDB945] to-[#CFB991] rounded-lg flex items-center justify-center">
                       <Users className="w-5 h-5 text-black" />
                     </div>
-                    <h4 className="font-bold">Who Can Join</h4>
+                    <h4 className="font-bold text-gray-900">Who Can Join</h4>
                   </div>
-                  <p className="text-gray-300 text-sm">
+                  <p className="text-gray-700 text-sm">
                     Students, researchers, professionals, or enthusiasts from any background. 
                     All skill levels welcome!
                   </p>
                 </div>
 
-                <div className="relative bg-gradient-to-br from-[#CFB991]/20 to-[#DDB945]/20 p-6 rounded-xl border-2 border-[#CFB991]/50 backdrop-blur-sm">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#CFB991]/5 to-[#DDB945]/5 rounded-xl"></div>
+                <div className="relative bg-gradient-to-br from-[#CFB991]/30 to-[#DDB945]/30 p-6 rounded-xl border-2 border-[#CFB991]/70 backdrop-blur-sm shadow-lg">
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#CFB991]/10 to-[#DDB945]/10 rounded-xl"></div>
                   <div className="relative">
                     <div className="flex items-center gap-3 mb-4">
                       <div className="w-12 h-12 bg-gradient-to-r from-[#CFB991] to-[#DDB945] rounded-xl flex items-center justify-center shadow-lg">
                         <Target className="w-6 h-6 text-black" />
                       </div>
-                      <h4 className="font-bold text-lg text-white">The Challenge</h4>
+                      <h4 className="font-bold text-lg text-gray-900">The Challenge</h4>
                     </div>
-                    <p className="text-white text-sm italic font-medium">
+                    <p className="text-gray-800 text-sm italic font-medium">
                       &ldquo;How to make digital agriculture more user-friendly and adaptable to farmers?&rdquo;
                     </p>
                   </div>
@@ -128,8 +155,13 @@ export function Hackathon() {
 
 
       {/* Schedule */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900">
-        <div className="max-w-6xl mx-auto">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-black text-white overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black">
+          <div className="absolute top-20 left-20 w-96 h-96 bg-[#DDB945]/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-[#CFB991]/10 rounded-full blur-3xl" />
+        </div>
+        <div className="relative max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -537,33 +569,6 @@ export function Hackathon() {
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Register CTA */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-black">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl font-black mb-6">Ready to Join?</h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Don&apos;t miss your chance to be part of this exciting hackathon. Registration closes October 4th!
-            </p>
-            
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <div className="inline-flex items-center gap-3 px-12 py-6 bg-gray-600 text-gray-300 font-bold text-xl rounded-2xl cursor-not-allowed opacity-75">
-                <Users className="w-6 h-6" />
-                Registration Closed - Team Limit Reached
-              </div>
-              <div className="inline-flex items-center gap-3 px-12 py-6 bg-gray-800 border-2 border-gray-600 text-gray-400 font-bold text-xl rounded-2xl cursor-not-allowed opacity-75">
-                <User className="w-6 h-6" />
-                Registration Closed - Team Limit Reached
-              </div>
-            </div>
-          </motion.div>
         </div>
       </section>
     </div>
