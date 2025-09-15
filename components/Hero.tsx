@@ -55,11 +55,11 @@ export function Hero() {
     );
   };
 
-  const handleLearnMoreClick = () => {
-    const element = document.querySelector("#about");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+  const handleTravelAwardsClick = () => {
+    window.open(
+      "https://purdue.ca1.qualtrics.com/jfe/form/SV_23Te3I51K0KHr2m",
+      "_blank",
+    );
   };
 
   // Button animation variants
@@ -261,13 +261,13 @@ export function Hero() {
               </motion.button>
 
               <motion.button
-                onClick={handleLearnMoreClick}
+                onClick={handleTravelAwardsClick}
                 variants={buttonAnimation}
                 whileHover="hover"
                 whileTap="tap"
                 className="px-8 py-4 text-lg font-semibold text-white bg-white/10 border-2 border-white/30 rounded-2xl backdrop-blur-md hover:bg-white/20 hover:border-white/50"
               >
-                Learn More
+                Travel Awards
               </motion.button>
             </motion.div>
 
