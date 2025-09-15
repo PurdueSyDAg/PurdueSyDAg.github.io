@@ -1,194 +1,194 @@
 {
-    "hackathon": {
-        "title": "Hackathon Weekend",
-        "days": [
-            {
-                "date": "Saturday, October 18th",
-                "location": "225 S University St, West Lafayette, IN 47907, Room ABE1164",
-                "sessions": [
-                    {
-                        "time": "08:00 am - 09:00 am",
-                        "title": "Check in & Breakfast"
-                    },
-                    {
-                        "time": "09:00 am - 09:30 am",
-                        "title": "Opening"
-                    },
-                    {
-                        "time": "09:30 am - 11:30 am",
-                        "title": "Ideas Pitching & Team Formation"
-                    },
-                    {
-                        "time": "11:30 am - 01:00 pm",
-                        "title": "Lunch"
-                    },
-                    {
-                        "time": "01:00 pm - 06:00 pm",
-                        "title": "Working Session"
-                    }
-                ]
-            },
-            {
-                "date": "Sunday, October 19th",
-                "location": "225 S University St, West Lafayette, IN 47907, Room ABE1164",
-                "sessions": [
-                    {
-                        "time": "08:00 am - 09:00 am",
-                        "title": "Check in & Breakfast"
-                    },
-                    {
-                        "time": "08:00 am - 12:00 pm",
-                        "title": "Working Session"
-                    },
-                    {
-                        "time": "12:00 pm - 01:00 pm",
-                        "title": "Lunch"
-                    },
-                    {
-                        "time": "01:00 pm - 04:00 pm",
-                        "title": "Working Session"
-                    },
-                    {
-                        "time": "04:00 pm - 05:30 pm",
-                        "title": "Presentation"
-                    }
-                ]
-            }
+  "hackathon": {
+    "title": "Hackathon Weekend",
+    "days": [
+      {
+        "date": "Saturday, October 18th",
+        "location": "225 S University St, West Lafayette, IN 47907, Room ABE1164",
+        "sessions": [
+          {
+            "time": "08:00 am - 09:00 am",
+            "title": "Check in & Breakfast"
+          },
+          {
+            "time": "09:00 am - 09:30 am",
+            "title": "Opening"
+          },
+          {
+            "time": "09:30 am - 11:30 am",
+            "title": "Ideas Pitching & Team Formation"
+          },
+          {
+            "time": "11:30 am - 01:00 pm",
+            "title": "Lunch"
+          },
+          {
+            "time": "01:00 pm - 06:00 pm",
+            "title": "Working Session"
+          }
         ]
-    },
-    "symposium": {
-        "title": "Symposium",
-        "days": [
-            {
-                "date": "Monday, October 20th",
-                "location": "Purdue, COREC facilities",
-                "sessions": [
-                    {
-                        "sessionTitle": "Morning Session",
-                        "items": [
-                            {
-                                "time": "08:00 am - 09:00 am",
-                                "title": "Check in & Breakfast"
-                            },
-                            {
-                                "time": "09:00 am - 09:30 am",
-                                "title": "Kickoff-Opening"
-                            },
-                            {
-                                "time": "09:30 am - 10:30 am",
-                                "title": "Panel Discussion Session 1",
-                                "description": "Innovation and Impact of Digital Ag Today: The Foundations for Tomorrow",
-                                "moderator": {
-                                    "name": "Ankita Raturi",
-                                    "id": "ankita-raturi"
-                                },
-                                "panelists": [
-                                    {
-                                        "name": "Claudia Nari",
-                                        "id": "claudia-nari"
-                                    },
-                                    {
-                                        "name": "Lukas Koch",
-                                        "id": "lukas-koch"
-                                    },
-                                    {
-                                        "name": "Josh Bailey",
-                                        "id": "josh-bailey"
-                                    },
-                                    {
-                                        "name": "Kaitlin Gold",
-                                        "id": "kaitlin-gold"
-                                    }
-                                ]
-                            },
-                            {
-                                "time": "10:30 am - 11:00 am",
-                                "title": "Break and poster session"
-                            },
-                            {
-                                "time": "11:00 am - 11:45 am",
-                                "title": "Keynote",
-                                "description": "30-35 mins talk; 10 min questions"
-                            },
-                            {
-                                "time": "11:45 am - 01:00 pm",
-                                "title": "Lunch"
-                            }
-                        ]
-                    },
-                    {
-                        "sessionTitle": "Afternoon Session",
-                        "items": [
-                            {
-                                "time": "01:00 pm - 02:30 pm",
-                                "title": "Turning Agricultural Challenges into Scalable Digital Solutions",
-                                "isGroup": true
-                            },
-                            {
-                                "time": "01:00 pm",
-                                "title": "Elizabeth Hawkins",
-                                "description": "Real-World Challenges: Lessons from the Field",
-                                "isSubItem": true,
-                                "speakerId": "elizabeth-hawkins"
-                            },
-                            {
-                                "time": "01:30 pm",
-                                "title": "Kaiyu Guan",
-                                "description": "Innovations at the Frontier: New Discoveries Shaping the Future of Ag Tech",
-                                "isSubItem": true,
-                                "speakerId": "kaiyu-guan"
-                            },
-                            {
-                                "time": "02:00 pm",
-                                "title": "Maia Donahue",
-                                "description": "From Research to Reality: Transforming Innovation into Scalable Solutions",
-                                "isSubItem": true,
-                                "speakerId": "maia-donahue"
-                            },
-                            {
-                                "time": "02:30 pm - 03:15 pm",
-                                "title": "Break and poster session"
-                            },
-                            {
-                                "time": "03:15 pm - 04:00 pm",
-                                "title": "Panel Discussion Session 2",
-                                "description": "Closing the Gap between Innovation & Adoption",
-                                "moderator": {
-                                    "name": "Bruce Erickson",
-                                    "id": "bruce-erickson"
-                                },
-                                "panelists": [
-                                    {
-                                        "name": "Isabella Chism",
-                                        "id": "isabella-chism"
-                                    },
-                                    {
-                                        "name": "Ezra Kies",
-                                        "id": "ezra-kies"
-                                    },
-                                    {
-                                        "name": "Adam Shanks",
-                                        "id": "adam-shanks"
-                                    },
-                                    {
-                                        "name": "Andy Like",
-                                        "id": "andy-like"
-                                    }
-                                ]
-                            },
-                            {
-                                "time": "04:00 pm - 04:30 pm",
-                                "title": "Awards ceremony",
-                                "description": "Hackathon + poster session"
-                            },
-                            {
-                                "time": "04:30 pm - 06:00 pm",
-                                "title": "Networking & Job Expo"
-                            }
-                        ]
-                    }
-                ]
-            }
+      },
+      {
+        "date": "Sunday, October 19th",
+        "location": "225 S University St, West Lafayette, IN 47907, Room ABE1164",
+        "sessions": [
+          {
+            "time": "08:00 am - 09:00 am",
+            "title": "Check in & Breakfast"
+          },
+          {
+            "time": "08:00 am - 12:00 pm",
+            "title": "Working Session"
+          },
+          {
+            "time": "12:00 pm - 01:00 pm",
+            "title": "Lunch"
+          },
+          {
+            "time": "01:00 pm - 04:00 pm",
+            "title": "Working Session"
+          },
+          {
+            "time": "04:00 pm - 05:30 pm",
+            "title": "Presentation"
+          }
         ]
-    }
+      }
+    ]
+  },
+  "symposium": {
+    "title": "Symposium",
+    "days": [
+      {
+        "date": "Monday, October 20th",
+        "location": "Purdue, COREC facilities",
+        "sessions": [
+          {
+            "sessionTitle": "Morning Session",
+            "items": [
+              {
+                "time": "08:00 am - 09:00 am",
+                "title": "Check in & Breakfast"
+              },
+              {
+                "time": "09:00 am - 09:30 am",
+                "title": "Kickoff-Opening"
+              },
+              {
+                "time": "09:30 am - 10:30 am",
+                "title": "Panel Discussion Session 1",
+                "description": "Innovation and Impact of Digital Ag Today: The Foundations for Tomorrow",
+                "moderator": {
+                  "name": "Ankita Raturi",
+                  "id": "ankita-raturi"
+                },
+                "panelists": [
+                  {
+                    "name": "Claudia Nari",
+                    "id": "claudia-nari"
+                  },
+                  {
+                    "name": "Lukas Koch",
+                    "id": "lukas-koch"
+                  },
+                  {
+                    "name": "Josh Bailey",
+                    "id": "josh-bailey"
+                  },
+                  {
+                    "name": "Kaitlin Gold",
+                    "id": "kaitlin-gold"
+                  }
+                ]
+              },
+              {
+                "time": "10:30 am - 11:00 am",
+                "title": "Break and poster session"
+              },
+              {
+                "time": "11:45 am - 01:00 pm",
+                "title": "Lunch"
+              },
+              {
+                "time": "12:15 am - 01:00 am",
+                "title": "Keynote",
+                "description": "30-35 mins talk; 10 min questions"
+              }
+            ]
+          },
+          {
+            "sessionTitle": "Afternoon Session",
+            "items": [
+              {
+                "time": "01:00 pm - 02:30 pm",
+                "title": "Turning Agricultural Challenges into Scalable Digital Solutions",
+                "isGroup": true
+              },
+              {
+                "time": "01:00 pm",
+                "title": "Elizabeth Hawkins",
+                "description": "Real-World Challenges: Lessons from the Field",
+                "isSubItem": true,
+                "speakerId": "elizabeth-hawkins"
+              },
+              {
+                "time": "01:30 pm",
+                "title": "Kaiyu Guan",
+                "description": "Innovations at the Frontier: New Discoveries Shaping the Future of Ag Tech",
+                "isSubItem": true,
+                "speakerId": "kaiyu-guan"
+              },
+              {
+                "time": "02:00 pm",
+                "title": "Maia Donahue",
+                "description": "From Research to Reality: Transforming Innovation into Scalable Solutions",
+                "isSubItem": true,
+                "speakerId": "maia-donahue"
+              },
+              {
+                "time": "02:30 pm - 03:15 pm",
+                "title": "Break and poster session"
+              },
+              {
+                "time": "03:15 pm - 04:00 pm",
+                "title": "Panel Discussion Session 2",
+                "description": "Closing the Gap between Innovation & Adoption",
+                "moderator": {
+                  "name": "Bruce Erickson",
+                  "id": "bruce-erickson"
+                },
+                "panelists": [
+                  {
+                    "name": "Isabella Chism",
+                    "id": "isabella-chism"
+                  },
+                  {
+                    "name": "Ezra Kies",
+                    "id": "ezra-kies"
+                  },
+                  {
+                    "name": "Adam Shanks",
+                    "id": "adam-shanks"
+                  },
+                  {
+                    "name": "Andy Like",
+                    "id": "andy-like"
+                  }
+                ]
+              },
+              {
+                "time": "04:00 pm - 04:30 pm",
+                "title": "Awards ceremony",
+                "description": "Hackathon + poster session"
+              },
+              {
+                "time": "04:30 pm - 06:00 pm",
+                "title": "Networking & Job Expo"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
 }
