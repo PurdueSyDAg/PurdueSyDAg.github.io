@@ -1,14 +1,5 @@
 [
   {
-    "id": "lourival-monaco",
-    "name": "Lourival Monaco",
-    "title": "Research Assistant Professor of Digital Innovation and Entrepreneurship",
-    "organization": "Purdue University",
-    "image": "/hackathon/Lourival.JPG",
-    "role": "judge",
-    "bio": "Research Assistant Professor leading venture-studio methods and industry transformation in the agrifood system. Serves as Research Manager at Purdue's DIAL Ventures, directing applied research connecting agrifood companies with startup innovation. Holds a PhD in Business Administration, MS in Agronomy and Crop Science, and MBA."
-  },
-  {
     "id": "geoffrey-lentner",
     "name": "Geoffrey Lentner",
     "title": "Data Science and HPC Specialist",
