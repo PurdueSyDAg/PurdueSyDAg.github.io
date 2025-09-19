@@ -67,11 +67,11 @@
             "sessionTitle": "Morning Session",
             "items": [
               {
-                "time": "08:00 am - 09:00 am",
+                "time": "08:00 am - 08:45 am",
                 "title": "Check in & Breakfast"
               },
               {
-                "time": "09:00 am - 09:30 am",
+                "time": "08:45 am - 09:30 am",
                 "title": "Kickoff-Opening"
               },
               {
@@ -102,7 +102,7 @@
                 ]
               },
               {
-                "time": "10:30 am - 11:00 am",
+                "time": "10:30 am - 11:45 am",
                 "title": "Break and poster session"
               },
               {
@@ -110,7 +110,7 @@
                 "title": "Lunch"
               },
               {
-                "time": "12:15 am - 01:00 am",
+                "time": "12:15 pm - 01:00 pm",
                 "title": "Keynote",
                 "description": "30-35 mins talk; 10 min questions"
               }
@@ -146,11 +146,11 @@
                 "speakerId": "maia-donahue"
               },
               {
-                "time": "02:30 pm - 03:15 pm",
+                "time": "02:30 pm - 03:00 pm",
                 "title": "Break and poster session"
               },
               {
-                "time": "03:15 pm - 04:00 pm",
+                "time": "03:00 pm - 04:00 pm",
                 "title": "Panel Discussion Session 2",
                 "description": "Closing the Gap between Innovation & Adoption",
                 "moderator": {
