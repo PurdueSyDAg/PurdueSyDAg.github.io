@@ -285,8 +285,8 @@ export function Posters() {
                     >
                         {[
                             { place: "1st Place", amount: "$300", gradient: "from-yellow-400 to-yellow-600", rank: "🥇" },
-                            { place: "2nd Place", amount: "$150", gradient: "from-gray-300 to-gray-500", rank: "🥈" },
-                            { place: "3rd Place", amount: "$50", gradient: "from-orange-400 to-orange-600", rank: "🥉" }
+                            { place: "2nd Place", amount: "$200", gradient: "from-gray-300 to-gray-500", rank: "🥈" },
+                            { place: "3rd Place", amount: "$100", gradient: "from-orange-400 to-orange-600", rank: "🥉" }
                         ].map((prize, index) => (
                             <motion.div
                                 key={index}
