@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FileText, Upload, Video, Calendar, Award, ExternalLink, Trophy, Download } from 'lucide-react';
+import { FileText, Upload, Video, Calendar, Award, Trophy, Download } from 'lucide-react';
 
 export function Posters() {
     const containerVariants = {
@@ -30,12 +30,6 @@ export function Posters() {
         }
     };
 
-    const handleSubmissionClick = () => {
-        window.open(
-            "https://docs.lib.purdue.edu/cgi/ir_submit.cgi?context=sydag",
-            "_blank"
-        );
-    };
 
     const handleTemplateDownload = () => {
         const link = document.createElement('a');
@@ -502,16 +496,9 @@ export function Posters() {
                     <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
                         Start your submission through Purdue e-Pubs and join the symposium poster showcase.
                     </p>
-                    <motion.button
-                        onClick={handleSubmissionClick}
-                        whileTap={{ scale: 0.98 }}
-                        className="group relative px-8 py-4 text-xl font-bold text-[#000000] bg-gradient-to-r from-[#CFB991] to-[#DDB945] rounded-2xl shadow-2xl overflow-hidden cursor-pointer"
-                    >
-                        <span className="relative z-10 flex items-center space-x-2">
-                            <span>Submit to Purdue e-Pubs</span>
-                            <ExternalLink className="w-5 h-5" />
-                        </span>
-                    </motion.button>
+                    <div className="inline-flex items-center gap-2 px-8 py-4 bg-gray-400 text-gray-700 font-bold text-xl rounded-2xl cursor-not-allowed opacity-75">
+                        <span>Submission Closed - Deadline Passed</span>
+                    </div>
                 </motion.div>
 
                 {/* Bottom Decorative Element */}
