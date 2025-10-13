@@ -1,13 +1,26 @@
 [
   {
+    "id": "brent-trenhaile",
+    "name": "Brent Trenhaile",
+    "title": "Head of Global Digital Product Development",
+    "organization": "Bayer Crop Science",
+    "image": "/hackathon/brent.jpg",
+    "role": "judge"
+  },
+  {
     "id": "geoffrey-lentner",
     "name": "Geoffrey Lentner",
     "title": "Data Science and HPC Specialist",
     "organization": "RCAC, Purdue University",
     "image": "/hackathon/geoffrey_lentner.jpeg",
-    "role": "judge",
-    "bio": "Data scientist and HPC expert with academic background in Astrophysics. Provides advanced user support on data science, data processing, and high-performance computing applications. Prolific builder of tools and automation, consulting with faculty and students on computational projects."
+    "role": "judge"
+  },
+  {
+    "id": "tim-dixon",
+    "name": "Tim Dixon",
+    "title": "Managing Director",
+    "organization": "DIAL Ventures, Purdue University",
+    "image": "/hackathon/tim.jpg",
+    "role": "judge"
   }
 ]
-
-
