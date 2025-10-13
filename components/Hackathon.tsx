@@ -1,24 +1,40 @@
 "use client";
 
-import { motion } from 'framer-motion';
-import { Calendar, MapPin, Clock, Gift, Trophy, Users, Code, Target, CheckCircle, Zap, Award, Server, Cpu } from 'lucide-react';
-import scheduleData from '@/data/schedule.json';
-import judgesData from '@/data/hackathon.json';
+import { motion } from "framer-motion";
+import {
+  Calendar,
+  MapPin,
+  Clock,
+  Gift,
+  Trophy,
+  Users,
+  Code,
+  Target,
+  CheckCircle,
+  Zap,
+  Award,
+  Server,
+  Cpu,
+} from "lucide-react";
+import scheduleData from "@/data/schedule.json";
+import judgesData from "@/data/hackathon.json";
 
 export function Hackathon() {
-
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.15, delayChildren: 0.2 }
-    }
+      transition: { staggerChildren: 0.15, delayChildren: 0.2 },
+    },
   };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
   };
 
   return (
@@ -60,9 +76,9 @@ export function Hackathon() {
               className="mb-8"
             >
               <div className="inline-flex items-center justify-center">
-                <img 
-                  src="/bayer.png" 
-                  alt="Bayer" 
+                <img
+                  src="/bayer.png"
+                  alt="Bayer"
                   className="h-16 sm:h-20 lg:h-24 w-auto object-contain"
                 />
               </div>
@@ -70,9 +86,11 @@ export function Hackathon() {
 
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#CFB991]/30 to-[#DDB945]/30 border border-[#CFB991]/50 rounded-full px-4 py-2 mb-6">
               <Trophy className="w-4 h-4 text-[#DDB945]" />
-              <span className="text-sm font-medium text-gray-800">48-Hour Innovation Challenge</span>
+              <span className="text-sm font-medium text-gray-800">
+                48-Hour Innovation Challenge
+              </span>
             </div>
-            
+
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-4">
               <span className="block text-gray-900">SyDAg</span>
               <span className="block bg-gradient-to-r from-[#CFB991] to-[#DDB945] bg-clip-text text-transparent">
@@ -87,11 +105,15 @@ export function Hackathon() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
               <div className="flex items-center gap-2 bg-gray-800/10 border border-gray-300 px-4 py-3 rounded-xl">
                 <Calendar className="w-5 h-5 text-[#DDB945]" />
-                <span className="font-medium text-gray-800">October 18-19, 2025</span>
+                <span className="font-medium text-gray-800">
+                  October 18-19, 2025
+                </span>
               </div>
               <div className="flex items-center gap-2 bg-gray-800/10 border border-gray-300 px-4 py-3 rounded-xl">
                 <MapPin className="w-5 h-5 text-[#DDB945]" />
-                <span className="font-medium text-gray-800">225 S University St, West Lafayette, IN 47907, Room ABE1164</span>
+                <span className="font-medium text-gray-800">
+                  225 S University St, West Lafayette, IN 47907, Room ABE1164
+                </span>
               </div>
             </div>
 
@@ -110,11 +132,14 @@ export function Hackathon() {
               transition={{ duration: 0.8, delay: 1.5, ease: "easeOut" }}
             >
               <div className="text-center mb-12">
-                <h3 className="text-3xl font-bold mb-4 text-gray-900">What is this Hackathon?</h3>
+                <h3 className="text-3xl font-bold mb-4 text-gray-900">
+                  What is this Hackathon?
+                </h3>
                 <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
-                  A 48-hour innovation sprint where teams tackle real agricultural challenges. 
-                  Choose from five case studies and build solutions that make digital agriculture 
-                  more accessible and farmer-friendly.
+                  A 48-hour innovation sprint where teams tackle real
+                  agricultural challenges. Choose from five case studies and
+                  build solutions that make digital agriculture more accessible
+                  and farmer-friendly.
                 </p>
               </div>
 
@@ -127,8 +152,8 @@ export function Hackathon() {
                     <h4 className="font-bold text-gray-900">Who Can Join</h4>
                   </div>
                   <p className="text-gray-700 text-sm">
-                    Students, researchers, professionals, or enthusiasts from any background. 
-                    All skill levels welcome!
+                    Students, researchers, professionals, or enthusiasts from
+                    any background. All skill levels welcome!
                   </p>
                 </div>
 
@@ -139,10 +164,13 @@ export function Hackathon() {
                       <div className="w-12 h-12 bg-gradient-to-r from-[#CFB991] to-[#DDB945] rounded-xl flex items-center justify-center shadow-lg">
                         <Target className="w-6 h-6 text-black" />
                       </div>
-                      <h4 className="font-bold text-lg text-gray-900">The Challenge</h4>
+                      <h4 className="font-bold text-lg text-gray-900">
+                        The Challenge
+                      </h4>
                     </div>
                     <p className="text-gray-800 text-sm italic font-medium">
-                      &ldquo;How to make digital agriculture more user-friendly and adaptable to farmers?&rdquo;
+                      &ldquo;How to make digital agriculture more user-friendly
+                      and adaptable to farmers?&rdquo;
                     </p>
                   </div>
                 </div>
@@ -151,8 +179,6 @@ export function Hackathon() {
           </motion.div>
         </div>
       </section>
-
-
 
       {/* Schedule */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-black text-white overflow-hidden">
@@ -168,8 +194,12 @@ export function Hackathon() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl sm:text-5xl font-black mb-6">Event Schedule</h2>
-            <p className="text-xl text-gray-300">Key dates and weekend agenda</p>
+            <h2 className="text-4xl sm:text-5xl font-black mb-6">
+              Event Schedule
+            </h2>
+            <p className="text-xl text-gray-300">
+              Key dates and weekend agenda
+            </p>
           </motion.div>
 
           {/* Timeline */}
@@ -179,7 +209,7 @@ export function Hackathon() {
               { date: "Oct 4", event: "Registration Closes" },
               { date: "Oct 18", event: "Hackathon Begins" },
               { date: "Oct 19", event: "Preselection Round" },
-              { date: "Oct 20", event: "Final Pitch & Awards" }
+              { date: "Oct 20", event: "Final Pitch & Awards" },
             ].map((milestone, index) => (
               <motion.div
                 key={index}
@@ -189,7 +219,9 @@ export function Hackathon() {
                 viewport={{ once: true }}
                 className="bg-black/50 border border-gray-700 rounded-xl p-4 text-center"
               >
-                <div className="text-2xl font-bold text-[#CFB991] mb-2">{milestone.date}</div>
+                <div className="text-2xl font-bold text-[#CFB991] mb-2">
+                  {milestone.date}
+                </div>
                 <div className="text-sm text-gray-300">{milestone.event}</div>
               </motion.div>
             ))}
@@ -203,12 +235,25 @@ export function Hackathon() {
             className="bg-gradient-to-r from-[#CFB991]/10 to-[#DDB945]/10 border border-[#CFB991]/30 rounded-2xl p-6 mb-12"
           >
             <div className="text-center">
-              <h3 className="text-2xl font-bold text-[#CFB991] mb-4">Competition Flow</h3>
+              <h3 className="text-2xl font-bold text-[#CFB991] mb-4">
+                Competition Flow
+              </h3>
               <p className="text-gray-300 leading-relaxed">
-                Teams work throughout the weekend to develop innovative agricultural technology solutions. 
-                On <span className="text-[#CFB991] font-semibold">Sunday afternoon</span>, all teams present their solutions to judges in a <span className="text-[#CFB991] font-semibold">preselection round</span>. 
-                Selected teams then advance to <span className="text-[#CFB991] font-semibold">Monday&apos;s final pitch competition</span> at the symposium, 
-                where they compete for prizes and are ranked by expert judges.
+                Teams work throughout the weekend to develop innovative
+                agricultural technology solutions. On{" "}
+                <span className="text-[#CFB991] font-semibold">
+                  Sunday afternoon
+                </span>
+                , all teams present their solutions to judges in a{" "}
+                <span className="text-[#CFB991] font-semibold">
+                  preselection round
+                </span>
+                . Selected teams then advance to{" "}
+                <span className="text-[#CFB991] font-semibold">
+                  Monday&apos;s final pitch competition
+                </span>{" "}
+                at the symposium, where they compete for prizes and are ranked
+                by expert judges.
               </p>
             </div>
           </motion.div>
@@ -228,20 +273,38 @@ export function Hackathon() {
                   <Calendar className="w-6 h-6 text-[#DDB945]" />
                   <h3 className="text-2xl font-bold">{day.date}</h3>
                 </div>
-                
+
                 <div className="space-y-3">
-                  {day.sessions.map((session: { time: string; title: string; description?: string }, sessionIndex: number) => (
-                    <div key={sessionIndex} className="flex items-start gap-3 p-3 bg-gray-800/50 rounded-lg">
-                      <Clock className="w-4 h-4 text-[#CFB991] mt-1 flex-shrink-0" />
-                      <div>
-                        <div className="text-sm text-[#CFB991] font-medium">{session.time}</div>
-                        <div className="text-white font-medium">{session.title}</div>
-                        {session.description && (
-                          <div className="text-gray-300 text-sm mt-1">{session.description}</div>
-                        )}
+                  {day.sessions.map(
+                    (
+                      session: {
+                        time: string;
+                        title: string;
+                        description?: string;
+                      },
+                      sessionIndex: number,
+                    ) => (
+                      <div
+                        key={sessionIndex}
+                        className="flex items-start gap-3 p-3 bg-gray-800/50 rounded-lg"
+                      >
+                        <Clock className="w-4 h-4 text-[#CFB991] mt-1 flex-shrink-0" />
+                        <div>
+                          <div className="text-sm text-[#CFB991] font-medium">
+                            {session.time}
+                          </div>
+                          <div className="text-white font-medium">
+                            {session.title}
+                          </div>
+                          {session.description && (
+                            <div className="text-gray-300 text-sm mt-1">
+                              {session.description}
+                            </div>
+                          )}
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ),
+                  )}
                 </div>
               </motion.div>
             ))}
@@ -276,9 +339,21 @@ export function Hackathon() {
             className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12"
           >
             {[
-              { place: "1st Place", amount: "$1000", gradient: "from-yellow-400 to-yellow-600" },
-              { place: "2nd Place", amount: "$500", gradient: "from-gray-300 to-gray-500" },
-              { place: "3rd Place", amount: "$300", gradient: "from-orange-400 to-orange-600" }
+              {
+                place: "1st Place",
+                amount: "$1000",
+                gradient: "from-yellow-400 to-yellow-600",
+              },
+              {
+                place: "2nd Place",
+                amount: "$500",
+                gradient: "from-gray-300 to-gray-500",
+              },
+              {
+                place: "3rd Place",
+                amount: "$300",
+                gradient: "from-orange-400 to-orange-600",
+              },
             ].map((prize, index) => (
               <motion.div
                 key={index}
@@ -288,11 +363,15 @@ export function Hackathon() {
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-[#CFB991]/5 to-[#DDB945]/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="relative">
-                  <div className={`w-16 h-16 bg-gradient-to-r ${prize.gradient} rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg`}>
+                  <div
+                    className={`w-16 h-16 bg-gradient-to-r ${prize.gradient} rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg`}
+                  >
                     <Trophy className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold mb-3">{prize.place}</h3>
-                  <p className="text-4xl font-black text-[#CFB991]">{prize.amount}</p>
+                  <p className="text-4xl font-black text-[#CFB991]">
+                    {prize.amount}
+                  </p>
                 </div>
               </motion.div>
             ))}
@@ -337,15 +416,33 @@ export function Hackathon() {
             className="text-center mb-16"
           >
             <h2 className="text-5xl font-black mb-6">How to Join</h2>
-            <p className="text-xl text-gray-300">Ready to build the future? Here&apos;s how to get started</p>
+            <p className="text-xl text-gray-300">
+              Ready to build the future? Here&apos;s how to get started
+            </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {[
-              { step: "1", title: "Register Online", desc: "Sign up before October 4th" },
-              { step: "2", title: "Form Your Team", desc: "Up to 5 people or get matched by skills" },
-              { step: "3", title: "Build Solutions", desc: "48 hours to create something amazing" },
-              { step: "4", title: "Present & Win", desc: "Pitch your solution to judges" }
+              {
+                step: "1",
+                title: "Register Online",
+                desc: "Sign up before October 4th",
+              },
+              {
+                step: "2",
+                title: "Form Your Team",
+                desc: "Up to 5 people or get matched by skills",
+              },
+              {
+                step: "3",
+                title: "Build Solutions",
+                desc: "48 hours to create something amazing",
+              },
+              {
+                step: "4",
+                title: "Present & Win",
+                desc: "Pitch your solution to judges",
+              },
             ].map((step, index) => (
               <div
                 key={index}
@@ -371,53 +468,74 @@ export function Hackathon() {
                 <Gift className="w-6 h-6 text-[#DDB945]" />
                 Resources Provided
               </h3>
-              <p className="text-gray-300 text-sm">Everything you need to build amazing solutions</p>
+              <p className="text-gray-300 text-sm">
+                Everything you need to build amazing solutions
+              </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="flex items-start gap-3">
                 <div className="w-10 h-10 bg-gradient-to-r from-[#CFB991] to-[#DDB945] rounded-lg flex items-center justify-center flex-shrink-0">
                   <Code className="w-5 h-5 text-black" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-white mb-1">RCAC Computing Resources</h4>
-                  <p className="text-gray-300 text-sm">Advanced computing power for ML and data processing</p>
+                  <h4 className="font-semibold text-white mb-1">
+                    RCAC Computing Resources
+                  </h4>
+                  <p className="text-gray-300 text-sm">
+                    Advanced computing power for ML and data processing
+                  </p>
                 </div>
               </div>
-              
+
               <div className="flex items-start gap-3">
                 <div className="w-10 h-10 bg-gradient-to-r from-[#DDB945] to-[#CFB991] rounded-lg flex items-center justify-center flex-shrink-0">
                   <Users className="w-5 h-5 text-black" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-white mb-1">Expert Mentorship</h4>
-                  <p className="text-gray-300 text-sm">Guidance from industry and academic professionals throughout the event</p>
+                  <h4 className="font-semibold text-white mb-1">
+                    Expert Mentorship
+                  </h4>
+                  <p className="text-gray-300 text-sm">
+                    Guidance from industry and academic professionals throughout
+                    the event
+                  </p>
                 </div>
               </div>
-              
+
               <div className="flex items-start gap-3">
                 <div className="w-10 h-10 bg-gradient-to-r from-[#555960] to-gray-600 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Gift className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-white mb-1">Food & Refreshments</h4>
-                  <p className="text-gray-300 text-sm">Meals and snacks to keep you energized</p>
+                  <h4 className="font-semibold text-white mb-1">
+                    Food & Refreshments
+                  </h4>
+                  <p className="text-gray-300 text-sm">
+                    Meals and snacks to keep you energized
+                  </p>
                 </div>
               </div>
-              
+
               <div className="flex items-start gap-3">
                 <div className="w-10 h-10 bg-gradient-to-r from-gray-600 to-[#555960] rounded-lg flex items-center justify-center flex-shrink-0">
                   <Target className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-white mb-1">Collaborative Workspace</h4>
-                  <p className="text-gray-300 text-sm">Modern facilities designed for team collaboration</p>
+                  <h4 className="font-semibold text-white mb-1">
+                    Collaborative Workspace
+                  </h4>
+                  <p className="text-gray-300 text-sm">
+                    Modern facilities designed for team collaboration
+                  </p>
                 </div>
               </div>
             </div>
-            
+
             <div className="mt-6 pt-4 border-t border-[#CFB991]/20 text-center">
-              <p className="text-sm text-gray-400 italic">*Don&apos;t forget to bring your own laptop!</p>
+              <p className="text-sm text-gray-400 italic">
+                *Don&apos;t forget to bring your own laptop!
+              </p>
             </div>
           </motion.div>
         </div>
@@ -449,24 +567,29 @@ export function Hackathon() {
               {/* Main content */}
               <div className="lg:col-span-2">
                 <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                  The SyDAg Hackathon is supported by the{' '}
-                  <a 
-                    href="https://www.rcac.purdue.edu/" 
-                    target="_blank" 
+                  The SyDAg Hackathon is supported by the{" "}
+                  <a
+                    href="https://www.rcac.purdue.edu/"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="font-semibold text-[#CFB991] hover:text-[#DDB945] transition-colors underline"
                   >
                     Rosen Center for Advanced Computing (RCAC)
-                  </a>{' '}
-                  at Purdue University, which offers state-of-the-art computational resources and expert services 
-                  to empower researchers. As a hub of innovation, RCAC drives performance enhancements and infrastructure 
-                  development to support data-intensive scientific discovery across disciplines.
+                  </a>{" "}
+                  at Purdue University, which offers state-of-the-art
+                  computational resources and expert services to empower
+                  researchers. As a hub of innovation, RCAC drives performance
+                  enhancements and infrastructure development to support
+                  data-intensive scientific discovery across disciplines.
                 </p>
-                
+
                 <p className="text-gray-300 leading-relaxed">
-                  The Anvil supercomputer, hosted by RCAC, represents Purdue&apos;s most powerful high-performance computing asset. 
-                  Funded by the NSF and part of the ACCESS program, Anvil provides robust compute capabilities to tens of 
-                  thousands of researchers nationwide, encouraging experiential learning and fostering future HPC professionals.
+                  The Anvil supercomputer, hosted by RCAC, represents
+                  Purdue&apos;s most powerful high-performance computing asset.
+                  Funded by the NSF and part of the ACCESS program, Anvil
+                  provides robust compute capabilities to tens of thousands of
+                  researchers nationwide, encouraging experiential learning and
+                  fostering future HPC professionals.
                 </p>
               </div>
 
@@ -477,28 +600,42 @@ export function Hackathon() {
                     <Cpu className="w-5 h-5 text-black" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-white mb-1">5.3 Petaflops Performance</h4>
-                    <p className="text-gray-300 text-sm">1,000 Dell-AMD nodes with specialized large-memory and GPU partitions</p>
+                    <h4 className="font-semibold text-white mb-1">
+                      5.3 Petaflops Performance
+                    </h4>
+                    <p className="text-gray-300 text-sm">
+                      1,000 Dell-AMD nodes with specialized large-memory and GPU
+                      partitions
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-3">
                   <div className="w-10 h-10 bg-gradient-to-r from-[#DDB945] to-[#CFB991] rounded-lg flex items-center justify-center flex-shrink-0">
                     <Zap className="w-5 h-5 text-black" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-white mb-1">ACCESS Allocation System</h4>
-                    <p className="text-gray-300 text-sm">Credit-based access through NSF&apos;s nationwide HPC program</p>
+                    <h4 className="font-semibold text-white mb-1">
+                      ACCESS Allocation System
+                    </h4>
+                    <p className="text-gray-300 text-sm">
+                      Credit-based access through NSF&apos;s nationwide HPC
+                      program
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-3">
                   <div className="w-10 h-10 bg-gradient-to-r from-gray-600 to-[#555960] rounded-lg flex items-center justify-center flex-shrink-0">
                     <Users className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-white mb-1">AI & ML Ready</h4>
-                    <p className="text-gray-300 text-sm">NVIDIA A100 and H100 GPUs for machine learning workloads</p>
+                    <h4 className="font-semibold text-white mb-1">
+                      AI & ML Ready
+                    </h4>
+                    <p className="text-gray-300 text-sm">
+                      NVIDIA A100 and H100 GPUs for machine learning workloads
+                    </p>
                   </div>
                 </div>
               </div>
@@ -521,7 +658,8 @@ export function Hackathon() {
               Meet the Judges
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Expert judges who will evaluate your innovative solutions and award prizes
+              Expert judges who will evaluate your innovative solutions and
+              award prizes
             </p>
           </motion.div>
 
@@ -561,6 +699,9 @@ export function Hackathon() {
                   </p>
                   <p className="text-[#CFB991] font-medium mb-4 text-sm">
                     {judge.organization}
+                  </p>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {judge.bio}
                   </p>
                 </div>
               </motion.div>

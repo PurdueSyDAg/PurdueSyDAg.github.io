@@ -5,7 +5,8 @@
     "title": "Head of Global Digital Product Development",
     "organization": "Bayer Crop Science",
     "image": "/hackathon/brent.jpg",
-    "role": "judge"
+    "role": "judge",
+    "bio": ""
   },
   {
     "id": "geoffrey-lentner",
@@ -13,14 +14,16 @@
     "title": "Data Science and HPC Specialist",
     "organization": "RCAC, Purdue University",
     "image": "/hackathon/geoffrey_lentner.jpeg",
-    "role": "judge"
+    "role": "judge",
+    "bio": "Data scientist and HPC expert with academic background in Astrophysics. Provides advanced user support on data science, data processing, and high-performance computing applications. Prolific builder of tools and automation, consulting with faculty and students on computational projects."
   },
   {
     "id": "tim-dixon",
     "name": "Tim Dixon",
     "title": "Managing Director",
-    "organization": "DIAL Ventures, Purdue University",
+    "organization": "DIAL Ventures, Purdue Applied Research Institute",
     "image": "/hackathon/tim.jpg",
-    "role": "judge"
+    "role": "judge",
+    "bio": "Developed and deployed Purdue DIAL Ventures’ studio model, launching 10 software/SaaS companies in its first three years of operation. Experience as CEO and leading sales and technical teams for Fortune 500 and startups in Dallas, Silicon Valley, Washington DC, and Chicago, raising more than $300M in funding."
   }
 ]
