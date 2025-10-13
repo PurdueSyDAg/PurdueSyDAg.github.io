@@ -3,6 +3,13 @@
 import { motion } from 'framer-motion';
 import { Clock, MapPin, Calendar, Users, User } from 'lucide-react';
 import scheduleData from '@/data/schedule.json';
+import speakersData from '@/data/speakers.json';
+
+// Function to get speaker name by ID
+const getSpeakerName = (speakerId: string): string => {
+    const speaker = speakersData.find(s => s.id === speakerId);
+    return speaker ? speaker.name : 'Speaker';
+};
 
 // Function to handle speaker name clicks
 const handleSpeakerClick = (speakerId: string) => {
@@ -171,21 +178,28 @@ export function Schedule() {
                                                     </span>
                                                 </div>
                                                 <h6 className={`font-medium text-[#000000] ${item.isGroup ? 'text-lg' : ''}`}>
-                                                    {item.speakerId ? (
-                                                        <button
-                                                            onClick={() => handleSpeakerClick(item.speakerId)}
-                                                            className="text-[#000000] hover:text-[#555960] active:text-[#555960] underline decoration-[#CFB991] decoration-2 underline-offset-2 cursor-pointer transition-colors duration-200 touch-manipulation"
-                                                        >
-                                                            {item.title}
-                                                        </button>
-                                                    ) : (
-                                                        item.title
-                                                    )}
+                                                    {item.title}
                                                 </h6>
                                                 {item.description && (
                                                     <p className="text-[#000000]/70 text-sm mt-1">
                                                         {item.description}
                                                     </p>
+                                                )}
+                                                {item.speakerId && (
+                                                    <div className="mt-2 p-2 bg-[#555960]/5">
+                                                        <div className="flex items-center mb-1">
+                                                            <User className="w-3 h-3 text-[#555960] mr-1" />
+                                                            <span className="text-xs font-medium text-[#555960]">
+                                                                Speaker:
+                                                            </span>
+                                                        </div>
+                                                        <button
+                                                            onClick={() => handleSpeakerClick(item.speakerId)}
+                                                            className="text-sm text-[#000000] hover:text-[#555960] active:text-[#555960] font-medium ml-4 underline decoration-[#CFB991] decoration-2 underline-offset-2 cursor-pointer transition-colors duration-200 touch-manipulation"
+                                                        >
+                                                            {getSpeakerName(item.speakerId)}
+                                                        </button>
+                                                    </div>
                                                 )}
                                                 {item.moderator && (
                                                     <div className="mt-2 p-2 bg-[#555960]/5">

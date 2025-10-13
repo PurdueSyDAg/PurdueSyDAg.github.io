@@ -107,12 +107,13 @@
               },
               {
                 "time": "11:45 am - 01:00 pm",
-                "title": "Lunch"
+                "title": "Lunch & Awards"
               },
               {
                 "time": "12:15 pm - 01:00 pm",
                 "title": "Keynote",
-                "description": "30-35 mins talk; 10 min questions"
+                "description": "30-35 mins talk; 10 min questions",
+                "speakerId": "xin-rex-sun"
               }
             ]
           },
@@ -140,14 +141,14 @@
               },
               {
                 "time": "02:00 pm",
-                "title": "Maia Donahue",
-                "description": "From Research to Reality: Transforming Innovation into Scalable Solutions",
+                "title": "Eric Schultz",
+                "description": "From Research to Reality: Turning data into decisions",
                 "isSubItem": true,
-                "speakerId": "maia-donahue"
+                "speakerId": "eric-schultz"
               },
               {
                 "time": "02:30 pm - 03:00 pm",
-                "title": "Break and poster session"
+                "title": "Break"
               },
               {
                 "time": "03:00 pm - 04:00 pm",
@@ -178,8 +179,8 @@
               },
               {
                 "time": "04:00 pm - 04:30 pm",
-                "title": "Awards ceremony",
-                "description": "Hackathon + poster session"
+                "title": "Hackathon Finalist Pitches",
+                "description": "5 mins presentations from 3 finalist teams"
               },
               {
                 "time": "04:30 pm - 06:00 pm",

@@ -54,7 +54,7 @@ export function Speakers() {
           {speakersData
             .sort((a, b) => {
               // Define role priority order
-              const roleOrder: { [key: string]: number } = { 'keynote speaker': 1, speaker: 2, panelist: 3, moderator: 4 };
+              const roleOrder: { [key: string]: number } = { 'keynote': 1, 'speaker': 2, 'panelist': 3, 'moderator': 4 };
               
               // First sort by role
               const roleComparison = (roleOrder[a.role] || 999) - (roleOrder[b.role] || 999);

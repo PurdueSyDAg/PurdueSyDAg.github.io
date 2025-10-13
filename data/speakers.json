@@ -56,11 +56,11 @@
     "role": "speaker"
   },
   {
-    "id": "maia-donahue",
-    "name": "Maia Donahue",
-    "title": "Digital Farming Platform Lead",
+    "id": "eric-schultz",
+    "name": "Eric Schultz",
+    "title": "Corterva's Seed R&D Leader: Hyperspectral Imaging & Predictive Analytics",
     "organization": "Corteva Agriscience",
-    "image": "/speakers/maia_donahue.jpeg",
+    "image": "/speakers/eric_schultz.jpg",
     "role": "speaker"
   },
   {
@@ -102,5 +102,13 @@
     "organization": "AgriSelect Evansville LLC",
     "image": "/speakers/andy_like.jpg",
     "role": "panelist"
+  },
+  {
+    "id": "xin-rex-sun",
+    "name": " Xin (Rex) Sun",
+    "title": "Endowed Chair and Director of the Peltier Institute for Advancement in Agricultural Technology",
+    "organization": "North Dakota State University",
+    "image": "/speakers/rex_sun.jpg",
+    "role": "keynote"
   }
 ]
