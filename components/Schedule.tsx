@@ -5,6 +5,24 @@ import { Clock, MapPin, Calendar, Users, User } from 'lucide-react';
 import scheduleData from '@/data/schedule.json';
 import speakersData from '@/data/speakers.json';
 
+// TypeScript interfaces for schedule data
+interface ScheduleItem {
+    time: string;
+    title: string;
+    description?: string;
+    isGroup?: boolean;
+    isSubItem?: boolean;
+    speakerId?: string;
+    moderator?: {
+        name: string;
+        id: string;
+    };
+    panelists?: Array<{
+        name: string;
+        id: string;
+    }>;
+}
+
 // Function to get speaker name by ID
 const getSpeakerName = (speakerId: string): string => {
     const speaker = speakersData.find(s => s.id === speakerId);
@@ -166,7 +184,7 @@ export function Schedule() {
                                                 whileInView={{ opacity: 1, y: 0 }}
                                                 transition={{ duration: 0.6, delay: itemIndex * 0.1 }}
                                                 viewport={{ once: true }}
-                                                className={`${item.isSubItem
+                                                className={`${(item as ScheduleItem).isSubItem
                                                     ? 'ml-6 border-l-2 border-[#CFB991]/60 pl-4 bg-white shadow-sm'
                                                     : 'border-l-4 border-[#555960]/60 pl-4 bg-white shadow-sm'
                                                     } py-2 rounded-r-md`}
@@ -177,7 +195,7 @@ export function Schedule() {
                                                         {item.time}
                                                     </span>
                                                 </div>
-                                                <h6 className={`font-medium text-[#000000] ${item.isGroup ? 'text-lg' : ''}`}>
+                                                <h6 className={`font-medium text-[#000000] ${(item as ScheduleItem).isGroup ? 'text-lg' : ''}`}>
                                                     {item.title}
                                                 </h6>
                                                 {item.description && (
@@ -185,7 +203,7 @@ export function Schedule() {
                                                         {item.description}
                                                     </p>
                                                 )}
-                                                {item.speakerId && (
+                                                {(item as ScheduleItem).speakerId && (
                                                     <div className="mt-2 p-2 bg-[#555960]/5">
                                                         <div className="flex items-center mb-1">
                                                             <User className="w-3 h-3 text-[#555960] mr-1" />
@@ -194,10 +212,10 @@ export function Schedule() {
                                                             </span>
                                                         </div>
                                                         <button
-                                                            onClick={() => handleSpeakerClick(item.speakerId)}
+                                                            onClick={() => handleSpeakerClick((item as ScheduleItem).speakerId!)}
                                                             className="text-sm text-[#000000] hover:text-[#555960] active:text-[#555960] font-medium ml-4 underline decoration-[#CFB991] decoration-2 underline-offset-2 cursor-pointer transition-colors duration-200 touch-manipulation"
                                                         >
-                                                            {getSpeakerName(item.speakerId)}
+                                                            {getSpeakerName((item as ScheduleItem).speakerId!)}
                                                         </button>
                                                     </div>
                                                 )}
