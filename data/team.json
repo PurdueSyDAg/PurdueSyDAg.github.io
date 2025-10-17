@@ -97,6 +97,14 @@
   },
   {
     "id": 13,
+    "name": "Lian Duron",
+    "position": "Research & Extension Assistant",
+    "role": "Marketing Team",
+    "pfp_file_name": "lian.jpeg",
+    "linkedin": "https://www.linkedin.com/in/lianduron"
+  },
+  {
+    "id": 14,
     "name": "Mariela Fernandez",
     "position": "Postdoctoral Research Associate",
     "role": "Finance, Poster and Travel Awards Teams",
@@ -104,7 +112,7 @@
     "linkedin": "https://www.linkedin.com/in/marielafernandez-campos/"
   },
   {
-    "id": 14,
+    "id": 15,
     "name": "Megan Low",
     "position": "Ph.D. Candidate",
     "role": "Logistics & Operations Team",
@@ -112,7 +120,7 @@
     "linkedin": "https://www.linkedin.com/in/megan-low-a45967138/"
   },
   {
-    "id": 15,
+    "id": 16,
     "name": "Melinda Smith",
     "position": "Project Manager",
     "role": "Advising Staff",
@@ -120,7 +128,7 @@
     "linkedin": "https://www.linkedin.com/in/melinda-smith-1a6aa512b/"
   },
   {
-    "id": 16,
+    "id": 17,
     "name": "Natalia Volpato",
     "position": "Ph.D. Student",
     "role": "Marketing Team",
@@ -128,7 +136,7 @@
     "linkedin": "https://www.linkedin.com/in/natalia-volpato-3824a6150/"
   },
   {
-    "id": 17,
+    "id": 18,
     "name": "Pedro Cisdeli",
     "position": "M.Sc. Student",
     "role": "Marketing Team",
@@ -136,7 +144,7 @@
     "linkedin": "https://linkedin.com/in/pedro-cisdeli"
   },
   {
-    "id": 18,
+    "id": 19,
     "name": "Thirawat Bureetes",
     "position": "Ph.D. Student",
     "role": "Chair and Session Team",
@@ -144,7 +152,7 @@
     "linkedin": "https://www.linkedin.com/in/thirawat-bureetes-8a787176/"
   },
   {
-    "id": 19,
+    "id": 20,
     "name": "Wily Sic",
     "position": "Ph.D. Student",
     "role": "Logistics & Operations and Session Team",
