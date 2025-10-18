@@ -98,9 +98,14 @@ export function Hero() {
   const CountdownTimer = () => {
     if (isExpired) {
       return (
-        <div className="flex flex-col items-center justify-center p-2 sm:p-3 bg-gradient-to-br from-[#CFB991] to-[#DDB945] text-[#000000] rounded-lg shadow-lg mx-auto max-w-sm">
-          <h2 className="font-heading text-base font-bold mb-1">🎉 Event Started!</h2>
-          <p className="font-heading text-sm font-semibold">Join us now!</p>
+        <div className="flex flex-col items-center justify-center p-3 sm:p-4 bg-gradient-to-br from-[#CFB991] to-[#DDB945] text-[#000000] rounded-lg shadow-lg mx-auto max-w-md">
+          <h2 className="font-heading text-base sm:text-lg font-bold mb-2">🎉 Hackathon Started!</h2>
+          <p className="font-heading text-sm sm:text-base font-semibold text-center leading-relaxed">
+            Symposium starting on Monday
+          </p>
+          <p className="font-heading text-xs sm:text-sm font-medium mt-1 text-center opacity-90">
+            Check the schedule below
+          </p>
         </div>
       );
     }
