@@ -57,11 +57,45 @@ export function Posters() {
                     <h2 className="text-5xl sm:text-6xl font-black text-white mb-8">
                         Posters
                     </h2>
+                    
+                    {/* Accepted Posters Section */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.1 }}
+                        viewport={{ once: true }}
+                        className="mb-12 max-w-4xl mx-auto"
+                    >
+                        <div className="bg-gradient-to-r from-[#CFB991]/20 via-[#DDB945]/15 to-[#DAAA00]/20 rounded-2xl p-8 border-2 border-[#CFB991]/50 shadow-2xl">
+                            <div className="flex items-center justify-center mb-4">
+                                <Trophy className="w-8 h-8 text-[#DDB945] mr-3" />
+                                <h3 className="text-2xl sm:text-3xl font-black text-white">
+                                    2025 Accepted Posters
+                                </h3>
+                            </div>
+                            <p className="text-base text-white/90 mb-6 leading-relaxed">
+                                Explore all the innovative posters accepted for the 2025 Symposium of Digital Agriculture!
+                            </p>
+                            <motion.a
+                                href="https://docs.lib.purdue.edu/sydag/2025/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#CFB991] to-[#DDB945] text-black font-bold text-lg rounded-xl shadow-lg hover:shadow-2xl transition-all"
+                            >
+                                <FileText className="w-5 h-5" />
+                                <span>View All Accepted Posters</span>
+                                <span className="text-sm opacity-90">→</span>
+                            </motion.a>
+                        </div>
+                    </motion.div>
+
                     <div className="max-w-4xl mx-auto space-y-6">
                         <motion.p
                             initial={{ opacity: 0, y: 15 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+                            transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
                             viewport={{ once: true }}
                             className="text-xl text-white/90 leading-relaxed"
                         >
@@ -71,7 +105,7 @@ export function Posters() {
                         <motion.p
                             initial={{ opacity: 0, y: 15 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
+                            transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
                             viewport={{ once: true }}
                             className="text-lg text-white/80 leading-relaxed"
                         >
@@ -99,7 +133,7 @@ export function Posters() {
                             <div className="w-12 h-12 bg-gradient-to-r from-[#CFB991] to-[#DDB945] rounded-xl flex items-center justify-center mr-4">
                                 <FileText className="w-6 h-6 text-white" />
                             </div>
-                            <h3 className="text-2xl font-bold text-black">In-Person Posters</h3>
+                            <h3 className="text-xl font-bold text-black">In-Person Posters</h3>
                         </div>
                         
                         <div className="space-y-4">
@@ -148,7 +182,7 @@ export function Posters() {
                             <div className="w-12 h-12 bg-gradient-to-r from-[#DDB945] to-[#DAAA00] rounded-xl flex items-center justify-center mr-4">
                                 <Video className="w-6 h-6 text-white" />
                             </div>
-                            <h3 className="text-2xl font-bold text-black">Online Posters</h3>
+                            <h3 className="text-xl font-bold text-black">Online Posters</h3>
                         </div>
                         
                         <div className="space-y-4">
@@ -213,7 +247,7 @@ export function Posters() {
                             <div className="w-12 h-12 bg-gradient-to-r from-[#555960] to-[#6F727B] rounded-xl flex items-center justify-center mr-4">
                                 <Calendar className="w-6 h-6 text-white" />
                             </div>
-                            <h3 className="text-2xl font-bold text-black">Deadline</h3>
+                            <h3 className="text-xl font-bold text-black">Deadline</h3>
                         </div>
                         <p className="text-[#1E3A5F] leading-relaxed">
                             The deadline to submit your poster information is 
@@ -230,7 +264,7 @@ export function Posters() {
                             <div className="w-12 h-12 bg-gradient-to-r from-[#DAAA00] to-[#DDB945] rounded-xl flex items-center justify-center mr-4">
                                 <Award className="w-6 h-6 text-white" />
                             </div>
-                            <h3 className="text-2xl font-bold text-black">Competition</h3>
+                            <h3 className="text-xl font-bold text-black">Competition</h3>
                         </div>
                         <p className="text-[#1E3A5F] leading-relaxed">
                             You may register and present more than one poster, but you can only 
@@ -253,7 +287,7 @@ export function Posters() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6 }}
                             viewport={{ once: true }}
-                            className="text-4xl font-black text-white mb-4 flex items-center justify-center gap-3"
+                            className="text-3xl sm:text-4xl font-black text-white mb-4 flex items-center justify-center gap-3"
                         >
                             <Trophy className="w-8 h-8 text-[#DDB945]" />
                             Competition Prizes
@@ -263,7 +297,7 @@ export function Posters() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.1 }}
                             viewport={{ once: true }}
-                            className="text-lg text-white/80 max-w-2xl mx-auto"
+                            className="text-base text-white/80 max-w-2xl mx-auto"
                         >
                             Compete for cash prizes with your innovative poster presentation
                         </motion.p>
@@ -292,8 +326,8 @@ export function Posters() {
                                         <Trophy className="w-8 h-8 text-white" />
                                     </div>
                                     <div className="text-4xl mb-3">{prize.rank}</div>
-                                    <h3 className="text-2xl font-bold text-[#000000] mb-3">{prize.place}</h3>
-                                    <p className="text-4xl font-black text-[#DDB945]">{prize.amount}</p>
+                                    <h4 className="text-xl font-bold text-[#000000] mb-3">{prize.place}</h4>
+                                    <p className="text-3xl font-black text-[#DDB945]">{prize.amount}</p>
                                 </div>
                             </motion.div>
                         ))}
@@ -308,8 +342,8 @@ export function Posters() {
                         className="mt-8 bg-gradient-to-r from-[#CFB991]/20 via-[#DDB945]/15 to-[#DAAA00]/20 rounded-xl p-6 border border-[#CFB991]/30 max-w-3xl mx-auto"
                     >
                         <div className="text-center">
-                            <h4 className="text-xl font-bold text-white mb-3">Competition Details</h4>
-                            <p className="text-white/90 leading-relaxed">
+                            <h4 className="text-lg font-bold text-white mb-3">Competition Details</h4>
+                            <p className="text-base text-white/90 leading-relaxed">
                                 Posters will be judged on <span className="font-semibold text-[#DDB945]">innovation</span>, 
                                 <span className="font-semibold text-[#DDB945]"> impact</span>, and 
                                 <span className="font-semibold text-[#DDB945]"> presentation quality</span>. 
@@ -327,8 +361,8 @@ export function Posters() {
                         className="mt-8 bg-white rounded-xl p-6 border-2 border-[#CFB991]/30 max-w-4xl mx-auto"
                     >
                         <div className="text-center mb-6">
-                            <h4 className="text-2xl font-bold text-[#000000] mb-3 flex items-center justify-center gap-2">
-                                <Award className="w-6 h-6 text-[#DDB945]" />
+                            <h4 className="text-lg font-bold text-[#000000] mb-3 flex items-center justify-center gap-2">
+                                <Award className="w-5 h-5 text-[#DDB945]" />
                                 Awards & Recognition
                             </h4>
                         </div>
@@ -340,7 +374,7 @@ export function Posters() {
                                     <div className="w-10 h-10 bg-gradient-to-r from-[#CFB991] to-[#DDB945] rounded-lg flex items-center justify-center mr-3">
                                         <Trophy className="w-5 h-5 text-white" />
                                     </div>
-                                    <h5 className="text-lg font-bold text-[#000000]">In-Person Presenters</h5>
+                                    <h5 className="text-base font-bold text-[#000000]">In-Person Presenters</h5>
                                 </div>
                                 <p className="text-[#1E3A5F] leading-relaxed">
                                     <span className="font-bold text-[#DDB945]">Monetary awards</span> are available for the top in-person poster presentations in the competition.
@@ -353,7 +387,7 @@ export function Posters() {
                                     <div className="w-10 h-10 bg-gradient-to-r from-[#DDB945] to-[#DAAA00] rounded-lg flex items-center justify-center mr-3">
                                         <FileText className="w-5 h-5 text-white" />
                                     </div>
-                                    <h5 className="text-lg font-bold text-[#000000]">Online Presenters</h5>
+                                    <h5 className="text-base font-bold text-[#000000]">Online Presenters</h5>
                                 </div>
                                 <p className="text-[#1E3A5F] leading-relaxed">
                                     All online presenters/poster submitters will receive a <span className="font-bold text-[#DDB945]">certificate of participation</span>.
@@ -379,7 +413,7 @@ export function Posters() {
                             <div className="w-16 h-16 bg-gradient-to-r from-[#CFB991] to-[#DDB945] rounded-2xl flex items-center justify-center mr-4 shadow-lg">
                                 <FileText className="w-8 h-8 text-white" />
                             </div>
-                            <h3 className="text-3xl font-black text-[#000000]">
+                            <h3 className="text-3xl sm:text-4xl font-black text-[#000000]">
                                 Poster Requirements
                             </h3>
                         </div>
@@ -397,7 +431,7 @@ export function Posters() {
                                     <div className="w-10 h-10 bg-gradient-to-r from-[#CFB991] to-[#DDB945] rounded-lg flex items-center justify-center mr-3">
                                         <Upload className="w-5 h-5 text-white" />
                                     </div>
-                                    <h4 className="text-lg font-bold text-[#000000]">Header Template</h4>
+                                    <h4 className="text-base font-bold text-[#000000]">Header Template</h4>
                                 </div>
                                 <p className="text-[#1E3A5F] leading-relaxed mb-4">
                                     Include the provided header template in your poster design to maintain consistency across all submissions.
@@ -432,7 +466,7 @@ export function Posters() {
                                     <div className="w-10 h-10 bg-gradient-to-r from-[#DDB945] to-[#DAAA00] rounded-lg flex items-center justify-center mr-3">
                                         <div className="text-white font-bold text-lg">💡</div>
                                     </div>
-                                    <h4 className="text-lg font-bold text-[#000000]">Innovation Focus</h4>
+                                    <h4 className="text-base font-bold text-[#000000]">Innovation Focus</h4>
                                 </div>
                                 <p className="text-[#1E3A5F] leading-relaxed">
                                     Add a dedicated section highlighting the <span className="font-semibold text-[#DDB945]">innovation and impact</span> of your research in digital agriculture.
@@ -451,7 +485,7 @@ export function Posters() {
                                     <div className="w-10 h-10 bg-gradient-to-r from-[#555960] to-[#6F727B] rounded-lg flex items-center justify-center mr-3">
                                         <div className="text-white font-bold text-lg">📐</div>
                                     </div>
-                                    <h4 className="text-lg font-bold text-[#000000]">Dimensions</h4>
+                                    <h4 className="text-base font-bold text-[#000000]">Dimensions</h4>
                                 </div>
                                 <p className="text-[#1E3A5F] leading-relaxed">
                                     <span className="font-bold text-[#555960]">Recommended size:</span><br />
@@ -478,26 +512,6 @@ export function Posters() {
                                 </p>
                             </div>
                         </motion.div>
-                    </div>
-                </motion.div>
-
-
-                {/* Submit Button */}
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
-                    viewport={{ once: true }}
-                    className="text-center"
-                >
-                    <h3 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-                        Ready to Submit Your Poster?
-                    </h3>
-                    <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
-                        Start your submission through Purdue e-Pubs and join the symposium poster showcase.
-                    </p>
-                    <div className="inline-flex items-center gap-2 px-8 py-4 bg-gray-400 text-gray-700 font-bold text-xl rounded-2xl cursor-not-allowed opacity-75">
-                        <span>Submission Closed - Deadline Passed</span>
                     </div>
                 </motion.div>
 
