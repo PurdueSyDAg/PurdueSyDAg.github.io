@@ -2,15 +2,20 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "SyDAg 2025 - From Innovation to Real World Impact",
-  description: "Join us for the first annual Symposium on Digital Agriculture, where we bring together researchers, industry leaders, and innovators to explore the intersection of digital technology and agricultural systems.",
-  keywords: "SyDAg, symposium, digital agriculture, innovation, agricultural technology, precision agriculture, smart farming, agtech, sustainable agriculture, research symposium, Purdue Univerisity",
-  authors: [{ name: "SyDAg 2025 Organizing Committee" }],
-  creator: "SyDAg 2025",
-  publisher: "SyDAg 2025",
-  metadataBase: new URL('https://www.sydag.org'),
+  title: {
+    default: "SyDAg",
+    template: "%s | SyDAg",
+  },
+  description:
+    "Symposium of Digital Agriculture website, including the latest event information and archived editions.",
+  keywords:
+    "SyDAg, symposium, digital agriculture, agtech, Purdue University, archived symposium website",
+  authors: [{ name: "SyDAg Organizing Committee" }],
+  creator: "SyDAg",
+  publisher: "SyDAg",
+  metadataBase: new URL("https://www.sydag.org"),
   alternates: {
-    canonical: 'https://www.sydag.org',
+    canonical: "https://www.sydag.org",
   },
   robots: {
     index: true,
@@ -18,57 +23,57 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   icons: {
     icon: [
-      { url: '/favicon.ico?v=2', sizes: 'any' },
-      { url: '/favicon-16x16.png?v=2', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon-32x32.png?v=2', sizes: '32x32', type: 'image/png' },
+      { url: "/favicon.ico?v=2", sizes: "any" },
+      { url: "/favicon-16x16.png?v=2", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png?v=2", sizes: "32x32", type: "image/png" },
     ],
-    apple: [
-      { url: '/apple-touch-icon.png', sizes: '180x180' },
-    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
     other: [
       {
-        rel: 'mask-icon',
-        url: '/safari-pinned-tab.svg',
-        color: '#000000',
+        rel: "mask-icon",
+        url: "/safari-pinned-tab.svg",
+        color: "#000000",
       },
     ],
   },
-  manifest: '/site.webmanifest',
+  manifest: "/site.webmanifest",
   openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: 'https://www.sydag.org',
-    siteName: 'SyDAg 2025',
-    title: 'SyDAg 2025 - From Innovation to Real World Impact',
-    description: 'Join us for the first annual Symposium on Digital Agriculture, where we bring together researchers, industry leaders, and innovators to explore the intersection of digital technology and agricultural systems.',
+    type: "website",
+    locale: "en_US",
+    url: "https://www.sydag.org",
+    siteName: "SyDAg",
+    title: "SyDAg",
+    description:
+      "Symposium of Digital Agriculture website, including the latest event information and archived editions.",
     images: [
       {
-        url: '/logo.png',
+        url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: 'SyDAg 2025 - Symposium on Digital Agriculture',
+        alt: "SyDAg - Symposium on Digital Agriculture",
       },
     ],
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'SyDAg 2025 - From Innovation to Real World Impact',
-    description: 'Join us for the first annual Symposium on Digital Agriculture, where we bring together researchers, industry leaders, and innovators.',
-    images: ['/logo.png'],
-    creator: '@sydag2025',
-    site: '@sydag2025',
+    card: "summary_large_image",
+    title: "SyDAg",
+    description:
+      "Symposium of Digital Agriculture website, including the latest event information and archived editions.",
+    images: ["/logo.png"],
+    creator: "@sydag2025",
+    site: "@sydag2025",
   },
   other: {
-    'theme-color': '#ffffff',
-    'color-scheme': 'light',
-    'format-detection': 'telephone=no',
+    "theme-color": "#ffffff",
+    "color-scheme": "light",
+    "format-detection": "telephone=no",
   },
 };
 
@@ -84,13 +89,21 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
         <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=2" />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png?v=2"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png?v=2"
+        />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       </head>
-      <body className="antialiased">
-        {children}
-      </body>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }

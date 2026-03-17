@@ -1,21 +1,22 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
-  Menu,
-  X,
+  CalendarCheck2,
+  FileText,
+  Handshake,
   Home,
+  Info,
+  Menu,
   Send,
   Speech,
-  CalendarCheck2,
-  Users,
-  Info,
-  Handshake,
   Trophy,
-  FileText,
+  Users,
+  X,
 } from "lucide-react";
+import { YearSwitcher } from "@/components/shared/YearSwitcher";
 
 type NavItem = {
   name: string;
@@ -24,7 +25,11 @@ type NavItem = {
   type: "anchor" | "route";
 };
 
-const navigationItems: NavItem[] = [
+type HeaderProps = {
+  variant?: "2025" | "2026";
+};
+
+const archiveNavigationItems: NavItem[] = [
   { name: "Home", icon: Home, href: "#home", type: "anchor" },
   { name: "About", icon: Info, href: "#about", type: "anchor" },
   { name: "Posters", icon: FileText, href: "#posters", type: "anchor" },
@@ -32,13 +37,22 @@ const navigationItems: NavItem[] = [
   { name: "Schedule", icon: CalendarCheck2, href: "#schedule", type: "anchor" },
   { name: "Team", icon: Users, href: "#team", type: "anchor" },
   { name: "Sponsors", icon: Handshake, href: "#sponsors", type: "anchor" },
-  { name: "Hackathon", icon: Trophy, href: "/hackathon", type: "route" },
+  { name: "Hackathon", icon: Trophy, href: "/2025/hackathon", type: "route" },
 ];
 
-export function Header() {
+const liveNavigationItems: NavItem[] = [
+  { name: "Home", icon: Home, href: "#home", type: "anchor" },
+  { name: "Hackathon", icon: Trophy, href: "/2026/hackathon", type: "route" },
+];
+
+export function Header({ variant = "2025" }: HeaderProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const pathname = usePathname();
+  const homePath = variant === "2025" ? "/2025" : "/2026";
+  const navigationItems =
+    variant === "2025" ? archiveNavigationItems : liveNavigationItems;
+  const showRegister = variant === "2025";
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
@@ -46,7 +60,6 @@ export function Header() {
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
-      // Set active section immediately when clicking
       setActiveSection(href.substring(1));
     }
     setIsMobileMenuOpen(false);
@@ -59,12 +72,12 @@ export function Header() {
     );
   };
 
-  // Intersection Observer to track active section
-  useEffect(() => {
-    // Only attach observer on homepage route
-    if (pathname && pathname !== "/") return;
+  const getAnchorHref = (href: string) => `${homePath}${href}`;
+  const isHomeRoute = pathname === homePath;
 
-    // Small delay to ensure all sections are rendered
+  useEffect(() => {
+    if (pathname && pathname !== homePath) return;
+
     const timer = setTimeout(() => {
       const sectionElements = navigationItems
         .filter((item) => item.type === "anchor")
@@ -78,154 +91,142 @@ export function Header() {
 
       const observer = new IntersectionObserver(
         (entries) => {
-          // Find all intersecting entries
           const intersectingEntries = entries.filter(
             (entry) => entry.isIntersecting,
           );
 
           if (intersectingEntries.length > 0) {
-            // Sort by intersection ratio (most visible section first)
             intersectingEntries.sort(
               (a, b) => b.intersectionRatio - a.intersectionRatio,
             );
-
-            // Get the ID of the most visible section
-            const mostVisibleSection = intersectingEntries[0].target.id;
-            setActiveSection(mostVisibleSection);
+            setActiveSection(intersectingEntries[0].target.id);
           } else {
-            // Handle case when scrolling between sections
-            // Check scroll position to determine which section should be active
             const scrollPosition = window.scrollY + window.innerHeight / 2;
-            
+
             for (const { id, element } of sectionElements) {
-              if (element) {
-                const rect = element.getBoundingClientRect();
-                const elementTop = rect.top + window.scrollY;
-                const elementBottom = elementTop + rect.height;
-                
-                if (scrollPosition >= elementTop && scrollPosition <= elementBottom) {
-                  setActiveSection(id);
-                  break;
-                }
+              if (!element) continue;
+
+              const rect = element.getBoundingClientRect();
+              const elementTop = rect.top + window.scrollY;
+              const elementBottom = elementTop + rect.height;
+
+              if (
+                scrollPosition >= elementTop &&
+                scrollPosition <= elementBottom
+              ) {
+                setActiveSection(id);
+                break;
               }
             }
           }
         },
         {
-          threshold: [0.1, 0.3, 0.5, 0.7], // Better thresholds for section detection
-          rootMargin: "-100px 0px -50% 0px", // Improved margins for better detection
+          threshold: [0.1, 0.3, 0.5, 0.7],
+          rootMargin: "-100px 0px -50% 0px",
         },
       );
 
-      // Observe all sections
       sectionElements.forEach(({ element }) => {
         if (element) observer.observe(element);
       });
 
-      // Add scroll listener as backup
       const handleScroll = () => {
-        const scrollPosition = window.scrollY + 150; // Account for header height
-        
+        const scrollPosition = window.scrollY + 150;
+
         for (const { id, element } of sectionElements) {
-          if (element) {
-            const rect = element.getBoundingClientRect();
-            const elementTop = rect.top + window.scrollY;
-            const elementBottom = elementTop + rect.height;
-            
-            if (scrollPosition >= elementTop && scrollPosition < elementBottom) {
-              setActiveSection(id);
-              break;
-            }
+          if (!element) continue;
+
+          const rect = element.getBoundingClientRect();
+          const elementTop = rect.top + window.scrollY;
+          const elementBottom = elementTop + rect.height;
+
+          if (
+            scrollPosition >= elementTop &&
+            scrollPosition < elementBottom
+          ) {
+            setActiveSection(id);
+            break;
           }
         }
       };
 
-      // Initial call to set correct active section
       handleScroll();
+      window.addEventListener("scroll", handleScroll, { passive: true });
 
-      window.addEventListener('scroll', handleScroll, { passive: true });
-
-      // Store observer and scroll listener for cleanup
       return () => {
         observer.disconnect();
-        window.removeEventListener('scroll', handleScroll);
+        window.removeEventListener("scroll", handleScroll);
       };
     }, 100);
 
     return () => {
       clearTimeout(timer);
     };
-  }, [pathname]);
+  }, [homePath, navigationItems, pathname]);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 w-full bg-gradient-to-r from-[#000000] via-[#1a1a1a] to-[#000000] backdrop-blur-md border-b border-[#9E6F3E]/20 transition-all duration-300">
+    <header className="fixed left-0 right-0 top-0 z-50 w-full border-b border-[#9E6F3E]/20 bg-gradient-to-r from-[#000000] via-[#1a1a1a] to-[#000000] backdrop-blur-md transition-all duration-300">
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo and Title */}
+        <div className="flex h-16 items-center justify-between">
           <div className="flex items-center space-x-2">
             <div className="flex items-center space-x-2">
-              <h1 className="font-heading text-xl font-bold bg-gradient-to-r from-[#CFB991] to-[#DDB945] bg-clip-text text-transparent">
+              <h1 className="font-heading bg-gradient-to-r from-[#CFB991] to-[#DDB945] bg-clip-text text-xl font-bold text-transparent">
                 SyDAg
               </h1>
-              <div className="hidden sm:block w-px h-6 bg-[#9E6F3E]/30"></div>
-              <span className="hidden sm:block text-sm text-white/70 font-light">
+              <div className="hidden h-6 w-px bg-[#9E6F3E]/30 sm:block"></div>
+              <span className="hidden text-sm font-light text-white/70 sm:block">
                 A Purdue Student Led Symposium
               </span>
             </div>
           </div>
 
-          {/* Center Navigation and Right Register Button */}
           <div className="flex items-center space-x-4">
-            {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center space-x-1">
+            <nav className="hidden items-center space-x-1 md:flex">
               {navigationItems.map((item) => {
                 const isAnchor = item.type === "anchor";
                 const isActive = isAnchor
-                  ? pathname === "/" && activeSection === item.href.substring(1)
+                  ? isHomeRoute && activeSection === item.href.substring(1)
                   : pathname?.startsWith(item.href);
                 const innerContent = (
                   <>
                     <item.icon
-                      className={`w-4 h-4 transition-colors duration-200 ${isActive
+                      className={`h-4 w-4 transition-colors duration-200 ${
+                        isActive
                           ? "text-[#CFB991]"
-                          : "group-hover:text-[#CFB991]"}
-                      `}
+                          : "group-hover:text-[#CFB991]"
+                      }`}
                     />
                     <span className="font-heading text-sm">{item.name}</span>
                   </>
                 );
 
                 return isAnchor ? (
-                  pathname === "/" ? (
-                    <button
-                      key={item.name}
-                      onClick={() => handleAnchorClick(item.href)}
-                      className={`group flex items-center space-x-1 px-3 py-2 rounded-lg transition-all duration-200 hover:scale-105 nav-font-geist cursor-pointer ${
-                        isActive
-                          ? "text-[#CFB991] font-bold"
-                          : "text-white/80 hover:text-white hover:font-semibold"
-                      }`}
-                    >
-                      {innerContent}
-                    </button>
-                  ) : (
-                    <Link
-                      key={item.name}
-                      href={`/${item.href}`}
-                      className={`group flex items-center space-x-1 px-3 py-2 rounded-lg transition-all duration-200 hover:scale-105 nav-font-geist text-white/80 hover:text-white hover:font-semibold`}
-                    >
-                      {innerContent}
-                    </Link>
-                  )
+                  <Link
+                    key={item.name}
+                    href={getAnchorHref(item.href)}
+                    onClick={(event) => {
+                      if (isHomeRoute) {
+                        event.preventDefault();
+                        handleAnchorClick(item.href);
+                      }
+                    }}
+                    className={`group flex items-center space-x-1 rounded-lg px-3 py-2 transition-all duration-200 hover:scale-105 ${
+                      isActive
+                        ? "font-bold text-[#CFB991]"
+                        : "text-white/80 hover:font-semibold hover:text-white"
+                    }`}
+                  >
+                    {innerContent}
+                  </Link>
                 ) : (
                   <Link
                     key={item.name}
                     href={item.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className={`group flex items-center space-x-1 px-3 py-2 rounded-lg transition-all duration-200 hover:scale-105 nav-font-geist ${
+                    className={`group flex items-center space-x-1 rounded-lg px-3 py-2 transition-all duration-200 hover:scale-105 ${
                       isActive
-                        ? "text-[#CFB991] font-bold"
-                        : "text-white/80 hover:text-white hover:font-semibold"
+                        ? "font-bold text-[#CFB991]"
+                        : "text-white/80 hover:font-semibold hover:text-white"
                     }`}
                   >
                     {innerContent}
@@ -234,80 +235,86 @@ export function Header() {
               })}
             </nav>
 
-            {/* Register Button */}
-            <button
-              onClick={handleRegisterClick}
-              className="hidden md:flex items-center space-x-1 px-4 py-1 bg-gradient-to-r from-[#CFB991] to-[#DDB945] text-[#000000] font-bold rounded-lg hover:scale-105 transition-all duration-200 shadow-lg cursor-pointer"
-            >
-              <Send className="w-4 h-4" />
-              <span className="font-heading">Register</span>
-            </button>
+            <div className="hidden md:block">
+              <YearSwitcher currentYear={variant} />
+            </div>
 
-            {/* Mobile Menu Button */}
+            {showRegister && (
+              <button
+                onClick={handleRegisterClick}
+                className="hidden cursor-pointer items-center space-x-1 rounded-lg bg-gradient-to-r from-[#CFB991] to-[#DDB945] px-4 py-1 font-bold text-[#000000] shadow-lg transition-all duration-200 hover:scale-105 md:flex"
+              >
+                <Send className="h-4 w-4" />
+                <span className="font-heading">Register</span>
+              </button>
+            )}
+
             <div className="md:hidden">
               <button
                 onClick={toggleMobileMenu}
-                className="p-2 rounded-lg text-white/80 hover:text-white transition-colors duration-200 cursor-pointer"
+                className="cursor-pointer rounded-lg p-2 text-white/80 transition-colors duration-200 hover:text-white"
                 aria-label="Toggle menu"
               >
                 {isMobileMenuOpen ? (
-                  <X className="w-6 h-6" />
+                  <X className="h-6 w-6" />
                 ) : (
-                  <Menu className="w-6 h-6" />
+                  <Menu className="h-6 w-6" />
                 )}
               </button>
             </div>
           </div>
         </div>
 
-        {/* Mobile Navigation Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden border-t border-[#C56A33]/20 py-4">
+          <div className="border-t border-[#C56A33]/20 py-4 md:hidden">
             <nav className="flex flex-col space-y-1">
+              <div className="px-3 pb-3">
+                <YearSwitcher currentYear={variant} />
+              </div>
+
               {navigationItems.map((item) => {
                 const isAnchor = item.type === "anchor";
+
                 return isAnchor ? (
-                  pathname === "/" ? (
-                    <button
-                      key={item.name}
-                      onClick={() => handleAnchorClick(item.href)}
-                      className="flex items-center space-x-3 px-3 py-3 rounded-lg transition-all duration-200 text-white/80 font-heading cursor-pointer"
-                    >
-                      <item.icon className="w-5 h-5" />
-                      <span className="font-heading">{item.name}</span>
-                    </button>
-                  ) : (
-                    <Link
-                      key={item.name}
-                      href={`/${item.href}`}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className="flex items-center space-x-3 px-3 py-3 rounded-lg transition-all duration-200 text-white/80 font-heading"
-                    >
-                      <item.icon className="w-5 h-5" />
-                      <span className="font-heading">{item.name}</span>
-                    </Link>
-                  )
+                  <Link
+                    key={item.name}
+                    href={getAnchorHref(item.href)}
+                    onClick={(event) => {
+                      if (isHomeRoute) {
+                        event.preventDefault();
+                        handleAnchorClick(item.href);
+                        return;
+                      }
+
+                      setIsMobileMenuOpen(false);
+                    }}
+                    className="flex items-center space-x-3 rounded-lg px-3 py-3 font-heading text-white/80 transition-all duration-200"
+                  >
+                    <item.icon className="h-5 w-5" />
+                    <span className="font-heading">{item.name}</span>
+                  </Link>
                 ) : (
                   <Link
                     key={item.name}
                     href={item.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="flex items-center space-x-3 px-3 py-3 rounded-lg transition-all duration-200 text-white/80 font-heading"
+                    className="flex items-center space-x-3 rounded-lg px-3 py-3 font-heading text-white/80 transition-all duration-200"
                   >
-                    <item.icon className="w-5 h-5" />
+                    <item.icon className="h-5 w-5" />
                     <span className="font-heading">{item.name}</span>
                   </Link>
                 );
               })}
 
-              {/* Mobile Register Button */}
-              <button
-                onClick={handleRegisterClick}
-                className="flex items-center space-x-3 px-3 py-3 mt-2 bg-gradient-to-r from-[#ddb945] to-[#f4e076] text-[#1F1510] font-bold rounded-lg transition-all duration-200 cursor-pointer"
-              >
-                <Send className="w-5 h-5" />
-                <span className="font-heading">Register</span>
-              </button>
+              {showRegister && (
+                <button
+                  onClick={handleRegisterClick}
+                  className="mt-2 flex cursor-pointer items-center space-x-3 rounded-lg bg-gradient-to-r from-[#ddb945] to-[#f4e076] px-3 py-3 font-bold text-[#1F1510] transition-all duration-200"
+                >
+                  <Send className="h-5 w-5" />
+                  <span className="font-heading">Register</span>
+                </button>
+              )}
             </nav>
           </div>
         )}

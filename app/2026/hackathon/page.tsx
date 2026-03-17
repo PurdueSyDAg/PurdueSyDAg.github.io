@@ -1,7 +1,7 @@
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 
-export default function HackathonPage() {
+export default function Site2026HackathonPage() {
   return (
     <div className="w-full overflow-x-hidden">
       <Header variant="2026" />
@@ -11,11 +11,11 @@ export default function HackathonPage() {
             2026 Hackathon
           </p>
           <h1 className="mb-6 text-4xl font-black text-[#000000] sm:text-5xl">
-            This page is reserved for the next hackathon build.
+            This page is ready for the next hackathon launch.
           </h1>
           <p className="mb-8 max-w-3xl text-lg leading-relaxed text-[#1E3A5F]">
-            We kept the full 2025 hackathon page intact for record keeping.
-            Use the year switcher above, or jump straight to the archive below.
+            The 2026 experience will be built here. Until then, the full 2025
+            hackathon remains available as an archive.
           </p>
           <a
             href="/2025/hackathon"

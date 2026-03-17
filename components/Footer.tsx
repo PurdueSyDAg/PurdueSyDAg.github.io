@@ -2,15 +2,17 @@
 
 import { Instagram, Linkedin } from 'lucide-react';
 
-export function Footer() {
-    const currentYear = new Date().getFullYear();
+type FooterProps = {
+    copyrightYear?: number;
+};
+
+export function Footer({ copyrightYear }: FooterProps) {
+    const currentYear = copyrightYear ?? new Date().getFullYear();
 
     return (
         <footer className="bg-gradient-to-r from-[#000000] via-[#1a1a1a] to-[#000000] border-t border-[#555960]/20 py-12">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                {/* Main footer content */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-                    {/* SyDAg Column */}
                     <div className="text-center md:text-left">
                         <h3 className="text-lg font-bold text-[#CFB991] mb-3">
                             SyDAg
@@ -20,7 +22,6 @@ export function Footer() {
                         </p>
                     </div>
 
-                    {/* Digital Ag. Club Column */}
                     <div className="text-center md:text-left">
                         <a
                             href="https://digitalagclub.org/"
@@ -37,7 +38,6 @@ export function Footer() {
                         </p>
                     </div>
 
-                    {/* IDAAS Column */}
                     <div className="text-center md:text-left">
                         <a
                             href="https://ag.purdue.edu/idaas/index.html"
@@ -57,7 +57,6 @@ export function Footer() {
                         </p>
                     </div>
 
-                    {/* RCAC Column */}
                     <div className="text-center md:text-left">
                         <a
                             href="https://www.rcac.purdue.edu/"
@@ -78,7 +77,6 @@ export function Footer() {
                     </div>
                 </div>
 
-                {/* Copyright and Social Links */}
                 <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 pt-8 border-t border-[#555960]/20">
                     <div className="text-center md:text-left">
                         <p className="text-white/70">
@@ -110,4 +108,4 @@ export function Footer() {
             </div>
         </footer>
     );
-} 
+}
