@@ -42,6 +42,9 @@ const archiveNavigationItems: NavItem[] = [
 
 const liveNavigationItems: NavItem[] = [
   { name: "Home", icon: Home, href: "#home", type: "anchor" },
+  { name: "About", icon: Info, href: "#about", type: "anchor" },
+  { name: "Speakers", icon: Speech, href: "#speakers", type: "anchor" },
+  { name: "Schedule", icon: CalendarCheck2, href: "#schedule", type: "anchor" },
   { name: "Hackathon", icon: Trophy, href: "/2026/hackathon", type: "route" },
 ];
 

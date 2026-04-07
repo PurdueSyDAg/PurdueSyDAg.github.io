@@ -1,0 +1,108 @@
+{
+  "header": {
+    "eyebrow": "Agenda",
+    "title": "Schedule",
+    "dayDate": "Monday, September 28, 2026",
+    "venue": "Beck Agricultural Center · 4550 US-52, West Lafayette, IN"
+  },
+  "periods": [
+    {
+      "label": "Morning Session",
+      "events": [
+        {
+          "time": "08:00 – 08:30 AM",
+          "title": "Check-in & Breakfast",
+          "purpose": "Networking and a relaxed start to the day; finalize poster setup."
+        },
+        {
+          "time": "08:30 – 09:00 AM",
+          "title": "Kickoff & Opening Remarks",
+          "description": "Speakers TBD",
+          "purpose": "Introduce the symposium theme “Growing with AI” and highlight the collaborative, student-led nature of the event."
+        },
+        {
+          "time": "09:00 – 10:00 AM",
+          "title": "Talk Session 1",
+          "topic": "AI in Agriculture Today: From Field Data to Decision Making",
+          "purpose": "Set the stage with field-informed insights and industry perspectives on how AI-enabled tools are reshaping production and agronomic decision-making.",
+          "subEvents": [
+            { "time": "09:00 – 09:30", "title": "Talk 1 (TBD)" },
+            { "time": "09:30 – 10:00", "title": "Talk 2 (TBD)" }
+          ]
+        },
+        {
+          "time": "10:00 – 10:30 AM",
+          "title": "Break & Showcase",
+          "purpose": "Details TBD."
+        },
+        {
+          "time": "10:30 – 11:30 AM",
+          "title": "Talk Session 2",
+          "topic": "From Agricultural Challenges to AI-Driven Solutions",
+          "purpose": "Highlight emerging research, innovations, and AI-driven discoveries with potential to shape scalable solutions.",
+          "subEvents": [
+            { "time": "10:30 – 11:00", "title": "Talk 3 (TBD)" },
+            { "time": "11:00 – 11:30", "title": "Talk 4 (TBD)" }
+          ]
+        },
+        {
+          "time": "11:30 AM – 12:30 PM",
+          "title": "Panel Discussion",
+          "topic": "Bridging the Gap: Accelerating AI Adoption in Agriculture",
+          "purpose": "While innovation in digital agriculture is growing rapidly, adoption remains a major challenge. This panel explores how academia, industry, and growers can work together to accelerate the practical use of AI technologies.",
+          "topicsLabel": "Discussion may include",
+          "topics": [
+            "Barriers to technology adoption",
+            "Data accessibility and interoperability",
+            "Economic considerations for farmers",
+            "Building trust in AI-driven systems",
+            "Training the next generation of agricultural technologists"
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Lunch & Keynote",
+      "events": [
+        {
+          "time": "12:30 – 01:30 PM",
+          "title": "Keynote: The Next Frontier of AI in Agriculture",
+          "description": "Speaker TBD",
+          "highlight": true,
+          "purpose": "A big-picture perspective on the future of AI in agriculture—emerging technologies, industry trends, and opportunities for innovation.",
+          "topicsLabel": "Key takeaways may include",
+          "topics": [
+            "The evolving role of artificial intelligence in food systems",
+            "Future opportunities for AI-driven agricultural solutions",
+            "How collaboration between academia, industry, and farmers can accelerate innovation"
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Afternoon Session",
+      "events": [
+        {
+          "time": "01:30 – 02:30 PM",
+          "title": "Poster Session",
+          "purpose": "Showcase student and faculty research and foster scientific exchange, with space for networking."
+        },
+        {
+          "time": "02:30 – 03:00 PM",
+          "title": "Hackathon Finalist Presentations",
+          "purpose": "Finalist teams present their hackathon projects."
+        },
+        {
+          "time": "03:00 – 03:30 PM",
+          "title": "Awards & Closing",
+          "purpose": "Recognize hackathon and poster competition winners and other honorees as determined by the planning team; encourage participation in future events."
+        },
+        {
+          "time": "03:30 – 05:00 PM",
+          "title": "Networking & Showcase",
+          "purpose": "Engage with industry representatives, researchers, and fellow attendees; explore demonstrations, career pathways, and opportunities to collaborate across academia, industry, and emerging agtech innovators."
+        }
+      ]
+    }
+  ]
+}

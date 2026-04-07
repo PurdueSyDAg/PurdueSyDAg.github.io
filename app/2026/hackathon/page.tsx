@@ -25,7 +25,7 @@ export default function Site2026HackathonPage() {
           </a>
         </div>
       </main>
-      <Footer copyrightYear={2026} />
+      <Footer copyrightYear={2026} showDigitalAgClub={false} />
     </div>
   );
 }

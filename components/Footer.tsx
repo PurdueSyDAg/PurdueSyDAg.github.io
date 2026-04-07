@@ -4,15 +4,24 @@ import { Instagram, Linkedin } from 'lucide-react';
 
 type FooterProps = {
     copyrightYear?: number;
+    /** When false, hides the Digital Ag. Club column (e.g. 2026 live site). Default true for 2025 archive. */
+    showDigitalAgClub?: boolean;
 };
 
-export function Footer({ copyrightYear }: FooterProps) {
+export function Footer({
+    copyrightYear,
+    showDigitalAgClub = true,
+}: FooterProps) {
     const currentYear = copyrightYear ?? new Date().getFullYear();
 
     return (
         <footer className="bg-gradient-to-r from-[#000000] via-[#1a1a1a] to-[#000000] border-t border-[#555960]/20 py-12">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div
+                    className={`grid grid-cols-1 gap-8 mb-8 md:grid-cols-2 ${
+                        showDigitalAgClub ? 'lg:grid-cols-4' : 'lg:grid-cols-3'
+                    }`}
+                >
                     <div className="text-center md:text-left">
                         <h3 className="text-lg font-bold text-[#CFB991] mb-3">
                             SyDAg
@@ -22,21 +31,23 @@ export function Footer({ copyrightYear }: FooterProps) {
                         </p>
                     </div>
 
-                    <div className="text-center md:text-left">
-                        <a
-                            href="https://digitalagclub.org/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-block"
-                        >
-                            <h3 className="text-lg font-bold text-[#DDB945] hover:text-[#CFB991] transition-colors duration-200 mb-3 underline decoration-2 underline-offset-2">
-                                Digital Ag. Club (DAC)
-                            </h3>
-                        </a>
-                        <p className="text-white/70 text-sm">
-                            Fostering innovation and collaboration in digital agricultural technologies
-                        </p>
-                    </div>
+                    {showDigitalAgClub && (
+                        <div className="text-center md:text-left">
+                            <a
+                                href="https://digitalagclub.org/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-block"
+                            >
+                                <h3 className="text-lg font-bold text-[#DDB945] hover:text-[#CFB991] transition-colors duration-200 mb-3 underline decoration-2 underline-offset-2">
+                                    Digital Ag. Club (DAC)
+                                </h3>
+                            </a>
+                            <p className="text-white/70 text-sm">
+                                Fostering innovation and collaboration in digital agricultural technologies
+                            </p>
+                        </div>
+                    )}
 
                     <div className="text-center md:text-left">
                         <a

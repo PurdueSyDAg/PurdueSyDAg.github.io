@@ -1,0 +1,135 @@
+import {
+  Monitor,
+  Handshake,
+  Sparkles,
+  Route,
+  Eye,
+  Network,
+} from 'lucide-react';
+
+const purposeItems = [
+  {
+    icon: Monitor,
+    text: 'Showcase technology that improves real-world decision-making',
+  },
+  {
+    icon: Handshake,
+    text: 'Promote collaboration between industry, academia, and growers',
+  },
+  {
+    icon: Sparkles,
+    text: 'Inspire the next generation of digital agriculture innovators',
+  },
+  {
+    icon: Route,
+    text: 'Create accessible pathways for understanding emerging digital tools',
+  },
+  {
+    icon: Eye,
+    text: 'Increase awareness of ongoing research and industry innovations',
+  },
+  {
+    icon: Network,
+    text: 'Foster interdisciplinary networks and hands-on learning',
+  },
+];
+
+const audienceGroups = [
+  'Students',
+  'Researchers & Educators',
+  'Industry & Startups',
+  'Extension & Agronomists',
+  'Growers',
+];
+
+export function About2026() {
+  return (
+    <section id="about" className="bg-[#0A0A0A] py-24 text-white sm:py-32">
+      <div className="mx-auto max-w-5xl px-6 sm:px-8 lg:px-12">
+        <p className="mb-16 font-heading text-xs uppercase tracking-[0.3em] text-[#CFB991] sm:mb-20 sm:text-sm">
+          About SyDAg 2026
+        </p>
+
+        {/* Vision */}
+        <div className="mb-16 border-l-[3px] border-[#CFB991] pl-6 sm:mb-20 sm:pl-10">
+          <p className="mb-3 font-heading text-xs uppercase tracking-[0.25em] text-[#CFB991]/70">
+            Our Vision
+          </p>
+          <p className="text-xl italic leading-relaxed text-white/90 sm:text-2xl md:text-3xl">
+            To build a future where digital agriculture is impactful, intuitive,
+            and accessible&mdash;making advanced technologies easy to understand,
+            simple to adopt, and meaningfully useful to growers, researchers, and
+            stakeholders across the agricultural ecosystem.
+          </p>
+        </div>
+
+        {/* Mission */}
+        <div className="mb-16 sm:mb-20">
+          <p className="mb-3 font-heading text-xs uppercase tracking-[0.25em] text-[#CFB991]/70">
+            Our Mission
+          </p>
+          <p className="max-w-3xl text-lg leading-relaxed text-white/75 sm:text-xl">
+            Our mission is to host a hands-on, student-led symposium that makes
+            digital agriculture approachable, encourages two-way conversations,
+            and showcases real-world applications shaping the future of food and
+            agriculture.
+          </p>
+        </div>
+
+        {/* Divider */}
+        <div className="mb-16 h-px w-full bg-white/10 sm:mb-20" />
+
+        {/* Purpose */}
+        <div className="mb-16 sm:mb-20">
+          <h2 className="mb-4 font-heading text-2xl font-bold text-white sm:text-3xl">
+            The Symposium
+          </h2>
+          <p className="mb-10 max-w-3xl text-base leading-relaxed text-white/60 sm:text-lg">
+            SyDAg brings together emerging leaders and established experts to
+            explore how innovations in digital and AI&#8209;driven agriculture
+            can address pressing challenges across production, management, and
+            supply systems.
+          </p>
+
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {purposeItems.map((item) => (
+              <div key={item.text} className="flex items-start gap-4">
+                <div className="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg bg-[#CFB991]/10">
+                  <item.icon className="h-4 w-4 text-[#CFB991]" />
+                </div>
+                <p className="text-sm leading-relaxed text-white/70 sm:text-base">
+                  {item.text}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Audience */}
+        <div className="border-t border-white/10 pt-12 sm:pt-16">
+          <p className="mb-6 font-heading text-xs uppercase tracking-[0.25em] text-[#CFB991]/70">
+            Who It&apos;s For
+          </p>
+
+          <div className="mb-6 flex flex-wrap gap-2">
+            {audienceGroups.map((group) => (
+              <span
+                key={group}
+                className="rounded-full border border-white/15 px-4 py-1.5 font-heading text-xs text-white/60 sm:text-sm"
+              >
+                {group}
+              </span>
+            ))}
+          </div>
+
+          <p className="max-w-3xl text-base leading-relaxed text-white/50">
+            The symposium welcomes students from agriculture, engineering, data
+            science, and related fields, as well as researchers, educators,
+            industry professionals, startups, extension specialists, and growers
+            exploring or utilizing digital tools.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
