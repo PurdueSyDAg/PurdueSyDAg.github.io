@@ -1,7 +1,7 @@
 {
-  "name": "SyDAg 2025 - From Innovation to Real World Impact",
-  "short_name": "SyDAg 2025",
-  "description": "Symposium on Digital Agriculture - From Innovation to Real World Impact",
+  "name": "SyDAg — Symposium of Digital Agriculture",
+  "short_name": "SyDAg",
+  "description": "Symposium of Digital Agriculture at Purdue University",
   "icons": [
     {
       "src": "/purdue.webp",

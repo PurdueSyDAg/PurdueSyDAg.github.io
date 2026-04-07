@@ -32,13 +32,6 @@ export const metadata: Metadata = {
       { url: "/favicon-32x32.png?v=2", sizes: "32x32", type: "image/png" },
     ],
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
-    other: [
-      {
-        rel: "mask-icon",
-        url: "/safari-pinned-tab.svg",
-        color: "#000000",
-      },
-    ],
   },
   manifest: "/site.webmanifest",
   openGraph: {
@@ -51,10 +44,11 @@ export const metadata: Metadata = {
       "Symposium of Digital Agriculture website, including the latest event information and archived editions.",
     images: [
       {
-        url: "/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "SyDAg - Symposium on Digital Agriculture",
+        url: "/coa.png",
+        width: 2309,
+        height: 295,
+        alt: "Purdue University College of Agriculture",
+        type: "image/png",
       },
     ],
   },
@@ -63,7 +57,7 @@ export const metadata: Metadata = {
     title: "SyDAg",
     description:
       "Symposium of Digital Agriculture website, including the latest event information and archived editions.",
-    images: ["/logo.png"],
+    images: ["/coa.png"],
     creator: "@sydag2025",
     site: "@sydag2025",
   },
