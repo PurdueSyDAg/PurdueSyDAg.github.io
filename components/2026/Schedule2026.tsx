@@ -44,30 +44,30 @@ function EventCard({ event }: { event: ScheduleEvent }) {
           : 'border-[#CFB991]/40'
       }`}
     >
-      <time className="font-heading text-xs font-medium uppercase tracking-wider text-[#9E6F3E] sm:text-sm">
+      <time className="font-heading text-sm font-medium uppercase tracking-wider text-[#9E6F3E] sm:text-base">
         {event.time}
       </time>
 
-      <h4 className="mt-1 font-heading text-base font-semibold text-[#1A1A1A] sm:text-lg">
+      <h4 className="mt-2 font-heading text-lg font-semibold text-[#1A1A1A] sm:text-xl">
         {event.title}
       </h4>
 
       {event.topic && (
-        <p className="mt-0.5 text-sm italic text-[#555960] sm:text-base">
+        <p className="mt-1 text-base italic text-[#555960] sm:text-lg">
           {event.topic}
         </p>
       )}
 
       {event.description && (
-        <p className="mt-2 text-sm font-medium text-[#1A1A1A] sm:text-base">
+        <p className="mt-2 text-base font-medium text-[#1A1A1A] sm:text-lg">
           {event.description}
         </p>
       )}
 
       {event.speakers && event.speakers.length > 0 && (
-        <ul className="mt-2 space-y-0.5">
+        <ul className="mt-2 space-y-1">
           {event.speakers.map((speaker) => (
-            <li key={speaker} className="text-sm text-[#555960]">
+            <li key={speaker} className="text-base text-[#555960] sm:text-lg">
               {speaker}
             </li>
           ))}
@@ -75,21 +75,21 @@ function EventCard({ event }: { event: ScheduleEvent }) {
       )}
 
       {event.subEvents && event.subEvents.length > 0 && (
-        <div className="mt-3 space-y-2 border-l border-[#CFB991]/20 pl-4">
+        <div className="mt-4 space-y-3 border-l border-[#CFB991]/20 pl-4">
           {event.subEvents.map((sub) => (
             <div key={`${sub.time}-${sub.title}`}>
-              <time className="font-heading text-xs text-[#9E6F3E]/70">
+              <time className="font-heading text-sm text-[#9E6F3E]/80">
                 {sub.time}
               </time>
-              <p className="text-sm text-[#555960]">{sub.title}</p>
+              <p className="text-base text-[#555960] sm:text-lg">{sub.title}</p>
             </div>
           ))}
         </div>
       )}
 
       {event.purpose && (
-        <p className="mt-3 border-l border-[#CFB991]/50 pl-3 text-sm leading-relaxed text-[#555960] sm:text-base">
-          <span className="mb-1 block font-heading text-[10px] font-semibold uppercase tracking-[0.2em] text-[#9E6F3E] sm:text-xs">
+        <p className="mt-4 border-l border-[#CFB991]/50 pl-4 text-base leading-relaxed text-[#555960] sm:text-lg">
+          <span className="mb-2 block font-heading text-xs font-semibold uppercase tracking-[0.18em] text-[#9E6F3E] sm:text-sm">
             Purpose
           </span>
           {event.purpose}
@@ -97,19 +97,19 @@ function EventCard({ event }: { event: ScheduleEvent }) {
       )}
 
       {event.topics && event.topics.length > 0 && (
-        <div className="mt-3">
+        <div className="mt-4">
           {event.topicsLabel && (
-            <p className="mb-2 font-heading text-[10px] font-semibold uppercase tracking-[0.2em] text-[#9E6F3E] sm:text-xs">
+            <p className="mb-3 font-heading text-xs font-semibold uppercase tracking-[0.18em] text-[#9E6F3E] sm:text-sm">
               {event.topicsLabel}
             </p>
           )}
-          <ul className="space-y-1">
+          <ul className="space-y-2">
             {event.topics.map((topic) => (
               <li
                 key={topic}
-                className="flex items-start gap-2 text-sm text-[#555960]"
+                className="flex items-start gap-2 text-base text-[#555960] sm:text-lg"
               >
-                <span className="mt-2 block h-1 w-1 flex-shrink-0 rounded-full bg-[#CFB991]" />
+                <span className="mt-2.5 block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#CFB991]" />
                 {topic}
               </li>
             ))}
@@ -125,25 +125,27 @@ export function Schedule2026() {
 
   return (
     <section id="schedule" className="bg-white py-24 sm:py-32">
-      <div className="mx-auto max-w-4xl px-6 sm:px-8 lg:px-12">
+      <div className="mx-auto max-w-5xl px-6 sm:px-8 lg:px-12">
         <div className="mb-14 text-center sm:mb-20">
-          <p className="mb-4 font-heading text-xs uppercase tracking-[0.3em] text-[#555960]">
+          <p className="mb-4 font-heading text-sm uppercase tracking-[0.28em] text-[#555960] sm:text-base">
             {header.eyebrow}
           </p>
           <h2 className="font-heading text-4xl font-black text-[#1A1A1A] sm:text-5xl md:text-6xl">
             {header.title}
           </h2>
           <div className="mx-auto mb-4 mt-6 h-[2px] w-16 bg-[#CFB991]" />
-          <p className="font-heading text-sm text-[#555960]">
+          <p className="font-heading text-base text-[#555960] sm:text-lg">
             {header.dayDate}
           </p>
-          <p className="mt-1 text-sm text-[#555960]">{header.venue}</p>
+          <p className="mt-2 text-base text-[#555960] sm:text-lg">
+            {header.venue}
+          </p>
         </div>
 
         <div className="space-y-12 sm:space-y-16">
           {periods.map((period) => (
             <div key={period.label}>
-              <h3 className="mb-6 font-heading text-xs font-semibold uppercase tracking-[0.25em] text-[#9E6F3E] sm:mb-8 sm:text-sm">
+              <h3 className="mb-6 font-heading text-sm font-semibold uppercase tracking-[0.22em] text-[#9E6F3E] sm:mb-8 sm:text-base">
                 {period.label}
               </h3>
 

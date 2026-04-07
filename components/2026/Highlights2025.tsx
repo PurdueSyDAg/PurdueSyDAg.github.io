@@ -70,11 +70,11 @@ export function Highlights2025() {
       <HighlightsSectionRule />
 
       <div className="mx-auto max-w-6xl px-6 pb-20 pt-12 sm:px-8 sm:pb-28 sm:pt-16 lg:max-w-7xl lg:px-12">
-        <h2 className="font-heading text-3xl font-black leading-tight tracking-tight text-white sm:text-4xl md:text-5xl">
+        <h2 className="font-heading text-4xl font-black leading-tight tracking-tight text-white sm:text-5xl md:text-6xl">
           2025 in review
         </h2>
 
-        <p className="mt-6 max-w-3xl font-heading text-xl font-semibold leading-snug text-white/90 sm:text-2xl md:text-[1.65rem] md:leading-snug">
+        <p className="mt-6 max-w-3xl font-heading text-2xl font-semibold leading-snug text-white/90 sm:text-3xl md:text-4xl md:leading-tight">
           The first SyDAg proved what a student-led symposium can look like at
           scale: research, industry, hands-on demos, and a weekend hackathon in
           one weekend, with leadership from the very top of the university.
@@ -90,14 +90,14 @@ export function Highlights2025() {
               className="pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full bg-[#DDB945]/[0.06]"
               aria-hidden
             />
-            <p className="font-heading text-[11px] uppercase tracking-[0.32em] text-[#CFB991]">
+            <p className="font-heading text-xs uppercase tracking-[0.28em] text-[#CFB991] sm:text-sm">
               Attendance
             </p>
-            <div className="mt-8 flex flex-col gap-1 sm:flex-row sm:items-end sm:gap-8">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:gap-10">
               <span className="font-heading text-6xl font-light tabular-nums leading-none tracking-[-0.04em] text-[#DDB945] sm:text-7xl md:text-8xl">
                 140
               </span>
-              <p className="max-w-[14rem] pb-1 text-sm leading-relaxed text-white/55">
+              <p className="max-w-md pb-1 text-lg leading-relaxed text-white/65 sm:text-xl">
                 Guests spanning campus, industry, and research, together for the
                 inaugural program.
               </p>
@@ -105,10 +105,10 @@ export function Highlights2025() {
           </div>
 
           <div className="flex flex-col justify-center rounded-2xl border border-[#CFB991]/25 bg-[#111]/80 px-8 py-8 backdrop-blur-sm lg:py-10">
-            <p className="font-heading text-xs uppercase tracking-[0.25em] text-[#CFB991]">
+            <p className="font-heading text-sm uppercase tracking-[0.22em] text-[#CFB991] sm:text-base">
               Opening session
             </p>
-            <p className="mt-4 font-heading text-xl font-bold leading-tight text-white sm:text-2xl">
+            <p className="mt-4 font-heading text-2xl font-bold leading-tight text-white sm:text-3xl">
               Purdue President{' '}
               <span className="text-[#DDB945]">Dr. Mung Chiang</span>
               <span className="block sm:mt-1">
@@ -116,7 +116,7 @@ export function Highlights2025() {
                 <span className="text-[#DDB945]">Dr. Bernie Engel</span>
               </span>
             </p>
-            <p className="mt-3 text-base leading-relaxed text-white/55">
+            <p className="mt-4 text-lg leading-relaxed text-white/60 sm:text-xl">
               Both joined the kickoff with robotics from Purdue labs, setting the
               tone for a symposium built on visibility and ambition.
             </p>
@@ -126,24 +126,24 @@ export function Highlights2025() {
         <HighlightsGallery slides={slides} theme="dark" />
 
         <div className="mt-14 border-t border-white/10 pt-14">
-          <p className="font-heading text-xs uppercase tracking-[0.25em] text-[#CFB991]">
+          <p className="font-heading text-sm uppercase tracking-[0.22em] text-[#CFB991] sm:text-base">
             At a glance
           </p>
-          <ul className="mt-5 space-y-3">
+          <ul className="mt-6 space-y-4">
             {summaryPoints.map((line) => (
               <li
                 key={line}
-                className="flex gap-3 text-base leading-relaxed text-white/65 sm:text-[17px]"
+                className="flex gap-3 text-lg leading-relaxed text-white/70 sm:text-xl"
               >
                 <span
-                  className="mt-2.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#DDB945]"
+                  className="mt-3 h-2 w-2 flex-shrink-0 rounded-full bg-[#DDB945]"
                   aria-hidden
                 />
                 {line}
               </li>
             ))}
           </ul>
-          <p className="mt-6 text-base text-white/50">
+          <p className="mt-8 text-lg text-white/55 sm:text-xl">
             Browse poster proceedings on{' '}
             <a
               href="https://docs.lib.purdue.edu/sydag"
@@ -158,7 +158,7 @@ export function Highlights2025() {
         </div>
 
         <div className="mt-10 rounded-xl border border-[#CFB991]/25 bg-[#CFB991]/[0.06] px-6 py-5 sm:px-8 sm:py-6">
-          <p className="text-base leading-relaxed text-white/65 sm:text-[17px]">
+          <p className="text-lg leading-relaxed text-white/70 sm:text-xl">
             <span className="font-heading font-bold text-[#CFB991]">
               SyDAg 2026
             </span>{' '}

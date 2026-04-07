@@ -53,7 +53,9 @@ export function HighlightsGallery({ slides, theme = 'dark' }: HighlightsGalleryP
   const btnClass = isDark
     ? 'border-white/15 bg-black/70 text-white backdrop-blur-sm'
     : 'border-[#1A1A1A]/10 bg-white/90 text-[#1A1A1A] backdrop-blur-sm';
-  const counterClass = isDark ? 'text-white/45' : 'text-[#555960]';
+  const counterClass = isDark
+    ? 'text-sm text-white/50 sm:text-base'
+    : 'text-sm text-[#555960] sm:text-base';
 
   return (
     <div
@@ -143,7 +145,7 @@ export function HighlightsGallery({ slides, theme = 'dark' }: HighlightsGalleryP
         </div>
 
         <p
-          className={`mt-2 text-center font-heading text-xs tabular-nums ${counterClass}`}
+          className={`mt-2 text-center font-heading tabular-nums ${counterClass}`}
         >
           {index + 1} / {count}
         </p>

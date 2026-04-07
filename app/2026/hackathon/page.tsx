@@ -7,13 +7,13 @@ export default function Site2026HackathonPage() {
       <Header variant="2026" />
       <main className="min-h-screen bg-gradient-to-br from-[#F9F9F9] via-white to-[#EBD99F]/30 px-4 py-24 sm:px-6 lg:px-8">
         <div className="mx-auto flex min-h-[calc(100vh-12rem)] max-w-4xl flex-col items-center justify-center text-center">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#9E6F3E]">
+          <p className="mb-4 text-base font-semibold uppercase tracking-[0.28em] text-[#9E6F3E] sm:text-lg">
             2026 Hackathon
           </p>
-          <h1 className="mb-6 text-4xl font-black text-[#000000] sm:text-5xl">
+          <h1 className="mb-6 text-4xl font-black text-[#000000] sm:text-5xl md:text-6xl">
             This page is ready for the next hackathon launch.
           </h1>
-          <p className="mb-8 max-w-3xl text-lg leading-relaxed text-[#1E3A5F]">
+          <p className="mb-8 max-w-3xl text-xl leading-relaxed text-[#1E3A5F] sm:text-2xl">
             The 2026 experience will be built here. Until then, the full 2025
             hackathon remains available as an archive.
           </p>

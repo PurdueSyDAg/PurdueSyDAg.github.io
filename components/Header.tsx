@@ -173,11 +173,11 @@ export function Header({ variant = "2025" }: HeaderProps) {
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center space-x-2">
             <div className="flex items-center space-x-2">
-              <h1 className="font-heading bg-gradient-to-r from-[#CFB991] to-[#DDB945] bg-clip-text text-xl font-bold text-transparent">
+              <h1 className="font-heading bg-gradient-to-r from-[#CFB991] to-[#DDB945] bg-clip-text text-xl font-bold text-transparent sm:text-2xl">
                 SyDAg
               </h1>
               <div className="hidden h-6 w-px bg-[#9E6F3E]/30 sm:block"></div>
-              <span className="hidden text-sm font-light text-white/70 sm:block">
+              <span className="hidden text-base font-light leading-snug text-white/70 sm:block md:max-w-[16rem] lg:max-w-none">
                 A Purdue Student Led Symposium
               </span>
             </div>
@@ -193,13 +193,13 @@ export function Header({ variant = "2025" }: HeaderProps) {
                 const innerContent = (
                   <>
                     <item.icon
-                      className={`h-4 w-4 transition-colors duration-200 ${
+                      className={`h-[1.125rem] w-[1.125rem] transition-colors duration-200 sm:h-5 sm:w-5 ${
                         isActive
                           ? "text-[#CFB991]"
                           : "group-hover:text-[#CFB991]"
                       }`}
                     />
-                    <span className="font-heading text-sm">{item.name}</span>
+                    <span className="font-heading text-base">{item.name}</span>
                   </>
                 );
 
@@ -213,7 +213,7 @@ export function Header({ variant = "2025" }: HeaderProps) {
                         handleAnchorClick(item.href);
                       }
                     }}
-                    className={`group flex items-center space-x-1 rounded-lg px-3 py-2 transition-all duration-200 hover:scale-105 ${
+                    className={`group flex items-center space-x-1.5 rounded-lg px-3 py-2 transition-all duration-200 hover:scale-105 ${
                       isActive
                         ? "font-bold text-[#CFB991]"
                         : "text-white/80 hover:font-semibold hover:text-white"
@@ -226,7 +226,7 @@ export function Header({ variant = "2025" }: HeaderProps) {
                     key={item.name}
                     href={item.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className={`group flex items-center space-x-1 rounded-lg px-3 py-2 transition-all duration-200 hover:scale-105 ${
+                    className={`group flex items-center space-x-1.5 rounded-lg px-3 py-2 transition-all duration-200 hover:scale-105 ${
                       isActive
                         ? "font-bold text-[#CFB991]"
                         : "text-white/80 hover:font-semibold hover:text-white"
@@ -245,10 +245,10 @@ export function Header({ variant = "2025" }: HeaderProps) {
             {showRegister && (
               <button
                 onClick={handleRegisterClick}
-                className="hidden cursor-pointer items-center space-x-1 rounded-lg bg-gradient-to-r from-[#CFB991] to-[#DDB945] px-4 py-1 font-bold text-[#000000] shadow-lg transition-all duration-200 hover:scale-105 md:flex"
+                className="hidden cursor-pointer items-center space-x-1 rounded-lg bg-gradient-to-r from-[#CFB991] to-[#DDB945] px-4 py-2 font-bold text-[#000000] shadow-lg transition-all duration-200 hover:scale-105 md:flex"
               >
-                <Send className="h-4 w-4" />
-                <span className="font-heading">Register</span>
+                <Send className="h-5 w-5" />
+                <span className="font-heading text-base">Register</span>
               </button>
             )}
 
@@ -291,9 +291,9 @@ export function Header({ variant = "2025" }: HeaderProps) {
 
                       setIsMobileMenuOpen(false);
                     }}
-                    className="flex items-center space-x-3 rounded-lg px-3 py-3 font-heading text-white/80 transition-all duration-200"
+                    className="flex items-center space-x-3 rounded-lg px-3 py-3 font-heading text-lg text-white/80 transition-all duration-200"
                   >
-                    <item.icon className="h-5 w-5" />
+                    <item.icon className="h-6 w-6" />
                     <span className="font-heading">{item.name}</span>
                   </Link>
                 ) : (
@@ -301,9 +301,9 @@ export function Header({ variant = "2025" }: HeaderProps) {
                     key={item.name}
                     href={item.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="flex items-center space-x-3 rounded-lg px-3 py-3 font-heading text-white/80 transition-all duration-200"
+                    className="flex items-center space-x-3 rounded-lg px-3 py-3 font-heading text-lg text-white/80 transition-all duration-200"
                   >
-                    <item.icon className="h-5 w-5" />
+                    <item.icon className="h-6 w-6" />
                     <span className="font-heading">{item.name}</span>
                   </Link>
                 );

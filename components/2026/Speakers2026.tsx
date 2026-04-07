@@ -2,7 +2,7 @@ export function Speakers2026() {
   return (
     <section id="speakers" className="bg-[#F8F6F1] py-24 sm:py-32">
       <div className="mx-auto max-w-5xl px-6 text-center sm:px-8 lg:px-12">
-        <p className="mb-4 font-heading text-xs uppercase tracking-[0.3em] text-[#555960]">
+        <p className="mb-4 font-heading text-sm uppercase tracking-[0.28em] text-[#555960] sm:text-base">
           Speakers
         </p>
 
@@ -12,7 +12,7 @@ export function Speakers2026() {
 
         <div className="mx-auto mb-8 mt-6 h-[2px] w-16 bg-[#CFB991]" />
 
-        <p className="mx-auto max-w-lg text-lg leading-relaxed text-[#555960]">
+        <p className="mx-auto max-w-2xl text-xl leading-relaxed text-[#555960] sm:text-2xl">
           We&apos;re assembling a lineup of researchers, industry leaders, and
           innovators shaping the future of digital agriculture. Stay tuned.
         </p>

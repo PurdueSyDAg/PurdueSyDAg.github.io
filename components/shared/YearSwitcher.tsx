@@ -37,7 +37,7 @@ export function YearSwitcher({ currentYear }: YearSwitcherProps) {
       <button
         type="button"
         onClick={() => setIsOpen((open) => !open)}
-        className="inline-flex w-full min-w-[9.5rem] items-center justify-between rounded-full border border-[#CFB991]/20 bg-white/6 px-3 py-1.5 text-sm font-semibold text-white shadow-[0_6px_18px_rgba(0,0,0,0.16)] backdrop-blur-md transition-all duration-200 hover:border-[#CFB991]/40 hover:bg-white/10 md:min-w-[10.5rem]"
+        className="inline-flex w-full min-w-[10rem] items-center justify-between rounded-full border border-[#CFB991]/20 bg-white/6 px-3 py-2 text-base font-semibold text-white shadow-[0_6px_18px_rgba(0,0,0,0.16)] backdrop-blur-md transition-all duration-200 hover:border-[#CFB991]/40 hover:bg-white/10 md:min-w-[11rem]"
         aria-haspopup="menu"
         aria-expanded={isOpen}
       >
@@ -45,7 +45,7 @@ export function YearSwitcher({ currentYear }: YearSwitcherProps) {
           <span className="flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-[#CFB991] to-[#DDB945] text-black shadow-sm">
             <CalendarRange className="h-3.5 w-3.5" />
           </span>
-          <span className="text-sm font-semibold text-white">
+          <span className="text-base font-semibold text-white">
             {currentItem.label}
           </span>
         </span>
@@ -68,7 +68,7 @@ export function YearSwitcher({ currentYear }: YearSwitcherProps) {
                 key={item.year}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className={`flex items-center justify-between px-4 py-3.5 text-sm transition-all duration-200 ${
+                className={`flex items-center justify-between px-4 py-3.5 text-base transition-all duration-200 ${
                   isActive
                     ? "bg-gradient-to-r from-[#CFB991] to-[#DDB945] font-semibold text-black"
                     : "text-white/80 hover:bg-white/5 hover:text-white"
@@ -83,7 +83,7 @@ export function YearSwitcher({ currentYear }: YearSwitcherProps) {
                   <span>{item.label}</span>
                 </span>
                 {isActive && (
-                  <span className="text-[10px] uppercase tracking-[0.2em] text-black/60">
+                  <span className="text-xs uppercase tracking-[0.2em] text-black/60">
                     Active
                   </span>
                 )}

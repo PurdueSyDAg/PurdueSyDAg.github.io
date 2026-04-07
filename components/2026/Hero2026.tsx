@@ -14,7 +14,7 @@ export function Hero2026() {
             className="w-[3px] shrink-0 rounded-full bg-[#CFB991]"
             aria-hidden
           />
-          <p className="self-center py-0.5 font-heading text-sm font-bold uppercase tracking-[0.32em] text-[#1A1A1A] sm:text-base md:text-lg">
+          <p className="self-center py-0.5 font-heading text-base font-bold uppercase tracking-[0.28em] text-[#1A1A1A] sm:text-lg md:text-xl">
             September 28, 2026
           </p>
         </div>
@@ -26,11 +26,11 @@ export function Hero2026() {
 
         <div className="mt-8 h-[3px] w-16 bg-[#CFB991] sm:mt-12" />
 
-        <p className="mt-6 max-w-2xl text-xl italic leading-snug text-[#555960] sm:mt-8 sm:text-2xl md:text-3xl">
+        <p className="mt-6 max-w-2xl text-2xl italic leading-snug text-[#555960] sm:mt-8 sm:text-3xl md:text-4xl">
           2nd Symposium of Digital Agriculture
         </p>
 
-        <div className="mt-4 flex flex-col gap-1 font-heading text-sm text-[#555960] sm:flex-row sm:items-center sm:gap-3">
+        <div className="mt-4 flex flex-col gap-1 font-heading text-base text-[#555960] sm:flex-row sm:items-center sm:gap-3 sm:text-lg">
           <span>Beck Agricultural Center</span>
           <span className="hidden text-[#CFB991] sm:inline">&bull;</span>
           <span>West Lafayette, Indiana</span>

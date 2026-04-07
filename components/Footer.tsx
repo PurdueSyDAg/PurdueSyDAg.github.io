@@ -23,10 +23,10 @@ export function Footer({
                     }`}
                 >
                     <div className="text-center md:text-left">
-                        <h3 className="text-lg font-bold text-[#CFB991] mb-3">
+                        <h3 className="text-xl font-bold text-[#CFB991] mb-3">
                             SyDAg
                         </h3>
-                        <p className="text-white/70 text-sm">
+                        <p className="text-base leading-relaxed text-white/70">
                             Symposium of Digital Agriculture - From Innovation to Impact
                         </p>
                     </div>
@@ -39,11 +39,11 @@ export function Footer({
                                 rel="noopener noreferrer"
                                 className="inline-block"
                             >
-                                <h3 className="text-lg font-bold text-[#DDB945] hover:text-[#CFB991] transition-colors duration-200 mb-3 underline decoration-2 underline-offset-2">
+                                <h3 className="text-xl font-bold text-[#DDB945] hover:text-[#CFB991] transition-colors duration-200 mb-3 underline decoration-2 underline-offset-2">
                                     Digital Ag. Club (DAC)
                                 </h3>
                             </a>
-                            <p className="text-white/70 text-sm">
+                            <p className="text-base leading-relaxed text-white/70">
                                 Fostering innovation and collaboration in digital agricultural technologies
                             </p>
                         </div>
@@ -56,14 +56,14 @@ export function Footer({
                             rel="noopener noreferrer"
                             className="inline-block"
                         >
-                            <h3 className="text-lg font-bold text-[#DDB945] hover:text-[#CFB991] transition-colors duration-200 mb-3 underline decoration-2 underline-offset-2">
+                            <h3 className="text-xl font-bold text-[#DDB945] hover:text-[#CFB991] transition-colors duration-200 mb-3 underline decoration-2 underline-offset-2">
                                 IDAAS
                             </h3>
                         </a>
-                        <p className="text-white/70 text-sm">
+                        <p className="text-base leading-relaxed text-white/70">
                             Institute of Digital and Advanced Agricultural Systems
                         </p>
-                        <p className="text-white/60 text-xs mt-2">
+                        <p className="mt-2 text-sm text-white/60">
                             Advancing agriculture through digital innovation
                         </p>
                     </div>
@@ -75,14 +75,14 @@ export function Footer({
                             rel="noopener noreferrer"
                             className="inline-block"
                         >
-                            <h3 className="text-lg font-bold text-[#DDB945] hover:text-[#CFB991] transition-colors duration-200 mb-3 underline decoration-2 underline-offset-2">
+                            <h3 className="text-xl font-bold text-[#DDB945] hover:text-[#CFB991] transition-colors duration-200 mb-3 underline decoration-2 underline-offset-2">
                                 RCAC
                             </h3>
                         </a>
-                        <p className="text-white/70 text-sm">
+                        <p className="text-base leading-relaxed text-white/70">
                             Rosen Center for Advanced Computing
                         </p>
-                        <p className="text-white/60 text-xs mt-2">
+                        <p className="mt-2 text-sm text-white/60">
                             Computational resources for researchers
                         </p>
                     </div>
@@ -90,7 +90,7 @@ export function Footer({
 
                 <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 pt-8 border-t border-[#555960]/20">
                     <div className="text-center md:text-left">
-                        <p className="text-white/70">
+                        <p className="text-base text-white/70">
                             © {currentYear} SyDAg. All rights reserved.
                         </p>
                     </div>
