@@ -76,8 +76,8 @@ export function Highlights2025() {
 
         <p className="mt-6 max-w-3xl font-heading text-2xl font-semibold leading-snug text-white/90 sm:text-3xl md:text-4xl md:leading-tight">
           The first SyDAg proved what a student-led symposium can look like at
-          scale: research, industry, hands-on demos, and a weekend hackathon in
-          one weekend, with leadership from the very top of the university.
+          scale: research, industry, hands-on demos, a hackathon, and leadership
+          from the very top of the university.
         </p>
 
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:gap-6">

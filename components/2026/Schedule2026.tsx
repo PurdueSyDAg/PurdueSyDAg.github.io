@@ -88,10 +88,7 @@ function EventCard({ event }: { event: ScheduleEvent }) {
       )}
 
       {event.purpose && (
-        <p className="mt-4 border-l border-[#CFB991]/50 pl-4 text-base leading-relaxed text-[#555960] sm:text-lg">
-          <span className="mb-2 block font-heading text-xs font-semibold uppercase tracking-[0.18em] text-[#9E6F3E] sm:text-sm">
-            Purpose
-          </span>
+        <p className="mt-4 text-base leading-relaxed text-[#555960] sm:text-lg">
           {event.purpose}
         </p>
       )}

@@ -61,7 +61,7 @@ export function About2026() {
           </p>
           <p className="text-2xl italic leading-relaxed text-white/90 sm:text-3xl md:text-4xl">
             To build a future where digital agriculture is impactful, intuitive,
-            and accessible&mdash;making advanced technologies easy to understand,
+            and accessible, making advanced technologies easy to understand,
             simple to adopt, and meaningfully useful to growers, researchers, and
             stakeholders across the agricultural ecosystem.
           </p>
