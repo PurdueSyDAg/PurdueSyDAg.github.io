@@ -6,6 +6,7 @@ import {
   Eye,
   Network,
 } from 'lucide-react';
+import { Highlights2025 } from '@/components/2026/Highlights2025';
 
 const purposeItems = [
   {
@@ -44,8 +45,11 @@ const audienceGroups = [
 
 export function About2026() {
   return (
-    <section id="about" className="bg-[#0A0A0A] py-24 text-white sm:py-32">
-      <div className="mx-auto max-w-5xl px-6 sm:px-8 lg:px-12">
+    <section
+      id="about"
+      className="bg-[#0A0A0A] pb-0 pt-24 text-white sm:pt-32"
+    >
+      <div className="mx-auto max-w-6xl px-6 sm:px-8 lg:max-w-7xl lg:px-12">
         <p className="mb-16 font-heading text-xs uppercase tracking-[0.3em] text-[#CFB991] sm:mb-20 sm:text-sm">
           About SyDAg 2026
         </p>
@@ -106,7 +110,7 @@ export function About2026() {
         </div>
 
         {/* Audience */}
-        <div className="border-t border-white/10 pt-12 sm:pt-16">
+        <div className="border-t border-white/10 pb-10 pt-12 sm:pb-14 sm:pt-16">
           <p className="mb-6 font-heading text-xs uppercase tracking-[0.25em] text-[#CFB991]/70">
             Who It&apos;s For
           </p>
@@ -122,7 +126,7 @@ export function About2026() {
             ))}
           </div>
 
-          <p className="max-w-3xl text-base leading-relaxed text-white/50">
+          <p className="mb-0 max-w-3xl text-base leading-relaxed text-white/50">
             The symposium welcomes students from agriculture, engineering, data
             science, and related fields, as well as researchers, educators,
             industry professionals, startups, extension specialists, and growers
@@ -130,6 +134,8 @@ export function About2026() {
           </p>
         </div>
       </div>
+
+      <Highlights2025 />
     </section>
   );
 }
