@@ -2,10 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: {
-    default: "SyDAg",
-    template: "%s | SyDAg",
-  },
+  title: "SyDAg",
   description:
     "Symposium of Digital Agriculture website, including the latest event information and archived editions.",
   keywords:
