@@ -55,7 +55,11 @@ export function Header({ variant = "2025" }: HeaderProps) {
   const homePath = variant === "2025" ? "/2025" : "/2026";
   const navigationItems =
     variant === "2025" ? archiveNavigationItems : liveNavigationItems;
-  const showRegister = variant === "2025";
+  const showRegister = true;
+  const registerUrl =
+    variant === "2026"
+      ? "https://purdue.ca1.qualtrics.com/jfe/form/SV_e533fe48gHo3x8q"
+      : "https://purdue.ca1.qualtrics.com/jfe/form/SV_9yuv1mTcomqpWey";
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
@@ -69,10 +73,7 @@ export function Header({ variant = "2025" }: HeaderProps) {
   };
 
   const handleRegisterClick = () => {
-    window.open(
-      "https://purdue.ca1.qualtrics.com/jfe/form/SV_9yuv1mTcomqpWey",
-      "_blank",
-    );
+    window.open(registerUrl, "_blank");
   };
 
   const getAnchorHref = (href: string) => `${homePath}${href}`;

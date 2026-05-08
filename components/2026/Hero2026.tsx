@@ -35,6 +35,15 @@ export function Hero2026() {
           <span className="hidden text-[#CFB991] sm:inline">&bull;</span>
           <span>West Lafayette, Indiana</span>
         </div>
+
+        <a
+          href="https://purdue.ca1.qualtrics.com/jfe/form/SV_e533fe48gHo3x8q"
+          target="_blank"
+          rel="noreferrer noopener"
+          className="mt-8 inline-flex items-center rounded-full bg-[#1A1A1A] px-7 py-3.5 font-heading text-sm font-bold uppercase tracking-[0.22em] text-[#F8F6F1] shadow-md transition-all duration-200 hover:bg-[#CFB991] hover:text-[#1A1A1A] sm:mt-10 sm:px-8 sm:py-4 sm:text-base"
+        >
+          Register
+        </a>
       </div>
     </section>
   );
