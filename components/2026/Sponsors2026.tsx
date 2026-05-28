@@ -2,7 +2,6 @@ import { Award, Check, Crown, Gem, Medal } from "lucide-react";
 
 type Tier = {
   name: string;
-  range: string;
   accent: string;
   Icon: React.ComponentType<{ className?: string }>;
   featured?: boolean;
@@ -13,7 +12,6 @@ type Tier = {
 const tiers: Tier[] = [
   {
     name: "Diamond",
-    range: "$8,000+",
     accent: "#CFB991",
     Icon: Gem,
     featured: true,
@@ -26,7 +24,6 @@ const tiers: Tier[] = [
   },
   {
     name: "Gold",
-    range: "$5,500 – $7,999",
     accent: "#DDB945",
     Icon: Crown,
     inheritsBelow: true,
@@ -37,7 +34,6 @@ const tiers: Tier[] = [
   },
   {
     name: "Silver",
-    range: "$3,500 – $5,499",
     accent: "#C8C5BC",
     Icon: Award,
     inheritsBelow: true,
@@ -48,7 +44,6 @@ const tiers: Tier[] = [
   },
   {
     name: "Bronze",
-    range: "$1,500 – $3,499",
     accent: "#9E6F3E",
     Icon: Medal,
     inheritsBelow: false,
@@ -109,36 +104,33 @@ export function Sponsors2026() {
                 style={{ backgroundColor: tier.accent }}
               />
 
-              <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between sm:gap-10">
-                <div className="flex items-center gap-4">
-                  <span
-                    className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl ring-1"
-                    style={{
-                      backgroundColor: `${tier.accent}14`,
-                      color: tier.accent,
-                      boxShadow: `inset 0 0 0 1px ${tier.accent}33`,
-                    }}
+              <div className="flex items-center gap-5">
+                <span
+                  className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl"
+                  style={{
+                    backgroundColor: `${tier.accent}14`,
+                    color: tier.accent,
+                    boxShadow: `inset 0 0 0 1px ${tier.accent}33`,
+                  }}
+                >
+                  <tier.Icon className="h-7 w-7" />
+                </span>
+                <div>
+                  <p
+                    className="font-heading text-xs font-bold uppercase tracking-[0.28em]"
+                    style={{ color: tier.accent }}
                   >
-                    <tier.Icon className="h-6 w-6" />
-                  </span>
-                  <div>
-                    <p
-                      className="font-heading text-xs font-bold uppercase tracking-[0.28em]"
-                      style={{ color: tier.accent }}
-                    >
-                      {tier.name} Sponsor
+                    {tier.name} Sponsor
+                  </p>
+                  <p className="mt-1 font-heading text-2xl font-black tracking-tight text-white sm:text-3xl">
+                    {tier.name}
+                  </p>
+                  {tier.inheritsBelow && (
+                    <p className="mt-1.5 font-heading text-[11px] uppercase tracking-[0.2em] text-white/40">
+                      All benefits below, plus
                     </p>
-                    {tier.inheritsBelow && (
-                      <p className="mt-1 font-heading text-[11px] uppercase tracking-[0.2em] text-white/40">
-                        All benefits below, plus
-                      </p>
-                    )}
-                  </div>
+                  )}
                 </div>
-
-                <p className="font-heading text-3xl font-black tracking-tight text-white sm:text-4xl">
-                  {tier.range}
-                </p>
               </div>
 
               <div
