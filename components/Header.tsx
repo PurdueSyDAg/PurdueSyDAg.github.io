@@ -45,6 +45,8 @@ const liveNavigationItems: NavItem[] = [
   { name: "About", icon: Info, href: "#about", type: "anchor" },
   { name: "Speakers", icon: Speech, href: "#speakers", type: "anchor" },
   { name: "Schedule", icon: CalendarCheck2, href: "#schedule", type: "anchor" },
+  { name: "Team", icon: Users, href: "#team", type: "anchor" },
+  { name: "Sponsors", icon: Handshake, href: "#sponsors", type: "anchor" },
   { name: "Hackathon", icon: Trophy, href: "/2026/hackathon", type: "route" },
 ];
 
@@ -178,7 +180,7 @@ export function Header({ variant = "2025" }: HeaderProps) {
                 SyDAg
               </h1>
               <div className="hidden h-6 w-px bg-[#9E6F3E]/30 sm:block"></div>
-              <span className="hidden text-base font-light leading-snug text-white/70 sm:block md:max-w-[16rem] lg:max-w-none">
+              <span className="hidden text-sm font-light leading-snug text-white/70 sm:block md:max-w-[16rem] lg:max-w-none">
                 A Purdue Student Led Symposium
               </span>
             </div>
@@ -194,13 +196,13 @@ export function Header({ variant = "2025" }: HeaderProps) {
                 const innerContent = (
                   <>
                     <item.icon
-                      className={`h-[1.125rem] w-[1.125rem] transition-colors duration-200 sm:h-5 sm:w-5 ${
+                      className={`h-4 w-4 transition-colors duration-200 ${
                         isActive
                           ? "text-[#CFB991]"
                           : "group-hover:text-[#CFB991]"
                       }`}
                     />
-                    <span className="font-heading text-base">{item.name}</span>
+                    <span className="font-heading text-sm">{item.name}</span>
                   </>
                 );
 
@@ -214,7 +216,7 @@ export function Header({ variant = "2025" }: HeaderProps) {
                         handleAnchorClick(item.href);
                       }
                     }}
-                    className={`group flex items-center space-x-1.5 rounded-lg px-3 py-2 transition-all duration-200 hover:scale-105 ${
+                    className={`group flex items-center space-x-1.5 rounded-lg px-2.5 py-2 transition-all duration-200 hover:scale-105 ${
                       isActive
                         ? "font-bold text-[#CFB991]"
                         : "text-white/80 hover:font-semibold hover:text-white"
@@ -227,7 +229,7 @@ export function Header({ variant = "2025" }: HeaderProps) {
                     key={item.name}
                     href={item.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className={`group flex items-center space-x-1.5 rounded-lg px-3 py-2 transition-all duration-200 hover:scale-105 ${
+                    className={`group flex items-center space-x-1.5 rounded-lg px-2.5 py-2 transition-all duration-200 hover:scale-105 ${
                       isActive
                         ? "font-bold text-[#CFB991]"
                         : "text-white/80 hover:font-semibold hover:text-white"
@@ -246,10 +248,10 @@ export function Header({ variant = "2025" }: HeaderProps) {
             {showRegister && (
               <button
                 onClick={handleRegisterClick}
-                className="hidden cursor-pointer items-center space-x-1 rounded-lg bg-gradient-to-r from-[#CFB991] to-[#DDB945] px-4 py-2 font-bold text-[#000000] shadow-lg transition-all duration-200 hover:scale-105 md:flex"
+                className="hidden cursor-pointer items-center space-x-1 rounded-lg bg-gradient-to-r from-[#CFB991] to-[#DDB945] px-3 py-1.5 font-bold text-[#000000] shadow-lg transition-all duration-200 hover:scale-105 md:flex"
               >
-                <Send className="h-5 w-5" />
-                <span className="font-heading text-base">Register</span>
+                <Send className="h-4 w-4" />
+                <span className="font-heading text-sm">Register</span>
               </button>
             )}
 

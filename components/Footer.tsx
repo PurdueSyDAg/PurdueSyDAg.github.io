@@ -6,11 +6,14 @@ type FooterProps = {
     copyrightYear?: number;
     /** When false, hides the Digital Ag. Club column (e.g. 2026 live site). Default true for 2025 archive. */
     showDigitalAgClub?: boolean;
+    /** Symposium tagline shown under the SyDAg heading. Defaults to the 2025 theme. */
+    tagline?: string;
 };
 
 export function Footer({
     copyrightYear,
     showDigitalAgClub = true,
+    tagline = "Symposium of Digital Agriculture - From Innovation to Impact",
 }: FooterProps) {
     const currentYear = copyrightYear ?? new Date().getFullYear();
 
@@ -27,7 +30,7 @@ export function Footer({
                             SyDAg
                         </h3>
                         <p className="text-base leading-relaxed text-white/70">
-                            Symposium of Digital Agriculture - From Innovation to Impact
+                            {tagline}
                         </p>
                     </div>
 

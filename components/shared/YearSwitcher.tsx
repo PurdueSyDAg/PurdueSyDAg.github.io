@@ -9,8 +9,8 @@ type YearSwitcherProps = {
 };
 
 const years = [
-  { year: "2026", label: "2026", href: "/2026" },
-  { year: "2025", label: "2025 Archive", href: "/2025" },
+  { year: "2026", label: "2026", panelLabel: "2026", href: "/2026" },
+  { year: "2025", label: "2025", panelLabel: "2025 Archive", href: "/2025" },
 ] as const;
 
 export function YearSwitcher({ currentYear }: YearSwitcherProps) {
@@ -37,21 +37,21 @@ export function YearSwitcher({ currentYear }: YearSwitcherProps) {
       <button
         type="button"
         onClick={() => setIsOpen((open) => !open)}
-        className="inline-flex w-full min-w-[10rem] items-center justify-between rounded-full border border-[#CFB991]/20 bg-white/6 px-3 py-2 text-base font-semibold text-white shadow-[0_6px_18px_rgba(0,0,0,0.16)] backdrop-blur-md transition-all duration-200 hover:border-[#CFB991]/40 hover:bg-white/10 md:min-w-[11rem]"
+        className="inline-flex w-full min-w-[10rem] items-center justify-between rounded-full border border-[#CFB991]/20 bg-white/6 px-2.5 py-1.5 text-sm font-semibold text-white shadow-[0_6px_18px_rgba(0,0,0,0.16)] backdrop-blur-md transition-all duration-200 hover:border-[#CFB991]/40 hover:bg-white/10 md:min-w-0"
         aria-haspopup="menu"
         aria-expanded={isOpen}
       >
-        <span className="flex items-center gap-3">
-          <span className="flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-[#CFB991] to-[#DDB945] text-black shadow-sm">
-            <CalendarRange className="h-3.5 w-3.5" />
+        <span className="flex items-center gap-2">
+          <span className="flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-br from-[#CFB991] to-[#DDB945] text-black shadow-sm">
+            <CalendarRange className="h-3 w-3" />
           </span>
-          <span className="text-base font-semibold text-white">
+          <span className="text-sm font-semibold text-white">
             {currentItem.label}
           </span>
         </span>
-        <span className="ml-3 flex h-6 w-6 items-center justify-center rounded-full border border-white/10 bg-white/5">
+        <span className="ml-2 flex h-5 w-5 items-center justify-center rounded-full border border-white/10 bg-white/5">
           <ChevronDown
-            className={`h-3.5 w-3.5 transition-transform duration-200 ${
+            className={`h-3 w-3 transition-transform duration-200 ${
               isOpen ? "rotate-180" : ""
             }`}
           />
@@ -80,7 +80,7 @@ export function YearSwitcher({ currentYear }: YearSwitcherProps) {
                       isActive ? "bg-black/70" : "bg-[#CFB991]"
                     }`}
                   />
-                  <span>{item.label}</span>
+                  <span>{item.panelLabel}</span>
                 </span>
                 {isActive && (
                   <span className="text-xs uppercase tracking-[0.2em] text-black/60">

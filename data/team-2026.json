@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "name": "Leonardo Bosche",
+    "position": "Ph.D. Student",
+    "role": "Symposium Chair",
+    "pfp_file_name": "pfp26/Leonardo.JPG",
+    "linkedin": "https://www.linkedin.com/in/leonardo-bosche/"
+  },
+  {
+    "id": 2,
+    "name": "Natalia Volpato",
+    "position": "Ph.D. Student",
+    "role": "Session Team Chair, Marketing Team",
+    "pfp_file_name": "pfp26/Natalia.JPG",
+    "linkedin": "https://www.linkedin.com/in/natalia-volpato-3824a6150/"
+  },
+  {
+    "id": 3,
+    "name": "Gustavo Santiago",
+    "position": "Ph.D. Student",
+    "role": "Logistics Chair, Hackathon Team",
+    "pfp_file_name": "pfp26/Gustavo.JPG",
+    "linkedin": "https://www.linkedin.com/in/gustavo-nocera-santiago-00796616a/"
+  },
+  {
+    "id": 4,
+    "name": "Vinicius Winnikes",
+    "position": "",
+    "role": "Marketing Chair",
+    "pfp_file_name": "pfp26/Vinicius.JPG",
+    "linkedin": ""
+  },
+  {
+    "id": 5,
+    "name": "Emmanuel Cooper",
+    "position": "Ph.D. Student",
+    "role": "Finance Chair, Showcase Lead",
+    "pfp_file_name": "Emmanuel Cooper.jpg",
+    "linkedin": "https://www.linkedin.com/in/emmanuel-g-cooper-18a29789/"
+  },
+  {
+    "id": 6,
+    "name": "Pedro Cisdeli",
+    "position": "Ph.D. Student",
+    "role": "Hackathon Chair",
+    "pfp_file_name": "Pedro_Cisdeli_AGRON.jpg",
+    "linkedin": "https://linkedin.com/in/pedro-cisdeli"
+  },
+  {
+    "id": 7,
+    "name": "Alex Acosta",
+    "position": "",
+    "role": "Poster Session Lead, Logistics Team, Hackathon Team",
+    "pfp_file_name": "pfp26/Alex.JPG",
+    "linkedin": ""
+  },
+  {
+    "id": 8,
+    "name": "Binod Joshi",
+    "position": "",
+    "role": "Session Team, Marketing Team",
+    "pfp_file_name": "pfp26/Binod.jpeg",
+    "linkedin": ""
+  },
+  {
+    "id": 9,
+    "name": "Jhonatas Gomes",
+    "position": "",
+    "role": "Session Team, Hackathon Team",
+    "pfp_file_name": "pfp26/Jhonatas.JPG",
+    "linkedin": ""
+  },
+  {
+    "id": 10,
+    "name": "Luiz Ferreira",
+    "position": "",
+    "role": "Logistics Team",
+    "pfp_file_name": "pfp26/Luiz.JPG",
+    "linkedin": ""
+  },
+  {
+    "id": 11,
+    "name": "Emanuel Santos",
+    "position": "",
+    "role": "Logistics Team, Hackathon Team",
+    "pfp_file_name": "pfp26/Emanuel_Santos.png",
+    "linkedin": "https://linkedin.com/in/emanuel-david-santos-suarez-440739235"
+  },
+  {
+    "id": 12,
+    "name": "Federico Gomez",
+    "position": "",
+    "role": "Logistics Team, Hackathon Team",
+    "pfp_file_name": "pfp26/Federico.jpg",
+    "linkedin": ""
+  },
+  {
+    "id": 13,
+    "name": "Emmanuel Obielodan",
+    "position": "",
+    "role": "Logistics Team, Marketing Team, Finance Team",
+    "pfp_file_name": "pfp26/Emmanuel_Obielodan.jpg",
+    "linkedin": ""
+  },
+  {
+    "id": 14,
+    "name": "Lorena Correira",
+    "position": "",
+    "role": "Marketing Team",
+    "pfp_file_name": "",
+    "linkedin": ""
+  },
+  {
+    "id": 15,
+    "name": "Adeayo Adewumi",
+    "position": "",
+    "role": "Hackathon Team",
+    "pfp_file_name": "pfp26/Adeayo.JPG",
+    "linkedin": ""
+  },
+  {
+    "id": 16,
+    "name": "Jean Paul Iyakaremye",
+    "position": "",
+    "role": "Hackathon Team",
+    "pfp_file_name": "pfp26/Jean_Paul.jpg",
+    "linkedin": ""
+  },
+  {
+    "id": 17,
+    "name": "Ignacio Ciampitti",
+    "position": "Ph.D. - Purdue University Professor",
+    "role": "Advising Faculty",
+    "pfp_file_name": "ignacio-ciampitti3.jpg",
+    "linkedin": "https://www.linkedin.com/in/ignaciociampitti/"
+  },
+  {
+    "id": 18,
+    "name": "Melinda Smith",
+    "position": "Project Manager",
+    "role": "Advising Staff",
+    "pfp_file_name": "Melinda Smith.jpg",
+    "linkedin": "https://www.linkedin.com/in/melinda-smith-1a6aa512b/"
+  }
+]
