@@ -47,9 +47,14 @@ export function HackathonHero2026() {
           Teams and individuals welcome
         </p>
 
-        <p className="mx-auto mt-8 w-fit rounded-full border border-[#CFB991]/50 bg-white/[0.04] px-6 py-3 font-heading text-sm font-bold uppercase tracking-[0.22em] text-white sm:mt-10 sm:text-base">
-          Registrations open July 10
-        </p>
+        <a
+          href="https://purdue.ca1.qualtrics.com/jfe/form/SV_0qW9qMnKuFd9U7I"
+          target="_blank"
+          rel="noreferrer noopener"
+          className="mx-auto mt-8 inline-flex w-fit items-center rounded-full bg-gradient-to-r from-[#CFB991] to-[#DDB945] px-8 py-4 font-heading text-sm font-bold uppercase tracking-[0.22em] text-[#1A1A1A] shadow-md transition-all duration-200 hover:brightness-95 sm:mt-10 sm:text-base"
+        >
+          Register Now
+        </a>
       </div>
     </section>
   );
