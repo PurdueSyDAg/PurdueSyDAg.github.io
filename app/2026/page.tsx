@@ -4,6 +4,7 @@ import { Hero2026 } from '@/components/2026/Hero2026';
 import { About2026 } from '@/components/2026/About2026';
 import { Speakers2026 } from '@/components/2026/Speakers2026';
 import { Schedule2026 } from '@/components/2026/Schedule2026';
+import { Posters2026 } from '@/components/2026/Posters2026';
 import { Team2026 } from '@/components/2026/Team2026';
 import { Sponsors2026 } from '@/components/2026/Sponsors2026';
 
@@ -16,6 +17,7 @@ export default function Site2026Home() {
         <About2026 />
         <Speakers2026 />
         <Schedule2026 />
+        <Posters2026 />
         <Team2026 />
         <Sponsors2026 />
       </main>

@@ -45,6 +45,7 @@ const liveNavigationItems: NavItem[] = [
   { name: "About", icon: Info, href: "#about", type: "anchor" },
   { name: "Speakers", icon: Speech, href: "#speakers", type: "anchor" },
   { name: "Schedule", icon: CalendarCheck2, href: "#schedule", type: "anchor" },
+  { name: "Posters", icon: FileText, href: "#posters", type: "anchor" },
   { name: "Team", icon: Users, href: "#team", type: "anchor" },
   { name: "Sponsors", icon: Handshake, href: "#sponsors", type: "anchor" },
   { name: "Hackathon", icon: Trophy, href: "/2026/hackathon", type: "route" },
