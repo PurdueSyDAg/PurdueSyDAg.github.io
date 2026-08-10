@@ -80,27 +80,27 @@
       ]
     },
     {
-      "label": "Afternoon Session",
+      "label": "Afternoon Session · From 1:30 PM",
       "events": [
         {
-          "time": "01:30 – 02:30 PM",
-          "title": "Poster Session",
-          "purpose": "Showcase student and faculty research and foster scientific exchange, with space for networking."
+          "title": "Hackathon Finals, Awards & Closing",
+          "purpose": "Finalist teams present their projects, followed by recognition of the hackathon winners and closing remarks.",
+          "topicsLabel": "Includes",
+          "topics": [
+            "Hackathon finalist presentations",
+            "Hackathon competition awards",
+            "Closing remarks"
+          ]
         },
         {
-          "time": "02:30 – 03:00 PM",
-          "title": "Hackathon Finalist Presentations",
-          "purpose": "Finalist teams present their hackathon projects."
-        },
-        {
-          "time": "03:00 – 03:30 PM",
-          "title": "Awards & Closing",
-          "purpose": "Recognize hackathon and poster competition winners and other honorees as determined by the planning team; encourage participation in future events."
-        },
-        {
-          "time": "03:30 – 05:00 PM",
-          "title": "Networking & Showcase",
-          "purpose": "Engage with industry representatives, researchers, and fellow attendees; explore demonstrations, career pathways, and opportunities to collaborate across academia, industry, and emerging agtech innovators."
+          "title": "Poster Session & Networking",
+          "purpose": "Explore student and faculty research, connect with industry representatives, and close out the day through demos and conversations across academia, industry, and emerging agtech.",
+          "topicsLabel": "Includes",
+          "topics": [
+            "Poster showcase",
+            "Poster competition awards",
+            "Networking with industry and researchers"
+          ]
         }
       ]
     }

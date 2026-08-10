@@ -6,7 +6,7 @@ type SubEvent = {
 };
 
 type ScheduleEvent = {
-  time: string;
+  time?: string;
   title: string;
   topic?: string;
   description?: string;
@@ -44,11 +44,17 @@ function EventCard({ event }: { event: ScheduleEvent }) {
           : 'border-[#CFB991]/40'
       }`}
     >
-      <time className="font-heading text-sm font-medium uppercase tracking-wider text-[#9E6F3E] sm:text-base">
-        {event.time}
-      </time>
+      {event.time && (
+        <time className="font-heading text-sm font-medium uppercase tracking-wider text-[#9E6F3E] sm:text-base">
+          {event.time}
+        </time>
+      )}
 
-      <h4 className="mt-2 font-heading text-lg font-semibold text-[#1A1A1A] sm:text-xl">
+      <h4
+        className={`font-heading text-lg font-semibold text-[#1A1A1A] sm:text-xl ${
+          event.time ? 'mt-2' : ''
+        }`}
+      >
         {event.title}
       </h4>
 

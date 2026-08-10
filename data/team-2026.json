@@ -96,22 +96,6 @@
     "linkedin": ""
   },
   {
-    "id": 13,
-    "name": "Emmanuel Obielodan",
-    "position": "",
-    "role": "Logistics Team, Marketing Team, Finance Team",
-    "pfp_file_name": "pfp26/Emmanuel_Obielodan.jpg",
-    "linkedin": ""
-  },
-  {
-    "id": 14,
-    "name": "Lorena Correira",
-    "position": "",
-    "role": "Marketing Team",
-    "pfp_file_name": "",
-    "linkedin": ""
-  },
-  {
     "id": 15,
     "name": "Adeayo Adewumi",
     "position": "",
@@ -125,6 +109,22 @@
     "position": "",
     "role": "Showcase Lead, Hackathon Team",
     "pfp_file_name": "pfp26/Jean_Paul.jpg",
+    "linkedin": ""
+  },
+  {
+    "id": 19,
+    "name": "Anna Mendes",
+    "position": "MSc. Student",
+    "role": "Logistics Team, Marketing Team",
+    "pfp_file_name": "anna_mendes.jpeg",
+    "linkedin": ""
+  },
+  {
+    "id": 20,
+    "name": "Faith Riensche",
+    "position": "",
+    "role": "Logistics Team",
+    "pfp_file_name": "pfp26/faith.jpeg",
     "linkedin": ""
   },
   {
