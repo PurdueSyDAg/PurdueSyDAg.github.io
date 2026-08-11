@@ -2,10 +2,11 @@ type Mentor = {
   name: string;
   title?: string;
   org?: string;
+  members?: string[];
 };
 
 const industry: Mentor[] = [
-  { name: "Bayer" },
+  { name: "Bayer", members: ["Mentor 1", "Mentor 2", "Mentor 3"] },
   {
     name: "Dan Kurdys",
     title: "Managing Director, Strategic Growth",
@@ -60,6 +61,16 @@ function MentorList({ title, people }: { title: string; people: Mentor[] }) {
                   </span>
                 )}
               </p>
+            )}
+            {person.members && (
+              <ul className="mt-2 space-y-1">
+                {person.members.map((member) => (
+                  <li key={member} className="text-sm text-[#555960]">
+                    {member}{" "}
+                    <span className="text-[#9E6F3E]/70">(TBD)</span>
+                  </li>
+                ))}
+              </ul>
             )}
           </li>
         ))}

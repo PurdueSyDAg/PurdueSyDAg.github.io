@@ -33,7 +33,7 @@ export function HackathonHero2026() {
       </div>
 
       <div className="relative flex min-h-0 flex-1 items-center justify-center">
-        <div className="w-full max-w-4xl mx-auto px-6 py-8 text-center sm:px-8">
+        <div className="w-full max-w-4xl mx-auto px-6 py-6 text-center sm:px-8">
           <div className="mx-auto flex w-fit items-center gap-3">
             <span className="h-[2px] w-8 bg-[#CFB991]" aria-hidden />
             <p className="font-heading text-xs font-bold uppercase tracking-[0.28em] text-white sm:text-sm">
@@ -42,18 +42,24 @@ export function HackathonHero2026() {
             <span className="h-[2px] w-8 bg-[#CFB991]" aria-hidden />
           </div>
 
-          <p className="mt-4 font-heading text-base font-bold uppercase tracking-[0.28em] text-[#CFB991] sm:mt-6 sm:text-lg">
+          <div className="mx-auto mt-3 flex w-fit flex-col items-center gap-0.5 font-heading text-xs text-white/60 sm:flex-row sm:gap-2 sm:text-sm">
+            <span>225 S University St, West Lafayette, IN</span>
+            <span className="hidden text-[#CFB991] sm:inline">&bull;</span>
+            <span>Room ABE1164</span>
+          </div>
+
+          <p className="mt-3 font-heading text-sm font-bold uppercase tracking-[0.28em] text-[#CFB991] sm:mt-4 sm:text-base">
             2nd Edition
           </p>
 
-          <h1 className="mt-2 font-heading text-[2.5rem] font-black leading-[0.9] tracking-[-0.04em] text-white sm:text-[4rem] md:text-[5.25rem]">
+          <h1 className="mt-2 font-heading text-[2.25rem] font-black leading-[0.9] tracking-[-0.04em] text-white sm:text-[3.5rem] md:text-[4.5rem]">
             <span className="block">SyDAg</span>
             <span className="block text-[#CFB991]">Hackathon</span>
           </h1>
 
-          <div className="mx-auto mt-6 h-[3px] w-16 bg-[#CFB991] sm:mt-8" />
+          <div className="mx-auto mt-5 h-[3px] w-16 bg-[#CFB991] sm:mt-6" />
 
-          <p className="mx-auto mt-5 max-w-2xl text-lg italic leading-snug text-white/80 sm:mt-6 sm:text-xl md:text-2xl">
+          <p className="mx-auto mt-4 max-w-2xl text-base italic leading-snug text-white/80 sm:mt-5 sm:text-lg md:text-xl">
             Open to everyone: students, researchers, scholars, post-docs,
             faculty, and industry. Bring your coding skills, your domain
             expertise, or both. If your roots are in agriculture, this is for
