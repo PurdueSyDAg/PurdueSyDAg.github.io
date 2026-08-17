@@ -24,12 +24,22 @@ const silver: Logo[] = [
     src: "/sponsors/2026/purdue-college-ag.png",
     name: "Purdue College of Agriculture",
   },
+  {
+    src: "/sponsors/2026/hunsinger.png",
+    name: "Hunsinger Ag Solutions",
+    size: "h-16 sm:h-[4.5rem]",
+  },
 ];
 const bronze: Logo[] = [
   { src: "/sponsors/2026/brandt.png", name: "BRANDT" },
   { src: "/sponsors/2026/cnh.png", name: "CNH" },
   { src: "/sponsors/2026/icmc.png", name: "Indiana Corn Marketing Council" },
   { src: "/sponsors/2026/isa.png", name: "Indiana Soybean Alliance" },
+  {
+    src: "/sponsors/2026/solinftec.png",
+    name: "SOLIX Ag Robotics by Solinftec",
+    size: "h-16 sm:h-20",
+  },
   {
     src: "/sponsors/2026/purdue.png",
     name: "Purdue Agricultural Alumni Association",
@@ -235,9 +245,11 @@ export function Sponsors2026() {
           {/* Silver */}
           <div className="mt-10 sm:mt-12">
             <TierHeading label="Silver" accent="#8A8D93" Icon={Award} />
-            <div className="mx-auto mt-6 grid max-w-3xl grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6">
+            <div className="mx-auto mt-6 flex max-w-3xl flex-wrap justify-center gap-5 sm:gap-6">
               {silver.map((logo) => (
-                <LogoCell key={logo.name} logo={logo} logoClass="h-14 sm:h-16" />
+                <div key={logo.name} className="w-full sm:w-[calc(50%-0.75rem)]">
+                  <LogoCell logo={logo} logoClass={logo.size ?? "h-14 sm:h-16"} />
+                </div>
               ))}
             </div>
           </div>
