@@ -17,7 +17,9 @@
         {
           "time": "08:30 – 09:00 AM",
           "title": "Kickoff & Opening Remarks",
-          "description": "Speakers TBD",
+          "speakers": [
+            "Bernard Engel — Dean, College of Agriculture · Purdue University"
+          ],
           "purpose": "Introduce the symposium theme “Growing with AI” and highlight the collaborative, student-led nature of the event."
         },
         {
@@ -26,8 +28,16 @@
           "topic": "AI in Agriculture Today: From Field Data to Decision Making",
           "purpose": "Set the stage with field-informed insights and industry perspectives on how AI-enabled tools are reshaping production and agronomic decision-making.",
           "subEvents": [
-            { "time": "09:00 – 09:30", "title": "Talk 1 (TBD)" },
-            { "time": "09:30 – 10:00", "title": "Talk 2 (TBD)" }
+            {
+              "time": "09:00 – 09:30",
+              "speaker": "Navin Elango",
+              "affiliation": "Data Science Manager, Crop Protection · Corteva"
+            },
+            {
+              "time": "09:30 – 10:00",
+              "speaker": "Elhan Ersoz",
+              "affiliation": "Clinical Assistant Professor, Digital Agriculture & Computational Biology · University of Illinois"
+            }
           ]
         },
         {
@@ -41,14 +51,23 @@
           "topic": "From Agricultural Challenges to AI-Driven Solutions",
           "purpose": "Highlight emerging research, innovations, and AI-driven discoveries with potential to shape scalable solutions.",
           "subEvents": [
-            { "time": "10:30 – 11:00", "title": "Talk 3 (TBD)" },
-            { "time": "11:00 – 11:30", "title": "Talk 4 (TBD)" }
+            {
+              "time": "10:30 – 11:00",
+              "speaker": "Julio Giordano",
+              "affiliation": "Professor of Dairy Cattle Biology & Management, Animal Science · Cornell University"
+            },
+            { "time": "11:00 – 11:30", "title": "Talk (TBD)" }
           ]
         },
         {
           "time": "11:30 AM – 12:30 PM",
           "title": "Panel Discussion",
           "topic": "Bridging the Gap: Accelerating AI Adoption in Agriculture",
+          "speakers": [
+            "Ignacio Ciampitti — Professor of Agronomy · Purdue University (Moderator)",
+            "Dan Kurdys — Managing Director, Strategic Growth · 9 North Group",
+            "Scott Fritz — President & Owner · Fritz Black Sand Farms"
+          ],
           "purpose": "While innovation in digital agriculture is growing rapidly, adoption remains a major challenge. This panel explores how academia, industry, and growers can work together to accelerate the practical use of AI technologies.",
           "topicsLabel": "Discussion may include",
           "topics": [
@@ -67,7 +86,9 @@
         {
           "time": "12:30 – 01:30 PM",
           "title": "Keynote: The Next Frontier of AI in Agriculture",
-          "description": "Speaker TBD",
+          "speakers": [
+            "William Aderholdt — Co-Founder & Executive Director · Grand Farm"
+          ],
           "highlight": true,
           "purpose": "A big-picture perspective on the future of AI in agriculture: emerging technologies, industry trends, and opportunities for innovation.",
           "topicsLabel": "Key takeaways may include",

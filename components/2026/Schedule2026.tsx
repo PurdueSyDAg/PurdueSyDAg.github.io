@@ -2,7 +2,9 @@ import schedule2026 from '@/data/schedule-2026.json';
 
 type SubEvent = {
   time: string;
-  title: string;
+  title?: string;
+  speaker?: string;
+  affiliation?: string;
 };
 
 type ScheduleEvent = {
@@ -83,11 +85,26 @@ function EventCard({ event }: { event: ScheduleEvent }) {
       {event.subEvents && event.subEvents.length > 0 && (
         <div className="mt-4 space-y-3 border-l border-[#CFB991]/20 pl-4">
           {event.subEvents.map((sub) => (
-            <div key={`${sub.time}-${sub.title}`}>
+            <div key={`${sub.time}-${sub.title ?? sub.speaker}`}>
               <time className="font-heading text-sm text-[#9E6F3E]/80">
                 {sub.time}
               </time>
-              <p className="text-base text-[#555960] sm:text-lg">{sub.title}</p>
+              {sub.speaker ? (
+                <>
+                  <p className="text-base font-semibold text-[#1A1A1A] sm:text-lg">
+                    {sub.speaker}
+                  </p>
+                  {sub.affiliation && (
+                    <p className="text-sm leading-relaxed text-[#555960] sm:text-base">
+                      {sub.affiliation}
+                    </p>
+                  )}
+                </>
+              ) : (
+                <p className="text-base text-[#555960] sm:text-lg">
+                  {sub.title}
+                </p>
+              )}
             </div>
           ))}
         </div>

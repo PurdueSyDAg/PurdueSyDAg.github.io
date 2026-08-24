@@ -1,0 +1,60 @@
+{
+  "keynote": {
+    "name": "William Aderholdt",
+    "title": "Co-Founder & Executive Director",
+    "org": "Grand Farm",
+    "talk": "The Next Frontier of AI in Agriculture",
+    "photo": ""
+  },
+  "speakers": [
+    {
+      "name": "Bernard Engel",
+      "title": "Dean, College of Agriculture",
+      "org": "Purdue University",
+      "tag": "Opening Remarks",
+      "photo": ""
+    },
+    {
+      "name": "Navin Elango",
+      "title": "Data Science Manager, Crop Protection",
+      "org": "Corteva",
+      "tag": "Talk Session 1",
+      "photo": ""
+    },
+    {
+      "name": "Elhan Ersoz",
+      "title": "Clinical Assistant Professor, Digital Agriculture & Computational Biology",
+      "org": "University of Illinois",
+      "tag": "Talk Session 1",
+      "photo": ""
+    },
+    {
+      "name": "Julio Giordano",
+      "title": "Professor of Dairy Cattle Biology & Management, Animal Science",
+      "org": "Cornell University",
+      "tag": "Talk Session 2",
+      "photo": ""
+    },
+    {
+      "name": "Ignacio Ciampitti",
+      "title": "Professor of Agronomy",
+      "org": "Purdue University",
+      "tag": "Panel Moderator",
+      "photo": ""
+    },
+    {
+      "name": "Dan Kurdys",
+      "title": "Managing Director, Strategic Growth",
+      "org": "9 North Group",
+      "tag": "Panelist",
+      "photo": ""
+    },
+    {
+      "name": "Scott Fritz",
+      "title": "President & Owner",
+      "org": "Fritz Black Sand Farms",
+      "tag": "Panelist",
+      "photo": ""
+    }
+  ]
+}
