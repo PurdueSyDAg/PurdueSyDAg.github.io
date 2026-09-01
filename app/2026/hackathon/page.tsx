@@ -3,6 +3,7 @@ import { Footer } from '@/components/Footer';
 import { HackathonHero2026 } from '@/components/2026/HackathonHero2026';
 import { HackathonAbout2026 } from '@/components/2026/HackathonAbout2026';
 import { HackathonPrizes2026 } from '@/components/2026/HackathonPrizes2026';
+import { HackathonCompute2026 } from '@/components/2026/HackathonCompute2026';
 import { HackathonStaff2026 } from '@/components/2026/HackathonStaff2026';
 
 export default function Site2026HackathonPage() {
@@ -13,6 +14,7 @@ export default function Site2026HackathonPage() {
         <HackathonHero2026 />
         <HackathonAbout2026 />
         <HackathonPrizes2026 />
+        <HackathonCompute2026 />
         <HackathonStaff2026 />
       </main>
       <Footer copyrightYear={2026} showDigitalAgClub={false} />
