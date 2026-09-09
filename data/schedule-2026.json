@@ -42,8 +42,7 @@
         },
         {
           "time": "10:00 – 10:30 AM",
-          "title": "Break & Showcase",
-          "purpose": "Details TBD."
+          "title": "Break"
         },
         {
           "time": "10:30 – 11:30 AM",
@@ -114,11 +113,12 @@
           ]
         },
         {
-          "title": "Poster Session & Networking",
-          "purpose": "Explore student and faculty research, connect with industry representatives, and close out the day through demos and conversations across academia, industry, and emerging agtech.",
+          "title": "Poster, Showcase & Networking",
+          "purpose": "Explore student and faculty research, take in the showcase, and connect with industry representatives across academia, industry, and emerging agtech.",
           "topicsLabel": "Includes",
           "topics": [
             "Poster showcase",
+            "Showcase & demos",
             "Poster competition awards",
             "Networking with industry and researchers"
           ]
