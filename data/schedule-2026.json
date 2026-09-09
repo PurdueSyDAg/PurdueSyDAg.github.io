@@ -55,7 +55,11 @@
               "speaker": "Julio Giordano",
               "affiliation": "Professor of Dairy Cattle Biology & Management, Animal Science · Cornell University"
             },
-            { "time": "11:00 – 11:30", "title": "Talk (TBD)" }
+            {
+              "time": "11:00 – 11:30",
+              "speaker": "Andrew Harmon",
+              "affiliation": "Staff Engineer, Production Systems · John Deere"
+            }
           ]
         },
         {
