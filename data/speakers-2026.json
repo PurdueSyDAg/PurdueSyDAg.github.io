@@ -4,7 +4,7 @@
     "title": "Co-Founder & Executive Director",
     "org": "Grand Farm",
     "talk": "The Next Frontier of AI in Agriculture",
-    "photo": ""
+    "photo": "/speakers/2026/william-aderholdt.jpg"
   },
   "speakers": [
     {
@@ -12,70 +12,70 @@
       "title": "Dean, College of Agriculture",
       "org": "Purdue University",
       "tag": "Opening Remarks",
-      "photo": ""
+      "photo": "/speakers/2026/bernard-engel.jpg"
     },
     {
       "name": "Navin Elango",
       "title": "Data Science Manager, Crop Protection",
       "org": "Corteva",
       "tag": "Talk Session 1",
-      "photo": ""
+      "photo": "/speakers/2026/navin-elango.jpg"
     },
     {
       "name": "Elhan Ersoz",
       "title": "Clinical Assistant Professor, Digital Agriculture & Computational Biology",
       "org": "University of Illinois",
       "tag": "Talk Session 1",
-      "photo": ""
+      "photo": "/speakers/2026/elhan-ersoz.jpg"
     },
     {
       "name": "Julio Giordano",
       "title": "Professor of Dairy Cattle Biology & Management, Animal Science",
       "org": "Cornell University",
       "tag": "Talk Session 2",
-      "photo": ""
+      "photo": "/speakers/2026/julio-giordano.jpg"
     },
     {
       "name": "Andrew Harmon",
       "title": "Staff Engineer, Production Systems",
       "org": "John Deere",
       "tag": "Talk Session 2",
-      "photo": ""
+      "photo": "/speakers/2026/andrew-harmon.jpg"
     },
     {
       "name": "Ignacio Ciampitti",
       "title": "Professor of Agronomy",
       "org": "Purdue University",
       "tag": "Panel Moderator",
-      "photo": ""
+      "photo": "/speakers/2026/ignacio-ciampitti.jpg"
     },
     {
       "name": "Dan Kurdys",
       "title": "Managing Director, Strategic Growth",
       "org": "9 North Group",
       "tag": "Panelist",
-      "photo": ""
+      "photo": "/speakers/2026/dan-kurdys.jpg"
     },
     {
       "name": "Scott Fritz",
       "title": "President & Owner",
       "org": "Fritz Black Sand Farms",
       "tag": "Panelist",
-      "photo": ""
+      "photo": "/speakers/2026/scott-fritz.jpg"
     },
     {
       "name": "Libby Fritz",
       "title": "Vice President",
       "org": "AgriNovus Indiana",
       "tag": "Panelist",
-      "photo": ""
+      "photo": "/speakers/2026/libby-fritz.jpg"
     },
     {
       "name": "Dennis Buckmaster",
       "title": "Professor of Agricultural & Biological Engineering",
       "org": "Purdue University",
       "tag": "Panelist",
-      "photo": ""
+      "photo": "/speakers/2026/dennis-buckmaster.jpg"
     }
   ]
 }
