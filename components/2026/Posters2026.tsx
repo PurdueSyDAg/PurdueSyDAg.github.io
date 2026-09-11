@@ -107,14 +107,12 @@ export function Posters2026() {
         </div>
 
         <div className="mt-14 text-center sm:mt-16">
-          <a
-            href="https://purdue.ca1.qualtrics.com/jfe/form/SV_d4r9WIqm31pUGay"
-            target="_blank"
-            rel="noreferrer noopener"
-            className="inline-flex items-center rounded-full bg-gradient-to-r from-[#CFB991] to-[#DDB945] px-8 py-4 font-heading text-sm font-bold uppercase tracking-[0.22em] text-[#1A1A1A] shadow-[0_18px_40px_-12px_rgba(207,185,145,0.45)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_22px_50px_-12px_rgba(207,185,145,0.6)] sm:text-base"
-          >
-            Submit your poster &amp; register
-          </a>
+          <p className="inline-flex items-center rounded-full border border-white/15 bg-white/[0.04] px-6 py-3 font-heading text-sm font-bold uppercase tracking-[0.22em] text-white/70 sm:text-base">
+            Poster registrations are now closed
+          </p>
+          <p className="mx-auto mt-4 max-w-md text-base text-white/60">
+            Thank you to everyone who submitted. See you at the poster session.
+          </p>
         </div>
       </div>
     </section>
